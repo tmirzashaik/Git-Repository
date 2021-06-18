@@ -269,6 +269,10 @@
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
+        <fullName>CleanStatus</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
         <fullName>CustomerPriority__c</fullName>
         <externalId>false</externalId>
         <label>Customer Priority</label>
@@ -348,6 +352,11 @@
         <trackFeedHistory>false</trackFeedHistory>
         <type>Number</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OperatingHoursId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>OwnerId</fullName>

@@ -10,10 +10,12 @@
     <canViewThumbnailAssets>false</canViewThumbnailAssets>
     <enableAnalyticsSharingEnable>true</enableAnalyticsSharingEnable>
     <enableAutoCompleteCombo>true</enableAutoCompleteCombo>
+    <enableDashboardComponentSnapshot>false</enableDashboardComponentSnapshot>
     <enableDashboardFlexiTable>true</enableDashboardFlexiTable>
     <enableEmailReportsToPortalUsers>false</enableEmailReportsToPortalUsers>
+    <enableFirebirdEditor>false</enableFirebirdEditor>
     <enableFloatingReportHeaders>true</enableFloatingReportHeaders>
-    <enableInsights>false</enableInsights>
+    <enableInsights>true</enableInsights>
     <enableLightningReportBuilder>false</enableLightningReportBuilder>
     <enableLotusNotesImages>false</enableLotusNotesImages>
     <enableMassEnableReportBuilder>true</enableMassEnableReportBuilder>
@@ -23,9 +25,9 @@
     <enableQueryLiveConnectors>true</enableQueryLiveConnectors>
     <enableRemoveFooterForRepDisplay>false</enableRemoveFooterForRepDisplay>
     <enableRemoveFooterFromRepExp>false</enableRemoveFooterFromRepExp>
-    <enableReportCrtAutoAddPref>false</enableReportCrtAutoAddPref>
     <enableReportHideXlsExportPref>false</enableReportHideXlsExportPref>
     <enableReportNotificationsEnable>true</enableReportNotificationsEnable>
+    <enableRequestPrioritySchdl>false</enableRequestPrioritySchdl>
     <enableS1AnalyticsEclairEnable>true</enableS1AnalyticsEclairEnable>
     <enableS3OutputConnector>false</enableS3OutputConnector>
     <enableSFXJoinedReportsEnable>false</enableSFXJoinedReportsEnable>
@@ -35,10 +37,12 @@
     <enableSqlLiveDataset>true</enableSqlLiveDataset>
     <enableTableauHyperOutputConnector>false</enableTableauHyperOutputConnector>
     <enableUseOldChartsLookAndFeel>false</enableUseOldChartsLookAndFeel>
+    <enableWaveAssetsNewDateVersion>false</enableWaveAssetsNewDateVersion>
     <enableWaveIndexMVDim>true</enableWaveIndexMVDim>
     <enableWaveRecordNavigation>false</enableWaveRecordNavigation>
     <enableWaveReplication>false</enableWaveReplication>
     <enableWaveSharingInheritance>false</enableWaveSharingInheritance>
+    <enableWaveTrendedDatasetCleanup>false</enableWaveTrendedDatasetCleanup>
     <maxHoursAppInProgress>48</maxHoursAppInProgress>
     <replaceBlankMeasuresWithNulls>false</replaceBlankMeasuresWithNulls>
     <sonicEnabled>false</sonicEnabled>

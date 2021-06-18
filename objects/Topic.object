@@ -43,5 +43,5 @@
         <type>Default</type>
     </actionOverrides>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
-    <enableFeeds>false</enableFeeds>
+    <enableFeeds>true</enableFeeds>
 </CustomObject>

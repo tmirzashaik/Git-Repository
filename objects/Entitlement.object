@@ -201,6 +201,11 @@
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
+        <fullName>SvcApptBookingWindowsId</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>Type</fullName>
         <trackHistory>false</trackHistory>
         <type>Picklist</type>
