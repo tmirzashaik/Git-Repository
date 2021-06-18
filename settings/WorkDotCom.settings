@@ -10,4 +10,5 @@
     <enableWorkCanvasPref>false</enableWorkCanvasPref>
     <enableWorkCertification>false</enableWorkCertification>
     <enableWorkCertificationNotification>false</enableWorkCertificationNotification>
+    <enableWorkThanksPref>false</enableWorkThanksPref>
 </WorkDotComSettings>
