@@ -131,14 +131,17 @@
     <externalSharingModel>ControlledByParent</externalSharingModel>
     <fields>
         <fullName>AssessmentTaskId</fullName>
+        <trackHistory>false</trackHistory>
         <type>MasterDetail</type>
     </fields>
     <fields>
         <fullName>ContentContextId</fullName>
+        <trackHistory>false</trackHistory>
         <type>Lookup</type>
     </fields>
     <fields>
         <fullName>ContentDocumentId</fullName>
+        <trackHistory>false</trackHistory>
         <type>Lookup</type>
     </fields>
     <listViews>

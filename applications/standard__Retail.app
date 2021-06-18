@@ -19,5 +19,6 @@
     <tabs>standard-RetailVisitKpi</tabs>
     <tabs>standard-AssessmentTaskDefinition</tabs>
     <tabs>standard-VehicleInventory</tabs>
+    <tabs>standard-RetailSetupAssistant</tabs>
     <uiType>Lightning</uiType>
 </CustomApplication>

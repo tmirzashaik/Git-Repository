@@ -4,5 +4,6 @@
     <enableEinsteinVisits>false</enableEinsteinVisits>
     <enableIndustriesRebates>false</enableIndustriesRebates>
     <enableObjectDetection>false</enableObjectDetection>
+    <enableVisitCalendarSync>false</enableVisitCalendarSync>
     <enableVisitInventoryEnabled>false</enableVisitInventoryEnabled>
 </IndustriesSettings>

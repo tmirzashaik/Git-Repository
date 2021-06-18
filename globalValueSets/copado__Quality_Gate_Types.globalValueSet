@@ -51,10 +51,10 @@
         <label>URL Callout</label>
     </customValue>
     <customValue>
-        <fullName>Compliance</fullName>
+        <fullName>Static Analysis</fullName>
         <default>false</default>
         <isActive>false</isActive>
-        <label>Compliance</label>
+        <label>Static Analysis</label>
     </customValue>
     <customValue>
         <fullName>Automation Template</fullName>
@@ -63,10 +63,10 @@
         <label>Automation Template</label>
     </customValue>
     <customValue>
-        <fullName>Static Analysis</fullName>
+        <fullName>Compliance</fullName>
         <default>false</default>
         <isActive>false</isActive>
-        <label>Static Analysis</label>
+        <label>Compliance</label>
     </customValue>
     <masterLabel>Quality Gate Types</masterLabel>
     <sorted>false</sorted>

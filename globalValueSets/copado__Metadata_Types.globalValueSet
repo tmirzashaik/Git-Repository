@@ -601,18 +601,6 @@
         <label>WorkflowTask</label>
     </customValue>
     <customValue>
-        <fullName>InstalledPackageLayout</fullName>
-        <default>false</default>
-        <isActive>false</isActive>
-        <label>InstalledPackageLayout</label>
-    </customValue>
-    <customValue>
-        <fullName>FlowDefinitioGroup</fullName>
-        <default>false</default>
-        <isActive>false</isActive>
-        <label>FlowDefinitioGroup</label>
-    </customValue>
-    <customValue>
         <fullName>FlexiPaFlow</fullName>
         <default>false</default>
         <isActive>false</isActive>
@@ -623,6 +611,18 @@
         <default>false</default>
         <isActive>false</isActive>
         <label>ReportTyRole</label>
+    </customValue>
+    <customValue>
+        <fullName>InstalledPackageLayout</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>InstalledPackageLayout</label>
+    </customValue>
+    <customValue>
+        <fullName>FlowDefinitioGroup</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>FlowDefinitioGroup</label>
     </customValue>
     <masterLabel>Metadata Types</masterLabel>
     <sorted>false</sorted>
