@@ -26,13 +26,6 @@
     </columns>
     <filter>
         <criteriaItems>
-            <column>LONG_NAME</column>
-            <columnToColumn>false</columnToColumn>
-            <isUnlocked>true</isUnlocked>
-            <operator>contains</operator>
-            <value>The</value>
-        </criteriaItems>
-        <criteriaItems>
             <column>SHORT_NAME</column>
             <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
