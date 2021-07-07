@@ -30,7 +30,7 @@
             <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>contains</operator>
-            <value>Thrisha</value>
+            <value>Thrisha Shaik</value>
         </criteriaItems>
         <criteriaItems>
             <column>LASTRUNDATE</column>
