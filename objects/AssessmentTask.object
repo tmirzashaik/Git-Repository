@@ -131,39 +131,50 @@
     <externalSharingModel>Private</externalSharingModel>
     <fields>
         <fullName>AssessmentTaskDefinitionId</fullName>
+        <trackHistory>false</trackHistory>
         <type>Lookup</type>
     </fields>
     <fields>
         <fullName>Description</fullName>
+        <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>EndTime</fullName>
+        <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>IsRequired</fullName>
+        <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>Name</fullName>
+        <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>OwnerId</fullName>
+        <trackHistory>false</trackHistory>
         <type>Lookup</type>
     </fields>
     <fields>
         <fullName>ParentId</fullName>
+        <trackHistory>false</trackHistory>
         <type>Lookup</type>
     </fields>
     <fields>
         <fullName>SequenceNumber</fullName>
+        <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>StartTime</fullName>
+        <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>Status</fullName>
+        <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>TaskType</fullName>
+        <trackHistory>false</trackHistory>
     </fields>
     <listViews>
         <fullName>All_AssessmentTask</fullName>
