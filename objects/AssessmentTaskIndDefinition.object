@@ -131,14 +131,17 @@
     <externalSharingModel>ControlledByParent</externalSharingModel>
     <fields>
         <fullName>AssessmentIndDefinitionId</fullName>
+        <trackHistory>false</trackHistory>
         <type>MasterDetail</type>
     </fields>
     <fields>
         <fullName>AssessmentTaskDefinitionId</fullName>
+        <trackHistory>false</trackHistory>
         <type>MasterDetail</type>
     </fields>
     <fields>
         <fullName>DisplayOrder</fullName>
+        <trackHistory>false</trackHistory>
     </fields>
     <searchLayouts>
         <customTabListAdditionalFields>LastModifiedDate</customTabListAdditionalFields>
