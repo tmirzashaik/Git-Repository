@@ -45,6 +45,5 @@
     <enableWaveTrendedDatasetCleanup>false</enableWaveTrendedDatasetCleanup>
     <maxHoursAppInProgress>48</maxHoursAppInProgress>
     <replaceBlankMeasuresWithNulls>false</replaceBlankMeasuresWithNulls>
-    <sonicEnabled>false</sonicEnabled>
     <turnOnTimeZones>false</turnOnTimeZones>
 </AnalyticsSettings>
