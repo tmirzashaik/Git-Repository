@@ -105,6 +105,15 @@
         <fullName>Record</fullName>
         <trackHistory>false</trackHistory>
     </fields>
+    <fields>
+        <fullName>ResubmittedBatchJobId</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Status</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
     <listViews>
         <fullName>All_Failed_Records</fullName>
         <columns>Name</columns>

@@ -145,47 +145,76 @@
     <externalSharingModel>Private</externalSharingModel>
     <fields>
         <fullName>AccountId</fullName>
+        <trackHistory>false</trackHistory>
         <type>Lookup</type>
     </fields>
     <fields>
         <fullName>ActualVisitEndTime</fullName>
+        <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>ActualVisitStartTime</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>AddressId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ContactId</fullName>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>ContextId</fullName>
+        <trackHistory>false</trackHistory>
         <type>Lookup</type>
     </fields>
     <fields>
         <fullName>InstructionDescription</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>LocationId</fullName>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>OwnerId</fullName>
+        <trackHistory>false</trackHistory>
         <type>Lookup</type>
     </fields>
     <fields>
         <fullName>PlaceId</fullName>
+        <trackHistory>false</trackHistory>
         <type>Lookup</type>
     </fields>
     <fields>
         <fullName>PlannedVisitEndTime</fullName>
+        <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>PlannedVisitStartTime</fullName>
+        <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>Status</fullName>
+        <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>StatusRemarks</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>UserId</fullName>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>VisitPriority</fullName>
+        <trackHistory>false</trackHistory>
         <type>Picklist</type>
     </fields>
     <fields>
         <fullName>VisitorId</fullName>
+        <trackHistory>false</trackHistory>
         <type>Lookup</type>
     </fields>
     <listViews>
@@ -200,6 +229,18 @@
         <customTabListAdditionalFields>PlannedVisitEndTime</customTabListAdditionalFields>
         <customTabListAdditionalFields>VisitPriority</customTabListAdditionalFields>
         <customTabListAdditionalFields>Visitor</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Place</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Status</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>PlannedVisitStartTime</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>PlannedVisitEndTime</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>VisitPriority</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Visitor</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Place</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Status</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>PlannedVisitStartTime</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>PlannedVisitEndTime</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>VisitPriority</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Visitor</lookupPhoneDialogsAdditionalFields>
         <searchResultsAdditionalFields>Place</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>Status</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>PlannedVisitStartTime</searchResultsAdditionalFields>
