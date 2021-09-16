@@ -8,5 +8,17 @@
         <plural>true</plural>
         <value>Tests</value>
     </caseValues>
+    <fields>
+        <label><!-- Test2 --></label>
+        <name>Test2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Test --></label>
+        <name>Test__c</name>
+    </fields>
+    <fields>
+        <label><!-- Test_for_Commit --></label>
+        <name>Test_for_Commit__c</name>
+    </fields>
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>
