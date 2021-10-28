@@ -9,6 +9,7 @@
         <label>All</label>
         <name>All</name>
     </dataCategory>
+    <description>For testing purposes</description>
     <label>Test Data Category Group</label>
     <objectUsage>
         <object>KnowledgeArticleVersion</object>
