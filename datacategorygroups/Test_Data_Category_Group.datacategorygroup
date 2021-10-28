@@ -12,6 +12,6 @@
     <description>For testing purposes</description>
     <label>Test Data Category Group</label>
     <objectUsage>
-        <object>KnowledgeArticleVersion</object>
+        <object>KnowledgeArticleVersion </object>
     </objectUsage>
 </DataCategoryGroup>
