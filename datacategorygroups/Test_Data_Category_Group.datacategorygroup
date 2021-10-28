@@ -3,6 +3,10 @@
     <active>true</active>
     <dataCategory>
         <dataCategory>
+            <dataCategory>
+                <label>Test2</label>
+                <name>Test2</name>
+            </dataCategory>
             <label>Test</label>
             <name>test</name>
         </dataCategory>
