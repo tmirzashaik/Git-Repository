@@ -9,6 +9,10 @@
         <value>Tests</value>
     </caseValues>
     <fields>
+        <label><!-- SnapshotDifferencesTest --></label>
+        <name>SnapshotDifferencesTest__c</name>
+    </fields>
+    <fields>
         <label><!-- Test2 --></label>
         <name>Test2__c</name>
     </fields>
