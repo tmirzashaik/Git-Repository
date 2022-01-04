@@ -178,7 +178,7 @@
     </fields>
     <fields>
         <fullName>Test__c</fullName>
-        <description>Change 1 for user story 1</description>
+        <description>Change for US-28</description>
         <externalId>false</externalId>
         <label>Test</label>
         <length>250</length>
