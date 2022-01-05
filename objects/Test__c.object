@@ -167,7 +167,7 @@
     </fields>
     <fields>
         <fullName>Test__c</fullName>
-        <description>Change for US-28</description>
+        <description>Rollback testing</description>
         <externalId>false</externalId>
         <label>Test</label>
         <length>250</length>
