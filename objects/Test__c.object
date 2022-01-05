@@ -178,7 +178,7 @@
     </fields>
     <fields>
         <fullName>Test__c</fullName>
-        <description>Change 1 for user story 1</description>
+        <description>Rollback testing</description>
         <externalId>false</externalId>
         <label>Test</label>
         <length>250</length>
