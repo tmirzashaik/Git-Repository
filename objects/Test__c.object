@@ -190,6 +190,7 @@
     </fields>
     <fields>
         <fullName>Test_for_Commit__c</fullName>
+        <description>Test for Click Deploy</description>
         <externalId>false</externalId>
         <label>Test_for_Commit</label>
         <length>12</length>
