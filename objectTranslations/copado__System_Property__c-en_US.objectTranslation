@@ -10,7 +10,7 @@
         <relationshipLabel><!-- System Properties --></relationshipLabel>
     </fields>
     <fields>
-        <label><!-- Is Sensitive --></label>
+        <label><!-- Hide Value --></label>
         <name>copado__Is_Sensitive__c</name>
     </fields>
     <fields>

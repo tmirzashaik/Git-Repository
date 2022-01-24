@@ -29,6 +29,10 @@
         <type>CustomApplication</type>
     </appMenuItems>
     <appMenuItems>
+        <name>standard__Chatter</name>
+        <type>CustomApplication</type>
+    </appMenuItems>
+    <appMenuItems>
         <name>standard__Sites</name>
         <type>CustomApplication</type>
     </appMenuItems>
@@ -118,6 +122,14 @@
     </appMenuItems>
     <appMenuItems>
         <name>standard__RetailOnBrowser</name>
+        <type>CustomApplication</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>copado__Copado_Plan</name>
+        <type>CustomApplication</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>copado__Copado_Plan_Lightning</name>
         <type>CustomApplication</type>
     </appMenuItems>
 </AppMenu>

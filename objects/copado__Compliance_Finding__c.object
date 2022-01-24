@@ -161,6 +161,7 @@
         <externalId>false</externalId>
         <label>Compliance Rule</label>
         <referenceTo>copado__Compliance_Rule__c</referenceTo>
+        <relationshipLabel>Compliance Findings</relationshipLabel>
         <relationshipName>Compliance_Incidences</relationshipName>
         <relationshipOrder>0</relationshipOrder>
         <reparentableMasterDetail>false</reparentableMasterDetail>
@@ -198,7 +199,7 @@
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <formula>TEXT(copado__Compliance_Rule__r.copado__Severity__c)</formula>
-        <label>Severity</label>
+        <label>Rule Severity</label>
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Text</type>

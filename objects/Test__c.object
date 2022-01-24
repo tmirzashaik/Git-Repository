@@ -167,7 +167,7 @@
     </fields>
     <fields>
         <fullName>Test__c</fullName>
-        <description>Change 2 for user story 2</description>
+        <description>Rollback testing</description>
         <externalId>false</externalId>
         <label>Test</label>
         <length>250</length>
@@ -184,7 +184,7 @@
         <type>Text</type>
     </nameField>
     <pluralLabel>Tests</pluralLabel>
-    <searchLayouts />
+    <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>

@@ -16,12 +16,13 @@ public with sharing class JiraIntegration extends JiraIntegrationConstants imple
     public String namedCredential;
     public Map<String, Id> userMap {
         get {
-            if(null == userMap){
+            if (null == userMap) {
                 Boolean unableCommunityUser = [SELECT Id, Enable_Community_User__c FROM copado__Project__c WHERE Id = :pId].Enable_Community_User__c;
                 userMap = CopadoCCMutilities.returnUsers(unableCommunityUser);
             }
             return userMap;
-        } private set;
+        }
+        private set;
     }
     public Map<String, Map<String, String>> keyValuepairsByExternalId {
         get {
@@ -32,9 +33,9 @@ public with sharing class JiraIntegration extends JiraIntegrationConstants imple
         }
         private set;
     }
-    public Map<String, copado__Release__c> releases { 
-        get{
-            if(null == releases){
+    public Map<String, copado__Release__c> releases {
+        get {
+            if (null == releases) {
                 releases = new Map<String, copado__Release__c>();
             }
             return releases;
@@ -67,24 +68,24 @@ public with sharing class JiraIntegration extends JiraIntegrationConstants imple
     }
 
     public Map<String, String> recordTypeMap {
-        get{
-            if(null == recordTypeMap){
+        get {
+            if (null == recordTypeMap) {
                 Boolean forThirdParty = true;
                 recordTypeMap = CopadoCCMUtilities.returnRecordTypeMap(pId, forThirdParty);
             }
             return recordTypeMap;
-        } 
+        }
         private set;
     }
 
     public Map<String, String> userStoryRecordTypeMap {
-        get{
-            if(null == userStoryRecordTypeMap){
+        get {
+            if (null == userStoryRecordTypeMap) {
                 Boolean forThirdParty = true;
                 userStoryRecordTypeMap = CopadoCCMUtilities.returnUserStoryRecordTypeMap(forThirdParty);
             }
             return userStoryRecordTypeMap;
-        } 
+        }
         private set;
     }
 
@@ -145,8 +146,6 @@ public with sharing class JiraIntegration extends JiraIntegrationConstants imple
         set;
     }
 
-    
-
     //INTEGRATION CORE METHODS - START
     /**
      * Updates single record based on external Id on Jira.
@@ -193,6 +192,33 @@ public with sharing class JiraIntegration extends JiraIntegrationConstants imple
     }
 
     /**
+     * Fetches records Per Sprint from Jira in JSON format
+     *
+     * @param selectedProject
+     *
+     * @return List<Map<String,String>>
+     */
+    public Map<String, Map<String, String>> fetchRecordsWithLimitedSprints(copado__Project__c selectedProject, List<copado__Sprint__c> sprints) {
+        pid = selectedProject.id;
+        projectExtId = null != selectedProject.Project_External_Id__c ? selectedProject.Project_External_Id__c : EMPTY_CHAR;
+        namedCredential = selectedProject.Copado_Integration_Setting__r.Named_Credential__c;
+
+        for (copado__Sprint__c sprint : sprints) {
+            this.currentSprint = sprint;
+            jqlExtFilter = EMPTY_CHAR;
+            String currentFilter = null != selectedProject.JQL_Extended_Filter__c ? selectedProject.JQL_Extended_Filter__c : EMPTY_CHAR;
+            correctExtendedFilter(currentFilter + ' AND Sprint=' + ESCAPED_SINGLE_QUOTE + sprint.Name + ESCAPED_SINGLE_QUOTE);
+
+            iterateThroughCallouts(selectedProject);
+        }
+
+        CopadoCCMutilities.createLogRecords();
+        Database.upsert(releases.values(), copado__Release__c.fields.External_Id__c);
+        //gets all unique values based on external id from keyValuepairsByExternalId
+        return keyValuepairsByExternalId;
+    }
+
+    /**
      * Fetches records from Jira in JSON format
      *
      * @param selectedProject
@@ -229,10 +255,10 @@ public with sharing class JiraIntegration extends JiraIntegrationConstants imple
         //gets all unique values based on external id from keyValuepairsByExternalId
         userStoryList.addAll(keyValuepairsByExternalId.values());
         //Returns list to executeUserStoryUpsert batch class
-        return this.userStoryList;
+        return userStoryList;
     }
     //INTEGRATION CORE METHODS - END
-    
+
     //INTEGRATION HELPER METHODS - START
     private void iterateThroughCallouts(copado__Project__c selectedProject) {
         Integer startIndex = 0;
@@ -320,10 +346,12 @@ public with sharing class JiraIntegration extends JiraIntegrationConstants imple
                     }
                 } else if (null != tempObject.get(NAME_KEYWORD)) {
                     keyValuepairs.put(cf, (String) tempObject.get(NAME_KEYWORD));
+                } else if (null != tempObject.get(VALUE_KEYWORD)) {
+                    keyValuepairs.put(cf, (String) tempObject.get(VALUE_KEYWORD));
                 }
-            } else if(fields.get(cf) instanceof List<Object> && cf == RELEASE_REST_NAME){
+            } else if (fields.get(cf) instanceof List<Object> && cf == RELEASE_REST_NAME) {
                 List<Object> tempObject = (List<Object>) fields.get(cf);
-                if(tempObject.isEmpty()){
+                if (tempObject.isEmpty()) {
                     continue;
                 }
                 Map<String, Object> result = (Map<String, Object>) tempObject[0];
@@ -332,26 +360,59 @@ public with sharing class JiraIntegration extends JiraIntegrationConstants imple
                 copado__Release__c upsertRelease = new copado__Release__c(External_Id__c = extId, Name = extName, copado__Project__c = pId);
                 keyValuepairs.put(cf.toLowerCase(), extId);
                 releases.put(extId, upsertRelease);
+            } else if (fields.get(cf) instanceof List<Object>) {
+                List<Object> tempObject = (List<Object>) fields.get(cf);
+                String cf_value = '';
+                for (Object eachObject : tempObject) {
+                    if (eachObject instanceof Map<String, Object>) {
+                        Map<String, Object> result = (Map<String, Object>) eachObject;
+                        if (null != result.get(EMAIL_ADDRESS)) {
+                            if (String.isBlank(cf_value)) {
+                                cf_value = (String) result.get(EMAIL_ADDRESS);
+                            } else {
+                                cf_value += '; ' + (String) result.get(EMAIL_ADDRESS);
+                            }
+                        } else if (null != result.get(NAME_KEYWORD)) {
+                            if (String.isBlank(cf_value)) {
+                                cf_value = (String) result.get(NAME_KEYWORD);
+                            } else {
+                                cf_value += '; ' + (String) result.get(NAME_KEYWORD);
+                            }
+                        } else if (null != result.get(VALUE_KEYWORD)) {
+                            if (String.isBlank(cf_value)) {
+                                cf_value = (String) result.get(VALUE_KEYWORD);
+                            } else {
+                                cf_value += '; ' + (String) result.get(VALUE_KEYWORD);
+                            }
+                        }
+                    } else {
+                        if (String.isBlank(cf_value)) {
+                            cf_value = (String) eachObject;
+                        } else {
+                            cf_value += '; ' + (String) eachObject;
+                        }
+                    }
+                }
+                keyValuepairs.put(cf, cf_value);
             }
         }
         return keyValuepairs;
     }
 
     /**
-     * prepares callout body from field Mappings 
+     * prepares callout body from field Mappings
      */
-    private String prepareFinalJSON(SObject cUserStory){
+    private String prepareFinalJSON(SObject cUserStory) {
         String finalJson = JSON_TEMPLATE_OUTER;
         for (String fieldName : fieldMap.keyset()) {
             if (null != cUserStory.get(fieldName) && fieldMap.get(fieldName) != STATUS) {
-                String fieldKey = fieldMap.get(fieldName),
-                       fieldValue = String.escapeSingleQuotes(String.valueOf(cUserStory.get(fieldName)));
-                if(fieldName == RECORD_TYPE_ID){
+                String fieldKey = fieldMap.get(fieldName), fieldValue = String.escapeSingleQuotes(String.valueOf(cUserStory.get(fieldName)));
+                if (fieldName == RECORD_TYPE_ID) {
                     String recordTypeId = fieldValue;
                     String recordTypeName = userStoryRecordTypeMap.get(recordTypeId);
                     fieldValue = recordTypeMap.get(recordTypeName);
                 }
-                
+
                 finalJson +=
                     String.format(
                         (typeMap.get(fieldName) == OBJECT_STRING
@@ -381,13 +442,13 @@ public with sharing class JiraIntegration extends JiraIntegrationConstants imple
         Boolean calloutFlag = false;
         for (Transitions tw : transitionWrapperItem.Transitions) {
             //Checks if the current status is available on Jira workflow, if not, does not do the callout
-            if (tw.name.toLowerCase() == currentStatusValue.toLowerCase()) {
+            if (tw.name.toLowerCase().equals(currentStatusValue.toLowerCase())) {
                 statusfinalJson = CopadoCCMutilities.replaceFromCurly(String.format(transitionTemplate, new List<String>{ tw.id }));
                 calloutFlag = true;
                 break;
             }
         }
-        
+
         if (calloutFlag) {
             CopadoCCMutilities.MakeCallout(
                 namedCredential,

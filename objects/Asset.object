@@ -121,6 +121,11 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>ConsequenceOfFailure</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
         <fullName>ContactId</fullName>
         <trackHistory>false</trackHistory>
         <type>Lookup</type>
