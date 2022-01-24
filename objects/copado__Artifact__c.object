@@ -204,6 +204,18 @@
         <visibleLines>3</visibleLines>
     </fields>
     <fields>
+        <fullName>copado__LastJobExecutionId__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Last Job Execution Id</label>
+        <length>18</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>copado__No_Namespace__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
@@ -221,8 +233,9 @@
         <externalId>false</externalId>
         <inlineHelpText>The org credential where the metadata of the Artifact is going to be retrieved from, for unlocked packages and 2GP.
 The org credential where the unmanaged package is created from.</inlineHelpText>
-        <label>Source Org Credential</label>
+        <label>Source Credential</label>
         <referenceTo>copado__Org__c</referenceTo>
+        <relationshipLabel>Artifacts</relationshipLabel>
         <relationshipName>Artifacts</relationshipName>
         <required>false</required>
         <trackHistory>false</trackHistory>
@@ -292,6 +305,20 @@ The org credential where the unmanaged package is created from.</inlineHelpText>
                 </value>
             </valueSetDefinition>
         </valueSet>
+    </fields>
+    <fields>
+        <fullName>copado__Pipeline__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Pipeline</label>
+        <referenceTo>copado__Deployment_Flow__c</referenceTo>
+        <relationshipLabel>Packages</relationshipLabel>
+        <relationshipName>Packages</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>copado__Sfdc_Login_Url__c</fullName>

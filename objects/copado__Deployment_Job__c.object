@@ -182,6 +182,7 @@
     <fields>
         <fullName>copado__Destination_Id__c</fullName>
         <deprecated>false</deprecated>
+        <description>Read only field used internally for system property replacement.</description>
         <externalId>false</externalId>
         <formula>CASESAFEID(copado__Destination_Org__r.copado__To_Org__r.copado__Environment__c)</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
@@ -270,6 +271,7 @@
     <fields>
         <fullName>copado__Git_Repository__c</fullName>
         <deprecated>false</deprecated>
+        <description>Read only field used internally for system property replacement.</description>
         <externalId>false</externalId>
         <formula>copado__Step__r.copado__Deployment__r.copado__Promotion__r.copado__Project__r.copado__Deployment_Flow__r.copado__Git_Repository__c</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
@@ -298,6 +300,7 @@
     <fields>
         <fullName>copado__Pipeline_Id__c</fullName>
         <deprecated>false</deprecated>
+        <description>Read only field used internally for system property replacement.</description>
         <externalId>false</externalId>
         <formula>IF(
 NOT(ISBLANK(copado__Step__r.copado__Deployment__r.copado__Promotion__r.copado__Project__r.copado__Deployment_Flow__c)),
@@ -315,6 +318,7 @@ CASESAFEID(copado__Step__r.copado__Deployment__r.copado__Promotion__r.copado__Re
     <fields>
         <fullName>copado__Source_Id__c</fullName>
         <deprecated>false</deprecated>
+        <description>Read only field used internally for system property replacement.</description>
         <externalId>false</externalId>
         <formula>CASESAFEID(copado__Step__r.copado__Deployment__r.copado__From_Org__r.copado__Environment__c)</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>

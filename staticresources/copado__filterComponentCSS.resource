@@ -41,6 +41,11 @@
     cursor: pointer;
 }
 
+.warning-icon {
+    color: #f29020;
+    margin: 4px 0 0 5px;
+}
+
 .filter-main-object li .custom-hr {
     margin: 1rem 0;
 }

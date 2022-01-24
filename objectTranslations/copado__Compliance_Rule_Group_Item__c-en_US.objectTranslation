@@ -10,4 +10,8 @@
         <name>copado__Compliance_Rule__c</name>
         <relationshipLabel><!-- Compliance Rule Group Items --></relationshipLabel>
     </fields>
+    <validationRules>
+        <errorMessage><!-- This compliance rule does not have any criteria. A compliance rule needs at least one valid criteria row in order to be added to a Compliance Rule Group. --></errorMessage>
+        <name>copado__RuleNeedsValidCriteriaToBeAddedToGroup</name>
+    </validationRules>
 </CustomObjectTranslation>

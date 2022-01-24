@@ -3,6 +3,11 @@
     <enableFeeds>false</enableFeeds>
     <externalSharingModel>Private</externalSharingModel>
     <fields>
+        <fullName>ActivityTeamId</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>ExternalResource</fullName>
         <trackHistory>false</trackHistory>
     </fields>

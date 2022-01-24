@@ -67,7 +67,9 @@ var globalSldsResourcePath = globalSldsResourcePath ? globalSldsResourcePath : u
             SVGUse = $copado('<use/>');
 
             SVGUse.attr('xlink:href', imageURL);
-            elem.prepend(SVG.append(SVGUse));
+            if(elem.find('svg').length === 0){
+                elem.prepend(SVG.append(SVGUse));
+            }
             elem.html(elem.html());
         }
     };

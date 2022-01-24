@@ -204,7 +204,6 @@
         <relatedList>copadoccmint__Field_Mapping__c.copadoccmint__Project__c</relatedList>
     </relatedLists>
     <relatedLists>
-        <fields>NAME</fields>
         <fields>copadoccmint__Salesforce_Record_Type_Name__c</fields>
         <fields>copadoccmint__Third_Party_Record_Type_Name__c</fields>
         <relatedList>copadoccmint__Record_Type_Mapping__c.copadoccmint__Project__c</relatedList>
