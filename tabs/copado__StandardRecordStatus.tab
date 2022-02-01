@@ -2,6 +2,6 @@
 <CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
     <description>Created by Lightning App Builder</description>
     <flexiPage>copado__StandardRecords</flexiPage>
-    <label>Standard Records</label>
+    <label>Copado Extensions</label>
     <motif>Custom98: Truck</motif>
 </CustomTab>

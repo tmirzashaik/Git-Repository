@@ -83,6 +83,10 @@ WARNING: Credits consumption will apply as a regular deployment since resource-w
         <name>copado__Org_Count__c</name>
     </fields>
     <fields>
+        <label><!-- Parent Id --></label>
+        <name>copado__ParentId__c</name>
+    </fields>
+    <fields>
         <label><!-- Read Only --></label>
         <name>copado__Read_Only__c</name>
     </fields>

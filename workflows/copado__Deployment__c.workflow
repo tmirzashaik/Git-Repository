@@ -37,6 +37,11 @@
             <operation>equals</operation>
             <value>Completed Successfully,Completed with Errors,Cancelled</value>
         </criteriaItems>
+        <criteriaItems>
+            <field>User.UserType</field>
+            <operation>notEqual</operation>
+            <value>Automated Process</value>
+        </criteriaItems>
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>
     <rules>

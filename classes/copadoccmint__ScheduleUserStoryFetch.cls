@@ -8,9 +8,13 @@
 global class ScheduleUserStoryFetch implements Schedulable {
     copado__Project__c project;
     Boolean isSprint;
+    Boolean isBulkSprint;
+    Integer chunkSize;
+    String pId;
     global ScheduleUserStoryFetch(Id pId, Boolean isSprint) {
         this.isSprint = isSprint;
-        project = [
+        this.pId = pId;
+        this.project = [
             SELECT
                 Id,
                 Name,
@@ -20,17 +24,40 @@ global class ScheduleUserStoryFetch implements Schedulable {
                 Enable_Logs__c,
                 Team_Info__c,
                 Project_External_Id__c,
-                Workspace_Id__c
+                Workspace_Id__c,
+                Sprint_Per_Batch_Chunk_Size__c
             FROM copado__Project__c
             WHERE Id = :pId
         ];
+        if (null != project.Sprint_Per_Batch_Chunk_Size__c) {
+            this.chunkSize = Integer.valueOf(project.Sprint_Per_Batch_Chunk_Size__c);
+        } else {
+            this.chunkSize = 50;
+        }
     }
 
     public void prepareSprints() {
-        IntegrationFactory.returnInstance(this.project.Copado_Integration_Setting__r.External_System__c).fetchSprints(this.project);
+        IntegrationFactory.returnInstance(project.Copado_Integration_Setting__r.External_System__c).fetchSprints(project);
     }
 
     global void execute(SchedulableContext sc) {
-        Database.executeBatch(new ExecuteUserStoryUpsert(this.project, this.isSprint), 200);
+        if (isSprint) {
+            List<copado__Sprint__c> sprints = [
+                SELECT Id, Name, External_Id__c
+                FROM copado__Sprint__c
+                WHERE copado__Project__c = :pId AND External_Id__c != NULL
+                ORDER BY copado__Start_Date__c ASC
+            ];
+            if (null != sprints && !sprints.isEmpty() && sprints.size() >= chunkSize) {
+                this.isBulkSprint = true;
+            } else {
+                this.isBulkSprint = false;
+            }
+        }
+        if (isSprint && isBulkSprint) {
+            Database.executeBatch(new ExecuteUserStoryFetch(project), chunkSize);
+        } else {
+            Database.executeBatch(new ExecuteUserStoryUpsert(project, isSprint), 200);
+        }
     }
 }

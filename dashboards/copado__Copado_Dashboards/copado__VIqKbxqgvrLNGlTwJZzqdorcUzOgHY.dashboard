@@ -141,6 +141,7 @@
                 <legendPosition>Bottom</legendPosition>
                 <report>copado__Copado_Change_Management/copado__CCM_Crrent_Sprint_More_info</report>
                 <showPercentage>false</showPercentage>
+                <showPicturesOnCharts>false</showPicturesOnCharts>
                 <showValues>true</showValues>
                 <sortBy>RowValueDescending</sortBy>
                 <useReportChart>false</useReportChart>
@@ -202,6 +203,7 @@
                 <legendPosition>Bottom</legendPosition>
                 <report>copado__Copado_Change_Management/copado__CCM_Current_Sprint_by_Developer</report>
                 <showPercentage>false</showPercentage>
+                <showPicturesOnCharts>false</showPicturesOnCharts>
                 <showValues>true</showValues>
                 <sortBy>RowValueDescending</sortBy>
                 <useReportChart>false</useReportChart>

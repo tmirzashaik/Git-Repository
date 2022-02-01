@@ -16,6 +16,7 @@ public virtual with sharing class JiraIntegrationConstants extends CommonIntegra
     protected final String ISSUE_TYPE = 'issuetype';
     protected final String SPRINTS_STRING = 'sprints';
     protected final String EMAIL_ADDRESS = 'emailAddress';
+    protected final String VALUE_KEYWORD = 'value';
     protected final String ERROR_MESSAGES_JSON = '"errorMessages"';
     protected final String ENCODING_TYPE = 'UTF-8';
 

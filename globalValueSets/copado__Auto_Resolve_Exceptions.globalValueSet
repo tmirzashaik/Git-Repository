@@ -30,6 +30,12 @@
         <default>false</default>
         <label>Layout</label>
     </customValue>
+    <customValue>
+        <fullName>CustomObject</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>CustomObject</label>
+    </customValue>
     <description>Metadata types to be excluded from the auto-resolve feature of Copado.</description>
     <masterLabel>Auto Resolve Exceptions</masterLabel>
     <sorted>false</sorted>

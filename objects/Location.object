@@ -215,6 +215,10 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>ShouldSyncWithOci</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
         <fullName>TimeZone</fullName>
         <trackHistory>false</trackHistory>
     </fields>

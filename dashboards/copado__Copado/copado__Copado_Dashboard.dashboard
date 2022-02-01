@@ -40,6 +40,7 @@
             <indicatorLowColor>#C25454</indicatorLowColor>
             <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
             <report>copado__Copado/copado__Scheduled_deployments</report>
+            <showPicturesOnTables>false</showPicturesOnTables>
             <sortBy>RowLabelAscending</sortBy>
         </components>
         <components>
@@ -54,6 +55,7 @@
             <indicatorLowColor>#C25454</indicatorLowColor>
             <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
             <report>copado__Copado/copado__Scheduled_Deployments_this_week</report>
+            <showPicturesOnTables>false</showPicturesOnTables>
             <sortBy>RowLabelAscending</sortBy>
         </components>
     </middleSection>
@@ -89,6 +91,7 @@
             <indicatorLowColor>#C25454</indicatorLowColor>
             <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
             <report>copado__Copado/copado__Steps_with_errors</report>
+            <showPicturesOnTables>false</showPicturesOnTables>
             <sortBy>RowLabelAscending</sortBy>
         </components>
     </rightSection>

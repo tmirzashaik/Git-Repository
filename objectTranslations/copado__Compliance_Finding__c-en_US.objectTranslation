@@ -15,7 +15,7 @@
         <name>copado__Rule_Error_Message__c</name>
     </fields>
     <fields>
-        <label><!-- Severity --></label>
+        <label><!-- Rule Severity --></label>
         <name>copado__Severity__c</name>
     </fields>
     <recordTypes>

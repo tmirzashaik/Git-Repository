@@ -48,6 +48,7 @@
                     <value>3</value>
                 </componentInstanceProperties>
                 <componentName>force:highlightsPanel</componentName>
+                <identifier>force_highlightsPanel</identifier>
             </componentInstance>
         </itemInstances>
         <mode>Replace</mode>
@@ -62,6 +63,7 @@
                     <value>required</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Name</fieldItem>
+                <identifier>RecordNameField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -71,6 +73,7 @@
                     <value>required</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.copado__Platform__c</fieldItem>
+                <identifier>RecordPlatform__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -80,6 +83,20 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.copado__Type__c</fieldItem>
+                <identifier>RecordType__cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldItem>Record.copado__Last_Refresh_Date__c</fieldItem>
+                <identifier>RecordLast_Refresh_Date__cField</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.copado__Type__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>Sandbox</rightValue>
+                    </criteria>
+                </visibilityRule>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -89,6 +106,7 @@
                     <value>readonly</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.CreatedById</fieldItem>
+                <identifier>RecordCreatedByIdField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-399a3bdd-4559-4656-8578-00a11edfb70b</name>
@@ -102,6 +120,7 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.OwnerId</fieldItem>
+                <identifier>RecordOwnerIdField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -111,6 +130,7 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.copado__Namespace__c</fieldItem>
+                <identifier>RecordNamespace__cField</identifier>
                 <visibilityRule>
                     <criteria>
                         <leftValue>{!Record.copado__Platform__c}</leftValue>
@@ -127,6 +147,7 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.copado__Org_ID__c</fieldItem>
+                <identifier>RecordOrg_ID__cField</identifier>
                 <visibilityRule>
                     <criteria>
                         <leftValue>{!Record.copado__Platform__c}</leftValue>
@@ -139,6 +160,7 @@
         <itemInstances>
             <fieldInstance>
                 <fieldItem>Record.copado__Run_all_tests__c</fieldItem>
+                <identifier>RecordRun_all_tests__cField</identifier>
                 <visibilityRule>
                     <criteria>
                         <leftValue>{!Record.copado__Platform__c}</leftValue>
@@ -155,6 +177,7 @@
                     <value>readonly</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.LastModifiedById</fieldItem>
+                <identifier>RecordLastModifiedByIdField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-3e90233f-40d5-44f8-bb2f-b614f3f29e91</name>
@@ -168,6 +191,7 @@
                     <value>Facet-399a3bdd-4559-4656-8578-00a11edfb70b</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:column</componentName>
+                <identifier>flexipage_column</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -177,6 +201,7 @@
                     <value>Facet-3e90233f-40d5-44f8-bb2f-b614f3f29e91</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:column</componentName>
+                <identifier>flexipage_column2</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-3f3a5028-3c07-4e07-82e6-7a8d0e143883</name>
@@ -190,6 +215,7 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.copado__Promotion_Default_Credential__c</fieldItem>
+                <identifier>RecordPromotion_Default_Credential__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -199,6 +225,7 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.copado__Validation_Promotion_Default_Credential__c</fieldItem>
+                <identifier>RecordValidation_Promotion_Default_Credential__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -208,6 +235,7 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.copado__Index_Back_Promotion_metadata__c</fieldItem>
+                <identifier>RecordIndex_Back_Promotion_metadata__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-1d9aaa38-0af2-48ba-b5bd-0a10e8bcec42</name>
@@ -221,6 +249,7 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.copado__Connection_Behavior__c</fieldItem>
+                <identifier>RecordConnection_Behavior__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -230,6 +259,7 @@
                     <value>readonly</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.copado__Latest_Deployment__c</fieldItem>
+                <identifier>RecordLatest_Deployment__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -239,6 +269,20 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.copado__Deployment_Automation_Override__c</fieldItem>
+                <identifier>RecordDeployment_Automation_Override__cField</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.copado__Platform__c}</leftValue>
+                        <operator>NE</operator>
+                        <rightValue>Salesforce</rightValue>
+                    </criteria>
+                </visibilityRule>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldItem>Record.copado__Deployment_Job_Template_Override__c</fieldItem>
+                <identifier>RecordDeployment_Job_Template_Override__cField</identifier>
                 <visibilityRule>
                     <criteria>
                         <leftValue>{!Record.copado__Platform__c}</leftValue>
@@ -251,6 +295,33 @@
         <itemInstances>
             <fieldInstance>
                 <fieldItem>Record.copado__Promotion_Override__c</fieldItem>
+                <identifier>RecordPromotion_Override__cField</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.copado__Platform__c}</leftValue>
+                        <operator>NE</operator>
+                        <rightValue>Salesforce</rightValue>
+                    </criteria>
+                </visibilityRule>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldItem>Record.copado__Promotion_Job_Template_Override__c</fieldItem>
+                <identifier>RecordPromotion_Job_Template_Override__cField</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.copado__Platform__c}</leftValue>
+                        <operator>NE</operator>
+                        <rightValue>Salesforce</rightValue>
+                    </criteria>
+                </visibilityRule>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldItem>Record.copado__CommitJobTemplateOverride__c</fieldItem>
+                <identifier>RecordCommitJobTemplateOverride__cField</identifier>
                 <visibilityRule>
                     <criteria>
                         <leftValue>{!Record.copado__Platform__c}</leftValue>
@@ -271,6 +342,7 @@
                     <value>Facet-1d9aaa38-0af2-48ba-b5bd-0a10e8bcec42</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:column</componentName>
+                <identifier>flexipage_column3</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -280,6 +352,7 @@
                     <value>Facet-6548003e-3b4f-48e1-ae59-6321f03586d0</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:column</componentName>
+                <identifier>flexipage_column4</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-eb053938-a3d9-43b6-beeb-26d93cde682f</name>
@@ -297,6 +370,7 @@
                     <value>Information</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:fieldSection</componentName>
+                <identifier>flexipage_fieldSection</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -310,6 +384,7 @@
                     <value>Pipeline Behavior</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:fieldSection</componentName>
+                <identifier>flexipage_fieldSection2</identifier>
             </componentInstance>
         </itemInstances>
         <mode>Replace</mode>
@@ -340,6 +415,7 @@
                     <value>true</value>
                 </componentInstanceProperties>
                 <componentName>force:relatedListSingleContainer</componentName>
+                <identifier>force_relatedListSingleContainer</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -365,6 +441,7 @@
                     <value>true</value>
                 </componentInstanceProperties>
                 <componentName>force:relatedListSingleContainer</componentName>
+                <identifier>force_relatedListSingleContainer2</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -390,6 +467,7 @@
                     <value>true</value>
                 </componentInstanceProperties>
                 <componentName>force:relatedListSingleContainer</componentName>
+                <identifier>force_relatedListSingleContainer3</identifier>
                 <visibilityRule>
                     <criteria>
                         <leftValue>{!Record.copado__Platform__c}</leftValue>
@@ -410,6 +488,7 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.copado__Run_all_tests__c</fieldItem>
+                <identifier>RecordRun_all_tests__cField2</identifier>
                 <visibilityRule>
                     <criteria>
                         <leftValue>{!Record.copado__Platform__c}</leftValue>
@@ -426,6 +505,7 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.copado__Current_Code_Coverage__c</fieldItem>
+                <identifier>RecordCurrent_Code_Coverage__cField</identifier>
                 <visibilityRule>
                     <criteria>
                         <leftValue>{!Record.copado__Platform__c}</leftValue>
@@ -446,6 +526,7 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.copado__Minimum_Apex_Test_Coverage__c</fieldItem>
+                <identifier>RecordMinimum_Apex_Test_Coverage__cField</identifier>
                 <visibilityRule>
                     <criteria>
                         <leftValue>{!Record.copado__Platform__c}</leftValue>
@@ -466,6 +547,7 @@
                     <value>Facet-979a9bcd-a45b-42ea-8d5e-e81c30f12f9d</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:column</componentName>
+                <identifier>flexipage_column7</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -475,6 +557,7 @@
                     <value>Facet-e39a9b96-5b2e-40b3-8ee5-5e8aaaf9251c</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:column</componentName>
+                <identifier>flexipage_column8</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-d66b2f56-549b-41a2-bc13-6436c8677348</name>
@@ -488,6 +571,7 @@
                     <value>readonly</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.copado__Current_SCA_Score__c</fieldItem>
+                <identifier>RecordCurrent_SCA_Score__cField</identifier>
                 <visibilityRule>
                     <criteria>
                         <leftValue>{!Record.copado__Platform__c}</leftValue>
@@ -508,6 +592,7 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.copado__Maximum_SCA_Score__c</fieldItem>
+                <identifier>RecordMaximum_SCA_Score__cField</identifier>
                 <visibilityRule>
                     <criteria>
                         <leftValue>{!Record.copado__Platform__c}</leftValue>
@@ -528,6 +613,7 @@
                     <value>Facet-a6a9089a-f1b0-4dfb-b9f4-6b925d478452</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:column</componentName>
+                <identifier>flexipage_column9</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -537,6 +623,7 @@
                     <value>Facet-003c39f8-eeb6-48d1-9b98-c6048dfcd133</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:column</componentName>
+                <identifier>flexipage_column10</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-b85523e1-ad5d-474d-b9a8-7ad7fdb750bc</name>
@@ -550,6 +637,7 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.copado__Compliance_Rule_Group__c</fieldItem>
+                <identifier>RecordCompliance_Rule_Group__cField</identifier>
                 <visibilityRule>
                     <criteria>
                         <leftValue>{!Record.copado__Platform__c}</leftValue>
@@ -566,6 +654,7 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.copado__Compliance_Scan_Events__c</fieldItem>
+                <identifier>RecordCompliance_Scan_Events__cField</identifier>
                 <visibilityRule>
                     <criteria>
                         <leftValue>{!Record.copado__Platform__c}</leftValue>
@@ -586,6 +675,7 @@
                     <value>readonly</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.copado__Compliance_Status__c</fieldItem>
+                <identifier>RecordCompliance_Status__cField</identifier>
                 <visibilityRule>
                     <criteria>
                         <leftValue>{!Record.copado__Platform__c}</leftValue>
@@ -602,6 +692,7 @@
                     <value>readonly</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.copado__Last_Compliance_Scan_Date__c</fieldItem>
+                <identifier>RecordLast_Compliance_Scan_Date__cField</identifier>
                 <visibilityRule>
                     <criteria>
                         <leftValue>{!Record.copado__Platform__c}</leftValue>
@@ -622,6 +713,7 @@
                     <value>Facet-45c34725-396b-4451-b720-06ae22db31f7</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:column</componentName>
+                <identifier>flexipage_column11</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -631,6 +723,7 @@
                     <value>Facet-5dde8b00-7ffc-424b-828a-6994b97de012</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:column</componentName>
+                <identifier>flexipage_column12</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-0278f65e-ac01-4aa5-9d3c-2ad15336fd6d</name>
@@ -648,6 +741,7 @@
                     <value>Code Coverage</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:fieldSection</componentName>
+                <identifier>flexipage_fieldSection4</identifier>
                 <visibilityRule>
                     <criteria>
                         <leftValue>{!Record.copado__Platform__c}</leftValue>
@@ -668,6 +762,7 @@
                     <value>Static Code Analysis</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:fieldSection</componentName>
+                <identifier>flexipage_fieldSection5</identifier>
                 <visibilityRule>
                     <criteria>
                         <leftValue>{!Record.copado__Platform__c}</leftValue>
@@ -688,6 +783,7 @@
                     <value>Compliance</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:fieldSection</componentName>
+                <identifier>flexipage_fieldSection6</identifier>
                 <visibilityRule>
                     <criteria>
                         <leftValue>{!Record.copado__Platform__c}</leftValue>
@@ -720,6 +816,7 @@
                     <value>true</value>
                 </componentInstanceProperties>
                 <componentName>force:relatedListSingleContainer</componentName>
+                <identifier>force_relatedListSingleContainer4</identifier>
                 <visibilityRule>
                     <criteria>
                         <leftValue>{!Record.copado__Platform__c}</leftValue>
@@ -752,6 +849,7 @@
                     <value>true</value>
                 </componentInstanceProperties>
                 <componentName>force:relatedListSingleContainer</componentName>
+                <identifier>force_relatedListSingleContainer5</identifier>
                 <visibilityRule>
                     <criteria>
                         <leftValue>{!Record.copado__Platform__c}</leftValue>
@@ -784,6 +882,7 @@
                     <value>true</value>
                 </componentInstanceProperties>
                 <componentName>force:relatedListSingleContainer</componentName>
+                <identifier>force_relatedListSingleContainer6</identifier>
                 <visibilityRule>
                     <criteria>
                         <leftValue>{!Record.copado__Platform__c}</leftValue>
@@ -804,6 +903,7 @@
                     <value>&lt;p&gt;Quality Gates are currently not supported for this type of Environment.&lt;/p&gt;</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:richText</componentName>
+                <identifier>flexipage_richText</identifier>
                 <visibilityRule>
                     <criteria>
                         <leftValue>{!Record.copado__Platform__c}</leftValue>
@@ -840,33 +940,7 @@
                     <value>true</value>
                 </componentInstanceProperties>
                 <componentName>force:relatedListSingleContainer</componentName>
-                <visibilityRule>
-                    <criteria>
-                        <leftValue>{!Record.copado__Platform__c}</leftValue>
-                        <operator>EQUAL</operator>
-                        <rightValue>Salesforce</rightValue>
-                    </criteria>
-                </visibilityRule>
-            </componentInstance>
-        </itemInstances>
-        <itemInstances>
-            <componentInstance>
-                <componentInstanceProperties>
-                    <name>decorate</name>
-                    <value>true</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>richTextValue</name>
-                    <value>&lt;p&gt;There are no Environment Variables for this type of Environment.&lt;/p&gt;</value>
-                </componentInstanceProperties>
-                <componentName>flexipage:richText</componentName>
-                <visibilityRule>
-                    <criteria>
-                        <leftValue>{!Record.copado__Platform__c}</leftValue>
-                        <operator>NE</operator>
-                        <rightValue>Salesforce</rightValue>
-                    </criteria>
-                </visibilityRule>
+                <identifier>force_relatedListSingleContainer7</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-91a34ad5-ed84-426f-856e-c88e4e8d4d25</name>
@@ -896,6 +970,7 @@
                     <value>true</value>
                 </componentInstanceProperties>
                 <componentName>force:relatedListSingleContainer</componentName>
+                <identifier>force_relatedListSingleContainer8</identifier>
                 <visibilityRule>
                     <criteria>
                         <leftValue>{!Record.copado__Platform__c}</leftValue>
@@ -928,6 +1003,7 @@
                     <value>true</value>
                 </componentInstanceProperties>
                 <componentName>force:relatedListSingleContainer</componentName>
+                <identifier>force_relatedListSingleContainer9</identifier>
                 <visibilityRule>
                     <criteria>
                         <leftValue>{!Record.copado__Platform__c}</leftValue>
@@ -948,6 +1024,7 @@
                     <value>&lt;p&gt;There are no External CI Jobs for this type of Environment.&lt;/p&gt;</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:richText</componentName>
+                <identifier>flexipage_richText2</identifier>
                 <visibilityRule>
                     <criteria>
                         <leftValue>{!Record.copado__Platform__c}</leftValue>
@@ -984,33 +1061,7 @@
                     <value>true</value>
                 </componentInstanceProperties>
                 <componentName>force:relatedListSingleContainer</componentName>
-                <visibilityRule>
-                    <criteria>
-                        <leftValue>{!Record.copado__Platform__c}</leftValue>
-                        <operator>NE</operator>
-                        <rightValue>Salesforce</rightValue>
-                    </criteria>
-                </visibilityRule>
-            </componentInstance>
-        </itemInstances>
-        <itemInstances>
-            <componentInstance>
-                <componentInstanceProperties>
-                    <name>decorate</name>
-                    <value>true</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>richTextValue</name>
-                    <value>&lt;p&gt;&lt;span style=&quot;color: rgb(107, 109, 112);&quot;&gt;System Properties are currently not supported for this type of Environment.&lt;/span&gt;&lt;/p&gt;</value>
-                </componentInstanceProperties>
-                <componentName>flexipage:richText</componentName>
-                <visibilityRule>
-                    <criteria>
-                        <leftValue>{!Record.copado__Platform__c}</leftValue>
-                        <operator>EQUAL</operator>
-                        <rightValue>Salesforce</rightValue>
-                    </criteria>
-                </visibilityRule>
+                <identifier>force_relatedListSingleContainer10</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-973df545-4218-4870-85e6-01917e967795</name>
@@ -1032,6 +1083,7 @@
                     <value>Standard.Tab.detail</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:tab</componentName>
+                <identifier>detailTab</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -1045,6 +1097,7 @@
                     <value>Pipelines</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:tab</componentName>
+                <identifier>customTab</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -1058,6 +1111,7 @@
                     <value>Quality Gates</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:tab</componentName>
+                <identifier>customTab2</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -1071,6 +1125,7 @@
                     <value>Environment Variables</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:tab</componentName>
+                <identifier>customTab3</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -1084,6 +1139,7 @@
                     <value>External CI</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:tab</componentName>
+                <identifier>customTab4</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -1097,6 +1153,7 @@
                     <value>System Properties</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:tab</componentName>
+                <identifier>customTab5</identifier>
             </componentInstance>
         </itemInstances>
         <mode>Replace</mode>
@@ -1111,6 +1168,7 @@
                     <value>maintabs</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:tabset</componentName>
+                <identifier>flexipage_tabset</identifier>
             </componentInstance>
         </itemInstances>
         <mode>Replace</mode>
@@ -1141,6 +1199,7 @@
                     <value>true</value>
                 </componentInstanceProperties>
                 <componentName>force:relatedListSingleContainer</componentName>
+                <identifier>force_relatedListSingleContainer11</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -1166,6 +1225,7 @@
                     <value>true</value>
                 </componentInstanceProperties>
                 <componentName>force:relatedListSingleContainer</componentName>
+                <identifier>force_relatedListSingleContainer12</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -1191,6 +1251,33 @@
                     <value>true</value>
                 </componentInstanceProperties>
                 <componentName>force:relatedListSingleContainer</componentName>
+                <identifier>force_relatedListSingleContainer13</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>parentFieldApiName</name>
+                    <value>copado__Environment__c.Id</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>relatedListApiName</name>
+                    <value>copado__Installed_Package_Versions__r</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>relatedListComponentOverride</name>
+                    <value>NONE</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>rowsToDisplay</name>
+                    <value>10</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>showActionBar</name>
+                    <value>true</value>
+                </componentInstanceProperties>
+                <componentName>force:relatedListSingleContainer</componentName>
+                <identifier>force_relatedListSingleContainer14</identifier>
             </componentInstance>
         </itemInstances>
         <mode>Replace</mode>
