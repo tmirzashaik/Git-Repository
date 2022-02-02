@@ -11,6 +11,7 @@ global class ExecuteUserStoryUpsert extends CommonIntegrationConstants implement
     global copado__Project__c gProject;
     private Boolean isSprint;
     List<copado__User_Story__c> userStories2Upsert;
+    private List<Map<String, String>> userStoryList;
     //Field mapping values between salesforce and third party platform fields under related project
     global Map<String, String> fieldMap {
         get {
@@ -43,17 +44,28 @@ global class ExecuteUserStoryUpsert extends CommonIntegrationConstants implement
         }
         set;
     }
-    
+
     //constructor to have the project via schedule class
     global ExecuteUserStoryUpsert(copado__Project__c proParam, Boolean isSprint) {
         gProject = proParam;
         this.isSprint = isSprint;
+        userStoryList = new List<Map<String, String>>();
+    }
+    //constructor to have the project via schedule class with User Story records
+    global ExecuteUserStoryUpsert(copado__Project__c proParam, List<Map<String, String>> userStoryListParam) {
+        gProject = proParam;
+        this.isSprint = true;
+        userStoryList = userStoryListParam;
     }
     //Finds related instance based on external system to use via factory pattern, fetches and parses the JSON and return to execute method
     global Iterable<Object> start(Database.BatchableContext BC) {
-        return new CallIterable(
-            IntegrationFactory.returnInstance(gProject.Copado_Integration_Setting__r.External_System__c).fetchRecords(gProject, this.isSprint)
-        );
+        if (null != userStoryList && !userStoryList.isEmpty()) {
+            return new CallIterable(userStoryList);
+        } else {
+            return new CallIterable(
+                IntegrationFactory.returnInstance(gProject.Copado_Integration_Setting__r.External_System__c).fetchRecords(gProject, isSprint)
+            );
+        }
     }
 
     global void execute(Database.BatchableContext BC, List<Object> scope) {
@@ -67,14 +79,17 @@ global class ExecuteUserStoryUpsert extends CommonIntegrationConstants implement
                 fieldName = fieldName.toLowerCase();
                 //puts the value on sf Object if the current user story item value Map stores current field Map keyset
                 if (tempMap.containsKey(fieldMap.get(fieldName))) {
-                    if(fieldName == COPADO_RELEASE && CopadoCCMutilities.returnCastedValue(tempMap.get(fieldMap.get(fieldName)),fieldName) != null){
+                    if (
+                        fieldName == COPADO_RELEASE &&
+                        CopadoCCMutilities.returnCastedValue(tempMap.get(fieldMap.get(fieldName)), fieldName) != null
+                    ) {
                         Sobject releaseObj = Schema.getGlobalDescribe().get(fieldName).newSObject();
-                        releaseObj.put(EXTERNAL_ID, CopadoCCMutilities.returnCastedValue(tempMap.get(fieldMap.get(fieldName)),fieldName));
+                        releaseObj.put(EXTERNAL_ID, CopadoCCMutilities.returnCastedValue(tempMap.get(fieldMap.get(fieldName)), fieldName));
                         sobj.putsObject(copado__User_Story__c.copado__Release__c.getDescribe().getSObjectField(), releaseObj);
-                    } else if(fieldName == RECORD_TYPE_ID && !recordTypeMap.isEmpty()){
+                    } else if (fieldName == RECORD_TYPE_ID && !recordTypeMap.isEmpty()) {
                         String jiraType = tempMap.get(fieldMap.get(fieldName));
                         String sfType = recordTypeMap.get(jiraType);
-                        if(null != sfType){
+                        if (null != sfType) {
                             Id sfTypeId = UserStoryRecordTypeMap.get(sfType);
                             sobj.put(fieldName, sfTypeId);
                         }

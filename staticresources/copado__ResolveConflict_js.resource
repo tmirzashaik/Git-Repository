@@ -165,62 +165,70 @@ var conversionFunc = conversionFunc || {},
             $copado('[cType="' + currentMode + '"]').addClass('slds-button_brand');
         } else $copado('[cType="xml"]').addClass('slds-button_brand');
 
-        if (att2Res || (attSource.length > 0 && attTarget.length > 0)) {
+        if (att2Res || (attSource.length > 0 && attTarget.length > 0) || (isRollback && preSourceRollback && preTargetRollback)) {
             var attach = att2Res.length > 0 ? getAttachmentById(config.parentId, att2Res) : '';
             if (!attach && !bundleFlag) {
-                bundleSource = unzip_Decode(attSource);
-                bundleTarget = unzip_Decode(attTarget);
-                if ((bundleSource[1].length == 2 || (bundleSource[1].length == 3 && bundleSource[1][1].indexOf('meta.xml') > -1)) && !attach) {
-                    preSource[0] =
-                        Object.keys(bundleSource[0].files)[0] != 'package.xml'
-                            ? bundleSource[0].file(Object.keys(bundleSource[0].files)[0]).asText()
-                            : '';
-                    preSource[1] = bundleSource[1][0];
-                    preTarget[0] =
-                        Object.keys(bundleTarget[0].files)[0] != 'package.xml'
-                            ? bundleTarget[0].file(Object.keys(bundleTarget[0].files)[0]).asText()
-                            : '';
-                    preTarget[1] = bundleTarget[1][0];
-                } else {
-                    bundleFlag = true;
-                    modalOperations.showFileModal();
-                    $copado('.slds-modal__content#modal-content-id-1').prepend('<div id="fs2append"></div>');
-
-                    for (var i = 0; i < bundleSource[1].length; i++) {
-                        if (bundleSource[1][i].toLowerCase() != 'package.xml') {
-                            /*used single quotes instead of ` since VF acts weird and puts js code directly to the page as visible*/
-                            $copado('[id="fs2append"]').append(
-                                '<div class="slds-card__header slds-grid" style="padding: 0 0 0 0;margin: 0 0 .15rem;"><header style="color:black !important;' +
-                                    (bundleSource[0].file(bundleSource[1][i]).asText() != bundleTarget[0].file(bundleSource[1][i]).asText()
-                                        ? 'background-color: #f4f7fa !important;'
-                                        : 'background-color: #FFF !important;') +
-                                    '" class="rectangle slds-media slds-media_center slds-has-flexi-truncate"><div class="slds-media__body"><h2><span style="margin-left: 1%;" class="slds-text-heading_small aura-bundle-page-template">' +
-                                    bundleSource[1][i] +
-                                    '</span></h2></div>' +
-                                    (bundleSource[0].file(bundleSource[1][i]).asText() != bundleTarget[0].file(bundleSource[1][i]).asText()
-                                        ? '<div class="aura-bundle-view-button slds-no-flex"><div class="slds-form-element__control"><div class="slds-radio_button-group"><span class="slds-button slds-radio_button" onclick="modalOperations.renderBundleSelection(\'' +
-                                          bundleSource[1][i] +
-                                          '\');"><input id="autoResolveButton-' +
-                                          i +
-                                          '" name="radio-' +
-                                          i +
-                                          '"  type="radio" value="on"><label class="slds-radio_button__label slds-button slds-button_neutral" for="autoResolveButton-' +
-                                          i +
-                                          '"><span class="slds-radio_faux" >' +
-                                          viewDifferences +
-                                          '</span></label></span></div> </div></div>'
-                                        : '<a href="#" onclick="modalOperations.renderBundleSelection(\'' +
-                                          bundleSource[1][i] +
-                                          '\');">' +
-                                          viewFile +
-                                          '</a>') +
-                                    '</header></div><div class="slds-card__body"></div><footer class="slds-card__footer"></footer>'
-                            );
-                        }
+                if (isRollback) {
+                    preSource = preSourceRollback;
+                    preTarget = preTargetRollback;
+                    if(preTarget && preTarget[0] === 'PREVIEW NOT AVAILABLE'){
+                        panes = 1;
                     }
-                    returnFlag = true;
                 }
+                else{
+                    bundleSource = unzip_Decode(attSource);
+                    bundleTarget = unzip_Decode(attTarget);
+                    if ((bundleSource[1].length == 2 || (bundleSource[1].length == 3 && bundleSource[1][1].indexOf('meta.xml') > -1)) && !attach) {
+                        preSource[0] =
+                            Object.keys(bundleSource[0].files)[0] != 'package.xml'
+                                ? bundleSource[0].file(Object.keys(bundleSource[0].files)[0]).asText()
+                                : '';
+                        preSource[1] = bundleSource[1][0];
+                        preTarget[0] =
+                            Object.keys(bundleTarget[0].files)[0] != 'package.xml'
+                                ? bundleTarget[0].file(Object.keys(bundleTarget[0].files)[0]).asText()
+                                : '';
+                        preTarget[1] = bundleTarget[1][0];
+                    } else {
+                        bundleFlag = true;
+                        modalOperations.showFileModal();
+                        $copado('.slds-modal__content#modal-content-id-1').prepend('<div id="fs2append"></div>');
 
+                        for (var i = 0; i < bundleSource[1].length; i++) {
+                            if (bundleSource[1][i].toLowerCase() != 'package.xml') {
+                                /*used single quotes instead of ` since VF acts weird and puts js code directly to the page as visible*/
+                                $copado('[id="fs2append"]').append(
+                                    '<div class="slds-card__header slds-grid" style="padding: 0 0 0 0;margin: 0 0 .15rem;"><header style="color:black !important;' +
+                                        (bundleSource[0].file(bundleSource[1][i]).asText() != bundleTarget[0].file(bundleSource[1][i]).asText()
+                                            ? 'background-color: #f4f7fa !important;'
+                                            : 'background-color: #FFF !important;') +
+                                        '" class="rectangle slds-media slds-media_center slds-has-flexi-truncate"><div class="slds-media__body"><h2><span style="margin-left: 1%;" class="slds-text-heading_small aura-bundle-page-template">' +
+                                        bundleSource[1][i] +
+                                        '</span></h2></div>' +
+                                        (bundleSource[0].file(bundleSource[1][i]).asText() != bundleTarget[0].file(bundleSource[1][i]).asText()
+                                            ? '<div class="aura-bundle-view-button slds-no-flex"><div class="slds-form-element__control"><div class="slds-radio_button-group"><span class="slds-button slds-radio_button" onclick="modalOperations.renderBundleSelection(\'' +
+                                            bundleSource[1][i] +
+                                            '\');"><input id="autoResolveButton-' +
+                                            i +
+                                            '" name="radio-' +
+                                            i +
+                                            '"  type="radio" value="on"><label class="slds-radio_button__label slds-button slds-button_neutral" for="autoResolveButton-' +
+                                            i +
+                                            '"><span class="slds-radio_faux" >' +
+                                            viewDifferences +
+                                            '</span></label></span></div> </div></div>'
+                                            : '<a href="#" onclick="modalOperations.renderBundleSelection(\'' +
+                                            bundleSource[1][i] +
+                                            '\');">' +
+                                            viewFile +
+                                            '</a>') +
+                                        '</header></div><div class="slds-card__body"></div><footer class="slds-card__footer"></footer>'
+                                );
+                            }
+                        }
+                        returnFlag = true;
+                    }
+                }
                 preFlag = true;
             }
             if (((attach && attach.Body.length > 0) || preFlag) && !returnFlag) {
@@ -261,6 +269,7 @@ var conversionFunc = conversionFunc || {},
                         format = currentMode;
                         offsetAmount = 30;
                     } else {
+                        currentMode = 'xml';
                         $copado('#xmlJson').css('display', 'none');
                     }
 
@@ -291,16 +300,16 @@ var conversionFunc = conversionFunc || {},
                     });
 
                     $copado('.CodeMirror-merge-editor').prepend(
-                        '<div class="panel top" style="background-color:white;"><center><div id="resolutionToolTip" class="slds-popover slds-popover_tooltip slds-nubbin_top-left slds-is-absolute slds-hide toolTipTopHeight" role="tooltip"><div class="slds-popover__body"><div><span>'+resolutionToolTip+'</span></div></div></div><span>' +
-                            (attach ? resolution : source + jqxdatatable_config.data.orgName) +
-                            '</span><div onmouseenter="$copado(\'#resolutionToolTip\').removeClass(\'slds-hide\')" onmouseleave="$copado(\'#resolutionToolTip\').addClass(\'slds-hide\')" class="slds-icon_container slds-icon__svg--default slds-p-left_xx-small informationIcon"><svg class="slds-button__icon"><use xlink:href="/_slds/icons/utility-sprite/svg/symbols.svg#info"></use></svg></div>'+
-                            '</center></div>'
+                        '<div class="panel top" style="background-color:white;"><center><div id="resolutionToolTip" class="slds-popover slds-popover_tooltip slds-nubbin_top-left slds-is-absolute slds-hide toolTipTopHeight" role="tooltip"><div class="slds-popover__body"><div><span>' + resolutionToolTip + '</span></div></div></div><span>' +
+                        (attach ? resolution +
+                            '</span><div onmouseenter="$copado(\'#resolutionToolTip\').removeClass(\'slds-hide\')" onmouseleave="$copado(\'#resolutionToolTip\').addClass(\'slds-hide\')" class="slds-icon_container slds-icon__svg--default slds-p-left_xx-small informationIcon"><svg class="slds-button__icon"><use xlink:href="/_slds/icons/utility-sprite/svg/symbols.svg#info"></use></svg></div>' +
+                            '</center></div>' : source + jqxdatatable_config.data.orgName)
                     );
                     $copado('.CodeMirror-merge-pane-rightmost').prepend(
-                        '<div class="panel top" style="background-color:white;"><center><div id="featureToolTip" class="slds-popover slds-popover_tooltip slds-nubbin_top slds-is-absolute slds-hide toolTipTopHeight" role="tooltip"><div class="slds-popover__body"><div><span>'+featureToolTip+'</span></div></div></div><span>' +
-                            (attach ? featureBranch : target + jqxdatatable_config.data.targetOrgName) + 
-                            '</span><div onmouseenter="$copado(\'#featureToolTip\').removeClass(\'slds-hide\')" onmouseleave="$copado(\'#featureToolTip\').addClass(\'slds-hide\')" class="slds-icon_container slds-icon__svg--default slds-p-left_xx-small informationIcon"><svg class="slds-button__icon"><use xlink:href="/_slds/icons/utility-sprite/svg/symbols.svg#info"></use></svg></div>'+
-                            '</center></div>'
+                        '<div class="panel top" style="background-color:white;"><center><div id="featureToolTip" class="slds-popover slds-popover_tooltip slds-nubbin_top slds-is-absolute slds-hide toolTipTopHeight" role="tooltip"><div class="slds-popover__body"><div><span>' + featureToolTip + '</span></div></div></div><span>' +
+                        (attach ? featureBranch +
+                            '</span><div onmouseenter="$copado(\'#featureToolTip\').removeClass(\'slds-hide\')" onmouseleave="$copado(\'#featureToolTip\').addClass(\'slds-hide\')" class="slds-icon_container slds-icon__svg--default slds-p-left_xx-small informationIcon"><svg class="slds-button__icon"><use xlink:href="/_slds/icons/utility-sprite/svg/symbols.svg#info"></use></svg></div>' +
+                            '</center></div>' : target + jqxdatatable_config.data.targetOrgName)
                     );
                     if ($copado('.CodeMirror-merge-left').length > 0) {
                         $copado('.CodeMirror-merge-left').prepend(
@@ -318,6 +327,7 @@ var conversionFunc = conversionFunc || {},
                         ) + 19;
                     $copado('.CodeMirror-merge-gap').css('height', gapSize);
                 } else {
+                    currentMode = 'xml';
                     $copado('#xmlJson').css('display', 'none');
 
                     CodeMirror.defineMode('highlightSearch', function(config, parserConfig) {
@@ -388,8 +398,13 @@ var conversionFunc = conversionFunc || {},
                 }
             }
             usName = val.slice(val.indexOf('>>>>>>>'), val.indexOf(usName) + usName.length); //'>>>>>>> feature/'+usName;
+            
+            var usNameWithMultiLineBreaks = val.match(usName + '(\r\n)');
+            var usNameWithLineBreaks = usNameWithMultiLineBreaks ? usName+ '\r\n' : usName+ val.charAt(val.indexOf(usName) + usName.length);
+            
             while (val.indexOf(usName) > -1 && usName && usName.length > 0) {
-                val = (val.slice(0, val.indexOf('=======')) + val.slice(val.indexOf(usName) + usName.length, val.length)).replace('<<<<<<< HEAD', '');
+                // find a new line character either \r or \n and append to the end to truncate the values
+                val = (val.slice(0, val.indexOf('=======')) + val.slice(val.indexOf(usName) + usNameWithLineBreaks.length, val.length)).replace(/<<<<<<< HEAD(\r\n|\n|\r)/, '');
             }
 
             var returnVal = format == 'json' ? conversionFunc.json2yaml(parseOperations.convertXml2formattedJSON(val)) : val;
@@ -402,11 +417,15 @@ var conversionFunc = conversionFunc || {},
                     val = val.replace(/(^[ \t]*\n)/gm, '');
                 }
             }
+            var usRegex = new RegExp(usName + '(\r\n|\n|\r)');
+            
+            var multiLineBreaks = val.match('=======' + '(\r\n)');
+            var conflictSperatorLineBreaks = multiLineBreaks ? '======='+ '\r\n' : '======='+ val.charAt(val.indexOf(usName) + usName.length);
+            
             while (val.indexOf(usName) > -1 && val.indexOf('<<<<<<< HEAD') > -1) {
-                val = (val.slice(0, val.indexOf('<<<<<<< HEAD')) + val.slice(val.indexOf('=======') + '======='.length, val.length)).replace(
-                    usName,
-                    ''
-                );
+                // find a new line character either \r or \n and append to the end to truncate the values
+                val = val.slice(0, val.indexOf('<<<<<<< HEAD')) + val.slice(val.indexOf('=======') + conflictSperatorLineBreaks.length, val.length);
+                val = val.replace(usRegex, '');
             }
             var returnVal = format == 'json' ? conversionFunc.json2yaml(parseOperations.convertXml2formattedJSON(val)) : val;
             return unicodeReplacer(returnVal);
@@ -672,6 +691,48 @@ var conversionFunc = conversionFunc || {},
         return param.length != '' ? JSON.stringify(xmlToJson(new DOMParser().parseFromString(param, 'text/xml')), null, '\t') : '';
     };
     parseOperations.convertJSON2formattedXml = function(param) {
-        return formatXml(json2Xml(JSON.parse(param)));
+        return formatXml(jsonToXml(JSON.parse(param)));
+    };
+    jsonToXml = function (o, tab) {
+        var toXml = function (v, name, ind) {
+            var xml = "";
+            if (v instanceof Array) {
+                for (var i = 0, n = v.length; i < n; i++)
+                    xml += ind + toXml(v[i], name, ind + "\t") + "\n";
+            }
+            else if (typeof (v) == "object") {
+                var hasChild = false;
+                xml += ind + "<" + name;
+                for (var m in v) {
+                    if (m.charAt(0) == "@") {
+                        for (var j in v[m]) {
+                            xml += " " + j + "=\"" + v[m][j] + "\"";
+                        }
+                    }
+                    else
+                        hasChild = true;
+                }
+                xml += hasChild ? ">" : "/>";
+                if (hasChild) {
+                    for (var m in v) {
+                        if (m == "#text")
+                            xml += v[m];
+                        else if (m == "#cdata")
+                            xml += "<![CDATA[" + v[m] + "]]>";
+                        else if (m.charAt(0) != "@")
+                            xml += toXml(v[m], m, ind + "\t");
+                    }
+                    xml += (xml.charAt(xml.length - 1) == "\n" ? ind : "") + "</" + name + ">";
+                }
+            }
+            else {
+                xml += ind + "<" + name + ">" + v.toString() + "</" + name + ">";
+            }
+            return xml;
+        }, xml = "";
+        for (var m in o) {
+            xml += toXml(o[m], m, "");
+        }
+        return tab ? xml.replace(/\t/g, tab) : xml.replace(/\t|\n/g, "");
     };
 })(parseOperations);

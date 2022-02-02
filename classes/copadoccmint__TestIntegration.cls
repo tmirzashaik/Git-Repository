@@ -36,6 +36,52 @@ private class TestIntegration {
         );
         insert new List<copado__Project__c>{ pro1, pro2 };
 
+        Record_Type_Mapping__c rtm1 = new Record_Type_Mapping__c(
+            Project__c = pro1.id,
+            Salesforce_Record_Type_Name__c = 'Bug',
+            Third_Party_Record_Type_Name__c = 'Bug'
+        );
+
+        Record_Type_Mapping__c rtm2 = new Record_Type_Mapping__c(
+            Project__c = pro1.id,
+            Salesforce_Record_Type_Name__c = 'User Story',
+            Third_Party_Record_Type_Name__c = 'Sub-task'
+        );
+
+        Record_Type_Mapping__c rtm3 = new Record_Type_Mapping__c(
+            Project__c = pro1.id,
+            Salesforce_Record_Type_Name__c = 'User Story',
+            Third_Party_Record_Type_Name__c = 'Story'
+        );
+
+        Record_Type_Mapping__c rtm4 = new Record_Type_Mapping__c(
+            Project__c = pro1.id,
+            Salesforce_Record_Type_Name__c = 'Investigation',
+            Third_Party_Record_Type_Name__c = 'Bug'
+        );
+        insert new List<Record_Type_Mapping__c>{ rtm1, rtm2, rtm3, rtm4 };
+        Field_Mapping__c fmJira1 = new Field_Mapping__c(
+            Exclude_from_su__c = false,
+            Exclude_from_tpu__c = false,
+            Project__c = pro1.id,
+            Salesforce_Field_Name__c = 'copado__Story_Points_SFDC__c',
+            Third_Party_Field_Name__c = 'storypoints'
+        );
+        Field_Mapping__c fmJira2 = new Field_Mapping__c(
+            Exclude_from_su__c = false,
+            Exclude_from_tpu__c = false,
+            Project__c = pro1.id,
+            Salesforce_Field_Name__c = 'copado__Close_Date__c',
+            Third_Party_Field_Name__c = 'closedate'
+        );
+
+        Field_Mapping__c fmJira3 = new Field_Mapping__c(
+            Exclude_from_su__c = false,
+            Exclude_from_tpu__c = false,
+            Project__c = pro1.id,
+            Salesforce_Field_Name__c = 'copado__Latest_Commit_Date__c',
+            Third_Party_Field_Name__c = 'commitdate'
+        );
         Field_Mapping__c fm1 = new Field_Mapping__c(
             Exclude_from_su__c = false,
             Exclude_from_tpu__c = false,
@@ -64,7 +110,7 @@ private class TestIntegration {
             Exclude_from_su__c = false,
             Exclude_from_tpu__c = false,
             Project__c = pro1.id,
-            Salesforce_Field_Name__c = 'copado__userStory_Role__c',
+            Salesforce_Field_Name__c = 'RecordTypeId',
             Target_Field_Type__c = 'object',
             Third_Party_Field_Name__c = 'issuetype'
         );
@@ -190,7 +236,30 @@ private class TestIntegration {
             Target_Field_Type__c = 'string',
             Third_Party_Field_Name__c = 'sprintId'
         );
-        insert new List<Field_Mapping__c>{ fm1, fm2, fm3, fm4, fm5, fm6, fm7, fm8, fm8_2, fm9, fm10, fm11, fm12, fm13, fm14, fm15, fm16, fm17, fm18 };
+        insert new List<Field_Mapping__c>{
+            fm1,
+            fm2,
+            fm3,
+            fm4,
+            fm5,
+            fm6,
+            fm7,
+            fm8,
+            fm8_2,
+            fm9,
+            fm10,
+            fm11,
+            fm12,
+            fm13,
+            fm14,
+            fm15,
+            fm16,
+            fm17,
+            fm18,
+            fmJira1,
+            fmJira2,
+            fmJira3
+        };
 
         copado__User_Story__c us1 = new copado__User_Story__c(
             copado__project__c = pro1.id,
@@ -394,5 +463,134 @@ private class TestIntegration {
         Test.stopTest();
 
         System.assertEquals(2, [SELECT COUNT() FROM copado__User_story__c WHERE copado__Sprint__c != NULL]);
+    }
+    @IsTest
+    static void testMethodToFetchBulkSprints_JIRA() {
+        copado__Project__c project = [
+            SELECT
+                Id,
+                Name,
+                Copado_Integration_Setting__r.External_System__c,
+                Copado_Integration_Setting__r.Named_Credential__c,
+                JQL_Extended_Filter__c,
+                Enable_Logs__c,
+                Project_External_Id__c,
+                Workspace_Id__c,
+                Sprint_Per_Batch_Chunk_Size__c
+            FROM copado__Project__c
+            WHERE name = 'MY JIRA Project'
+            LIMIT 1
+        ];
+        System.assertEquals(50, project.Sprint_Per_Batch_Chunk_Size__c, 'Default Chunk size is not correct');
+        Id proId = project.Id;
+        System.assertEquals(0, [SELECT COUNT() FROM copado__sprint__c], 'Sprint Record count is incorrect');
+
+        String respBody = '{"jodaTimeZoneId":"Etc/UTC","sprints":[';
+        for (Integer i = 1; i < 51; i++) {
+            String eachsprint =
+                '{"id":' +
+                i +
+                ',"start":"19082020231134","end":"02092020231134","name":"Sample Sprint ' +
+                i +
+                '","closed":true,"editable":true,"projects":[{"key":"SSP","name":"Sample Scrum Project"}],"viewBoardsUrl":"https://copado.atlassian.net/secure/GHGoToBoard.jspa?sprintId=' +
+                i +
+                '"},';
+            respBody += eachsprint;
+        }
+        respBody = respBody.subString(0, respBody.length() - 1);
+        respBody += ']}';
+        Test.startTest();
+        CopadoMockHttpResponseGenerator fakeResponse = new CopadoMockHttpResponseGenerator(200, 'Complete', respBody, null);
+        Test.setMock(HttpCalloutMock.class, fakeResponse);
+        ScheduleUserStoryFetch schObj = new ScheduleUserStoryFetch(proId, true);
+        schObj.prepareSprints();
+        System.assertEquals(50, [SELECT COUNT() FROM copado__sprint__c], 'Sprint count should be 50');
+
+        fakeResponse = new CopadoMockHttpResponseGenerator(
+            200,
+            'Complete',
+            '{"expand":"schema,names","startAt":0,"maxResults":50,"total":7,"issues":[{"expand":"operations,versionedRepresentations,editmeta,changelog,renderedFields","id":"13145","self":"https://copado.atlassian.net/rest/api/2/issue/13145","key":"SSP-23","fields":{"storypoints":3,"closedate":"2021-04-20","commitdate":"2021-04-20T03:00:00.000+0000","summary":"As a user, Id like a historical story to show in reports","issuetype":{"self":"https://copado.atlassian.net/rest/api/2/issuetype/10005","id":"10005","description":"Stories track functionality or features expressed as user goals.","iconUrl":"https://copado.atlassian.net/secure/viewavatar?size=medium&avatarId=10315&avatarType=issuetype","name":"Story","subtask":false,"avatarId":10315},"description":null,"assignee":{"self":"https://copado.atlassian.net/rest/api/2/user?accountId=5bd1da5342830350dca4061d","accountId":"5bd1da5342830350dca4061d","avatarUrls":{"48x48":"https://secure.gravatar.com/avatar/451b84aa83c5b885bebc0cf468fd68f3?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FCA-1.png","24x24":"https://secure.gravatar.com/avatar/451b84aa83c5b885bebc0cf468fd68f3?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FCA-1.png","16x16":"https://secure.gravatar.com/avatar/451b84aa83c5b885bebc0cf468fd68f3?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FCA-1.png","32x32":"https://secure.gravatar.com/avatar/451b84aa83c5b885bebc0cf468fd68f3?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FCA-1.png"},"displayName":"Copado Jira account","active":true,"timeZone":"Europe/Madrid","accountType":"atlassian"},"status":{"self":"https://copado.atlassian.net/rest/api/2/status/10022","description":"","iconUrl":"https://copado.atlassian.net/","name":"Done","id":"10022","statusCategory":{"self":"https://copado.atlassian.net/rest/api/2/statuscategory/3","id":3,"key":"done","colorName":"green","name":"Done"}}}},{"expand":"operations,versionedRepresentations,editmeta,changelog,renderedFields","id":"13144","self":"https://copado.atlassian.net/rest/api/2/issue/13144","key":"SSP-22","fields":{"storypoints":3,"closedate":"2021-04-20","commitdate":"2021-04-20T03:00:00.000+0000","summary":"As a user, Id like a historical story to show in reports","issuetype":{"self":"https://copado.atlassian.net/rest/api/2/issuetype/10005","id":"10005","description":"Stories track functionality or features expressed as user goals.","iconUrl":"https://copado.atlassian.net/secure/viewavatar?size=medium&avatarId=10315&avatarType=issuetype","name":"Story","subtask":false,"avatarId":10315},"description":null,"assignee":{"self":"https://copado.atlassian.net/rest/api/2/user?accountId=5bd1da5342830350dca4061d","accountId":"5bd1da5342830350dca4061d","avatarUrls":{"48x48":"https://secure.gravatar.com/avatar/451b84aa83c5b885bebc0cf468fd68f3?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FCA-1.png","24x24":"https://secure.gravatar.com/avatar/451b84aa83c5b885bebc0cf468fd68f3?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FCA-1.png","16x16":"https://secure.gravatar.com/avatar/451b84aa83c5b885bebc0cf468fd68f3?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FCA-1.png","32x32":"https://secure.gravatar.com/avatar/451b84aa83c5b885bebc0cf468fd68f3?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FCA-1.png"},"displayName":"Copado Jira account","active":true,"timeZone":"Europe/Madrid","accountType":"atlassian"},"status":{"self":"https://copado.atlassian.net/rest/api/2/status/10022","description":"","iconUrl":"https://copado.atlassian.net/","name":"Done","id":"10022","statusCategory":{"self":"https://copado.atlassian.net/rest/api/2/statuscategory/3","id":3,"key":"done","colorName":"green","name":"Done"}}}},{"expand":"operations,versionedRepresentations,editmeta,changelog,renderedFields","id":"13143","self":"https://copado.atlassian.net/rest/api/2/issue/13143","key":"SSP-21","fields":{"storypoints":3,"closedate":"2021-04-20","commitdate":"2021-04-20T03:00:00.000+0000","summary":"As a user, Id like a historical story to show in reports","issuetype":{"self":"https://copado.atlassian.net/rest/api/2/issuetype/10005","id":"10005","description":"Stories track functionality or features expressed as user goals.","iconUrl":"https://copado.atlassian.net/secure/viewavatar?size=medium&avatarId=10315&avatarType=issuetype","name":"Story","subtask":false,"avatarId":10315},"description":null,"assignee":{"self":"https://copado.atlassian.net/rest/api/2/user?accountId=5bd1da5342830350dca4061d","accountId":"5bd1da5342830350dca4061d","avatarUrls":{"48x48":"https://secure.gravatar.com/avatar/451b84aa83c5b885bebc0cf468fd68f3?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FCA-1.png","24x24":"https://secure.gravatar.com/avatar/451b84aa83c5b885bebc0cf468fd68f3?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FCA-1.png","16x16":"https://secure.gravatar.com/avatar/451b84aa83c5b885bebc0cf468fd68f3?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FCA-1.png","32x32":"https://secure.gravatar.com/avatar/451b84aa83c5b885bebc0cf468fd68f3?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FCA-1.png"},"displayName":"Copado Jira account","active":true,"timeZone":"Europe/Madrid","accountType":"atlassian"},"status":{"self":"https://copado.atlassian.net/rest/api/2/status/10022","description":"","iconUrl":"https://copado.atlassian.net/","name":"Done","id":"10022","statusCategory":{"self":"https://copado.atlassian.net/rest/api/2/statuscategory/3","id":3,"key":"done","colorName":"green","name":"Done"}}}},{"expand":"operations,versionedRepresentations,editmeta,changelog,renderedFields","id":"13142","self":"https://copado.atlassian.net/rest/api/2/issue/13142","key":"SSP-20","fields":{"storypoints":3,"closedate":"2021-04-20","commitdate":"2021-04-20T03:00:00.000+0000","summary":"As a user, Id like a historical story to show in reports","issuetype":{"self":"https://copado.atlassian.net/rest/api/2/issuetype/10005","id":"10005","description":"Stories track functionality or features expressed as user goals.","iconUrl":"https://copado.atlassian.net/secure/viewavatar?size=medium&avatarId=10315&avatarType=issuetype","name":"Story","subtask":false,"avatarId":10315},"description":null,"assignee":{"self":"https://copado.atlassian.net/rest/api/2/user?accountId=5bd1da5342830350dca4061d","accountId":"5bd1da5342830350dca4061d","avatarUrls":{"48x48":"https://secure.gravatar.com/avatar/451b84aa83c5b885bebc0cf468fd68f3?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FCA-1.png","24x24":"https://secure.gravatar.com/avatar/451b84aa83c5b885bebc0cf468fd68f3?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FCA-1.png","16x16":"https://secure.gravatar.com/avatar/451b84aa83c5b885bebc0cf468fd68f3?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FCA-1.png","32x32":"https://secure.gravatar.com/avatar/451b84aa83c5b885bebc0cf468fd68f3?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FCA-1.png"},"displayName":"Copado Jira account","active":true,"timeZone":"Europe/Madrid","accountType":"atlassian"},"status":{"self":"https://copado.atlassian.net/rest/api/2/status/10022","description":"","iconUrl":"https://copado.atlassian.net/","name":"Done","id":"10022","statusCategory":{"self":"https://copado.atlassian.net/rest/api/2/statuscategory/3","id":3,"key":"done","colorName":"green","name":"Done"}}}},{"expand":"operations,versionedRepresentations,editmeta,changelog,renderedFields","id":"13141","self":"https://copado.atlassian.net/rest/api/2/issue/13141","key":"SSP-19","fields":{"storypoints":3,"closedate":"2021-04-20","commitdate":"2021-04-20T03:00:00.000+0000","summary":"As a user, Id like a historical story to show in reports","issuetype":{"self":"https://copado.atlassian.net/rest/api/2/issuetype/10005","id":"10005","description":"Stories track functionality or features expressed as user goals.","iconUrl":"https://copado.atlassian.net/secure/viewavatar?size=medium&avatarId=10315&avatarType=issuetype","name":"Story","subtask":false,"avatarId":10315},"description":null,"assignee":{"self":"https://copado.atlassian.net/rest/api/2/user?accountId=5bd1da5342830350dca4061d","accountId":"5bd1da5342830350dca4061d","avatarUrls":{"48x48":"https://secure.gravatar.com/avatar/451b84aa83c5b885bebc0cf468fd68f3?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FCA-1.png","24x24":"https://secure.gravatar.com/avatar/451b84aa83c5b885bebc0cf468fd68f3?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FCA-1.png","16x16":"https://secure.gravatar.com/avatar/451b84aa83c5b885bebc0cf468fd68f3?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FCA-1.png","32x32":"https://secure.gravatar.com/avatar/451b84aa83c5b885bebc0cf468fd68f3?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FCA-1.png"},"displayName":"Copado Jira account","active":true,"timeZone":"Europe/Madrid","accountType":"atlassian"},"status":{"self":"https://copado.atlassian.net/rest/api/2/status/10022","description":"","iconUrl":"https://copado.atlassian.net/","name":"Done","id":"10022","statusCategory":{"self":"https://copado.atlassian.net/rest/api/2/statuscategory/3","id":3,"key":"done","colorName":"green","name":"Done"}}}},{"expand":"operations,versionedRepresentations,editmeta,changelog,renderedFields","id":"13140","self":"https://copado.atlassian.net/rest/api/2/issue/13140","key":"SSP-18","fields":{"storypoints":3,"closedate":"2021-04-20","commitdate":"2021-04-20T03:00:00.000+0000","summary":"As a user, Id like a historical story to show in reports","issuetype":{"self":"https://copado.atlassian.net/rest/api/2/issuetype/10005","id":"10005","description":"Stories track functionality or features expressed as user goals.","iconUrl":"https://copado.atlassian.net/secure/viewavatar?size=medium&avatarId=10315&avatarType=issuetype","name":"Story","subtask":false,"avatarId":10315},"description":null,"assignee":{"self":"https://copado.atlassian.net/rest/api/2/user?accountId=5bd1da5342830350dca4061d","accountId":"5bd1da5342830350dca4061d","avatarUrls":{"48x48":"https://secure.gravatar.com/avatar/451b84aa83c5b885bebc0cf468fd68f3?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FCA-1.png","24x24":"https://secure.gravatar.com/avatar/451b84aa83c5b885bebc0cf468fd68f3?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FCA-1.png","16x16":"https://secure.gravatar.com/avatar/451b84aa83c5b885bebc0cf468fd68f3?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FCA-1.png","32x32":"https://secure.gravatar.com/avatar/451b84aa83c5b885bebc0cf468fd68f3?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FCA-1.png"},"displayName":"Copado Jira account","active":true,"timeZone":"Europe/Madrid","accountType":"atlassian"},"status":{"self":"https://copado.atlassian.net/rest/api/2/status/10022","description":"","iconUrl":"https://copado.atlassian.net/","name":"Done","id":"10022","statusCategory":{"self":"https://copado.atlassian.net/rest/api/2/statuscategory/3","id":3,"key":"done","colorName":"green","name":"Done"}}}},{"expand":"operations,versionedRepresentations,editmeta,changelog,renderedFields","id":"13138","self":"https://copado.atlassian.net/rest/api/2/issue/13138","key":"SSP-16","fields":{"storypoints":3,"closedate":"2021-04-20","commitdate":"2021-04-20T03:00:00.000+0000","summary":"As a team, we can finish the sprint by clicking the cog icon next to the sprint name above the To Do column then selecting Complete Sprint >> Try closing this sprint now","issuetype":{"self":"https://copado.atlassian.net/rest/api/2/issuetype/10005","id":"10005","description":"Stories track functionality or features expressed as user goals.","iconUrl":"https://copado.atlassian.net/secure/viewavatar?size=medium&avatarId=10315&avatarType=issuetype","name":"Story","subtask":false,"avatarId":10315},"description":null,"assignee":null,"status":{"self":"https://copado.atlassian.net/rest/api/2/status/10022","description":"","iconUrl":"https://copado.atlassian.net/","name":"Done","id":"10022","statusCategory":{"self":"https://copado.atlassian.net/rest/api/2/statuscategory/3","id":3,"key":"done","colorName":"green","name":"Done"}}}}]}',
+            null
+        );
+        Test.setMock(HttpCalloutMock.class, fakeResponse);
+        delete [SELECT Id FROM copado__User_story__c];
+        System.assertEquals(50, [SELECT COUNT() FROM copado__sprint__c], 'Sprint count should be 50');
+
+        String sch = '0 0 23 * * ?';
+        System.schedule('Test status Check', sch, schObj);
+        Map<Id, copado__sprint__c> sprintMap = new Map<Id, copado__sprint__c>([SELECT Id, Name FROM copado__sprint__c]);
+
+        Database.executeBatch(new ExecuteUserStoryFetch(project, new List<Id>(sprintMap.keySet())), 200);
+        Test.stopTest();
+
+        System.assertEquals(7, [SELECT COUNT() FROM copado__User_story__c WHERE copado__Sprint__c != NULL], 'User Story count should be 7');
+        System.assertEquals(
+            '{"Id":"123","Key":"&lt;b&gt;123&lt;/b&gt;"}',
+            CopadoCCMutilities.escapeInvalidChars('{"Id":"123","Key":"<b>123</b>"}'),
+            'String have some invalid characters'
+        );
+    }
+
+    @IsTest
+    static void testMethodToFetchBulkSprints_VSTS() {
+        copado__Project__c project = [
+            SELECT
+                Id,
+                Name,
+                Copado_Integration_Setting__r.External_System__c,
+                Copado_Integration_Setting__r.Named_Credential__c,
+                JQL_Extended_Filter__c,
+                Enable_Logs__c,
+                Project_External_Id__c,
+                Team_Info__c,
+                Workspace_Id__c,
+                Sprint_Per_Batch_Chunk_Size__c
+            FROM copado__Project__c
+            WHERE name = 'MY VSTS Project'
+            LIMIT 1
+        ];
+        System.assertEquals(50, project.Sprint_Per_Batch_Chunk_Size__c, 'Default Chunk size is not correct');
+        Id proId = project.Id;
+        System.assertEquals(0, [SELECT COUNT() FROM copado__sprint__c], 'Sprint Record count is incorrect');
+
+        String respBody = '{"count":50,"value":[';
+        Integer urlCount = 52963849;
+        for (Integer i = 1; i < 51; i++) {
+            String eachsprint =
+                '{"id":"' +
+                urlCount +
+                '-9af6-4b04-8f54-a37e303ece6c","name":"Sprint Test ' +
+                i +
+                '","path":"MyFirstProject\\\\Sprint Test ' +
+                i +
+                '","attributes":{"startDate":"2020-09-09T00:00:00Z","finishDate":"2020-09-24T00:00:00Z","timeFrame":"current"},"url":"https://copadointegrationspoc.visualstudio.com/6755f40b-aacf-4234-8a07-a4b21da51a18/e4f76f04-0256-4477-852b-cb13734929cb/_apis/work/teamsettings/iterations/' +
+                urlCount +
+                '-9af6-4b04-8f54-a37e303ece6c"},';
+            respBody += eachsprint;
+            urlCount++;
+        }
+        respBody = respBody.subString(0, respBody.length() - 1);
+        respBody += ']}';
+        Test.startTest();
+        CopadoMockHttpResponseGenerator fakeResponse = new CopadoMockHttpResponseGenerator(200, 'Complete', respBody, null);
+
+        Test.setMock(HttpCalloutMock.class, fakeResponse);
+        ScheduleUserStoryFetch schObj = new ScheduleUserStoryFetch(proId, true);
+        schObj.prepareSprints();
+        System.assertEquals(50, [SELECT COUNT() FROM copado__sprint__c], 'Sprint count should be 50');
+
+        fakeResponse = new CopadoMockHttpResponseGenerator(
+            200,
+            'Complete',
+            '{"workItemRelations":[{"rel":null,"source":null,"target":{"id":10,"url":"https://copadointegrationspoc.visualstudio.com/_apis/wit/workItems/10"}},{"rel":null,"source":null,"target":{"id":9,"url":"https://copadointegrationspoc.visualstudio.com/_apis/wit/workItems/9"}}],"url":"https://copadointegrationspoc.visualstudio.com/6755f40b-aacf-4234-8a07-a4b21da51a18/e4f76f04-0256-4477-852b-cb13734929cb/_apis/work/teamsettings/iterations/52963986-9af6-4b04-8f54-a37e303ece6c/workitems","_links":{"self":{"href":"https://copadointegrationspoc.visualstudio.com/6755f40b-aacf-4234-8a07-a4b21da51a18/e4f76f04-0256-4477-852b-cb13734929cb/_apis/work/teamsettings/iterations/52963986-9af6-4b04-8f54-a37e303ece6c/workitems"},"project":{"href":"https://copadointegrationspoc.visualstudio.com/_apis/projects/6755f40b-aacf-4234-8a07-a4b21da51a18"},"team":{"href":"https://copadointegrationspoc.visualstudio.com/_apis/projects/6755f40b-aacf-4234-8a07-a4b21da51a18/teams/e4f76f04-0256-4477-852b-cb13734929cb"},"teamIteration":{"href":"https://copadointegrationspoc.visualstudio.com/6755f40b-aacf-4234-8a07-a4b21da51a18/e4f76f04-0256-4477-852b-cb13734929cb/_apis/work/teamsettings/iterations/52963986-9af6-4b04-8f54-a37e303ece6c"}}}',
+            null
+        );
+        delete [SELECT Id FROM copado__User_story__c];
+        Test.setMock(HttpCalloutMock.class, fakeResponse);
+
+        Database.executeBatch(new ExecuteUserStoryFetch(project, null), 200);
+        Test.stopTest();
+
+        System.assertEquals(2, [SELECT COUNT() FROM copado__User_story__c WHERE copado__Sprint__c != NULL], 'User Story count should be 2');
     }
 }

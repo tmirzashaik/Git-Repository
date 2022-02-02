@@ -5,6 +5,18 @@
         <name>copado__DeployAPIName__c</name>
     </fields>
     <fields>
+        <label><!-- PackageImportAPIName --></label>
+        <name>copado__PackageImportAPIName__c</name>
+    </fields>
+    <fields>
+        <label><!-- PackageVersionCreateApiName --></label>
+        <name>copado__PackageVersionCreateApiName__c</name>
+    </fields>
+    <fields>
+        <label><!-- PackageVersionPublishAPIName --></label>
+        <name>copado__PackageVersionPublishAPIName__c</name>
+    </fields>
+    <fields>
         <label><!-- PlatformName --></label>
         <name>copado__PlatformName__c</name>
     </fields>

@@ -167,7 +167,7 @@
                 <operation>equals</operation>
                 <value>True</value>
             </filterItems>
-            <infoMessage>Only developer hub org credentials can be selected</infoMessage>
+            <infoMessage>Only developer hub credentials can be selected</infoMessage>
             <isOptional>false</isOptional>
         </lookupFilter>
         <referenceTo>copado__Org__c</referenceTo>

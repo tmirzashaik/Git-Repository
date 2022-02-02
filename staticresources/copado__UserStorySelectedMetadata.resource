@@ -1,7 +1,7 @@
 var USselectedMetadata = USselectedMetadata || {};
 
 //closure
-(function (app) {
+(function(app) {
     app = app || {};
 
     //app properties
@@ -19,7 +19,7 @@ var USselectedMetadata = USselectedMetadata || {};
      * @param  {[type]} [description]
      * @return {[type]} nothing
      */
-    (app.getGitMetadata = function () {
+    (app.getGitMetadata = function() {
         var url =
             "Select Id, __NAMESPACE__Snapshot_Commit__c, __NAMESPACE__Snapshot_Commit__r.__NAMESPACE__Git_Backup__r.__NAMESPACE__Branch__c, __NAMESPACE__Snapshot_Commit__r.__NAMESPACE__Git_Backup__r.__NAMESPACE__Git_Repository__c from __NAMESPACE__User_Story_Commit__c where __NAMESPACE__User_Story__c='" +
             app.conf.data.userStoryId +
@@ -34,7 +34,7 @@ var USselectedMetadata = USselectedMetadata || {};
             app.callBackEnd(repoId, branch);
         }
     }),
-        (app.onComplete = function () {
+        (app.onComplete = function() {
             lockScreen();
             app.init(app.conf);
         }),
@@ -44,35 +44,32 @@ var USselectedMetadata = USselectedMetadata || {};
          * @param  {[type]}    branch       [description]
          * @return {[type]}                 [description]
          */
-        (app.callBackEnd = function (repoId, branch) {
+        (app.callBackEnd = function(repoId, branch) {
             setLockScreenMessage(copadoLabels.loading);
             var me = app;
             if (typeof repoId !== 'undefined' && repoId !== null && typeof branch !== 'undefined' && branch !== null) {
                 lockScreen();
-                console.log('Calling Copado to get Git Metadata ');
                 var url = app.conf.server.USgitMetadataUrl.replace('__USERSTORYID__', app.conf.data.userStoryId)
                     .replace('__repoId__', repoId)
                     .replace('__branch__', branch);
-                utilsV2.onFailureCB = function (obj) {
+                utilsV2.onFailureCB = function(obj) {
                     unlockScreen();
                     alert('Error: ' + obj.error);
                     console.error(obj.error);
                 };
-                utilsV2.onSuccessCB = function (res) {
-                    console.log('Response callback', res);
+                utilsV2.onSuccessCB = function(res) {
                     var obj = $copado.parseJSON(res);
-                    console.log('Callback object', obj);
                     if (obj && obj.status && obj.status == 'done') {
                         app.onComplete();
                         return true;
                     }
                     if (obj && obj.ok) {
-                        setTimeout(function () {
+                        setTimeout(function() {
                             me.callBackEnd(repoId, branch);
                             me.retries++;
                         }, 2000);
                     } else {
-                        setTimeout(function () {
+                        setTimeout(function() {
                             me.callBackEnd(repoId, branch);
                             me.retries++;
                         }, 2000);
@@ -88,7 +85,7 @@ var USselectedMetadata = USselectedMetadata || {};
                 alert(copadoLabels.REPO_OR_BRANCH_NOT_DEFINED);
             }
         }),
-        (app.getAttachments = function () {
+        (app.getAttachments = function() {
             var fileNames = ['Delete MetaData', 'Git MetaData', 'MetaData', 'Git Deletion', 'Test Classes', 'RetrieveOnly MetaData'];
             var results = [];
             var counter = fileNames.length;
@@ -100,7 +97,7 @@ var USselectedMetadata = USselectedMetadata || {};
                         fileNames[i] +
                         "'",
                     {
-                        onSuccess: function (result) {
+                        onSuccess: function(result) {
                             var records = result.getArray('records');
                             if (records.length == 1) {
                                 var fn = records[0].Name;
@@ -124,7 +121,7 @@ var USselectedMetadata = USselectedMetadata || {};
                                 app.dedupeDataArrays();
                             }
                         },
-                        onFailure: function (error) {
+                        onFailure: function(error) {
                             counter--;
                             if (counter == 0) {
                                 app.dedupeDataArrays();
@@ -141,17 +138,17 @@ var USselectedMetadata = USselectedMetadata || {};
          * @param  {[type]} val [description]
          * @return {[type]}     [description]
          */
-        (app.valueInArray = function (arr, val) {
+        (app.valueInArray = function(arr, val) {
             return $copado.inArray(val, arr) > -1;
         }),
-        (app.createDataArrayRow = function (obj, type, retOnly) {
+        (app.createDataArrayRow = function(obj, type, retOnly) {
             var row = [];
             if (obj) {
                 var ms = (type == 'metadataSelection' || obj.s) && type !== 'testClasses' ? true : false;
                 var gs = type == 'gitSelection' ? true : false;
                 var gd = type == 'gitDeletion' ? true : false;
                 var to = type === 'testClasses' ? true : false;
-                var r = (type === 'retrievesOnly' || retOnly ) ? true : false;
+                var r = type === 'retrievesOnly' || retOnly ? true : false;
                 var t = obj.t ? obj.t : type === 'testClasses' ? 'ApexClass' : '';
                 var n = obj.n ? obj.n : '';
                 var b = obj.b ? obj.b : '';
@@ -167,19 +164,31 @@ var USselectedMetadata = USselectedMetadata || {};
          * @param {[Array]} data    the data array to be loaded
          * @return {[type]}         [description]
          */
-        (app.startGrid = function (data) {
+        (app.startGrid = function(data) {
             var theme = 'base',
                 source = {
                     datatype: 'array',
-                    updaterow: function (rowid, rowdata, commit) {
+                    updaterow: function(rowid, rowdata, commit) {
                         commit(true);
                         data[rowid] = rowdata;
                     }
                 };
+        
+            var gridDataFields = [];
 
-            source_meta = {
-                localdata: data,
-                datafields: [
+            if (app.conf.platform && app.conf.platform === 'Other') {
+                gridDataFields = [
+                    { name: 'gs', type: 'bool' },
+                    { name: 'gd', type: 'bool' },
+                    { name: 't', type: 'string' },
+                    { name: 'n', type: 'string' },
+                    { name: 'b', type: 'string' },
+                    { name: 'd', type: 'string' },
+                    { name: 'cb', type: 'string' },
+                    { name: 'cd', type: 'string' }
+                ]  
+            } {
+                gridDataFields = [
                     { name: 'ms', type: 'bool' },
                     { name: 'gs', type: 'bool' },
                     { name: 'gd', type: 'bool' },
@@ -191,9 +200,14 @@ var USselectedMetadata = USselectedMetadata || {};
                     { name: 'd', type: 'string' },
                     { name: 'cb', type: 'string' },
                     { name: 'cd', type: 'string' }
-                ],
+                ]
+            }
+
+            source_meta = {
+                localdata: data,
+                datafields: gridDataFields,
                 datatype: 'array',
-                updaterow: function (rowid, rowdata, commit) {
+                updaterow: function(rowid, rowdata, commit) {
                     commit(true);
                     data[rowid] = rowdata;
                 }
@@ -209,9 +223,37 @@ var USselectedMetadata = USselectedMetadata || {};
 
             setLockScreenMessage('Loading grid...');
             dataAdapter_meta = new $copado.jqx.dataAdapter(source_meta);
-            console.log('Metadata adaptaber: ', dataAdapter_meta);
             $gridm = $copado('<div>');
             metadatagrid.html($gridm);
+        
+            var gridColumns = [];
+            if (app.conf.platform && app.conf.platform === 'Other') {
+                gridColumns = [
+                    { text: copadoLabels.GIT_UPSERTS, columntype: 'checkbox', filtertype: 'bool', datafield: 'gs', width: 80 },
+                    { text: copadoLabels.GIT_DELETIONS, columntype: 'checkbox', filtertype: 'bool', datafield: 'gd', width: 80 },
+                    { text: copadoLabels.name, filtertype: 'textbox', filtercondition: 'contains', editable: false, datafield: 'n', width: 220 },
+                    { text: copadoLabels.type, datafield: 't', filtertype: 'checkedlist', editable: false, columntype: 'textbox', width: 150 },
+                    { text: copadoLabels.LAST_COMMITTED_BY, filtertype: 'checkedlist', editable: false, datafield: 'b', width: 150 },
+                    { text: copadoLabels.LAST_COMMITTED_DATE, filtertype: 'textbox', editable: false, datafield: 'd', width: 100 },
+                    { text: copadoLabels.CREATEDBY, filtertype: 'checkedlist', editable: false, datafield: 'cb', width: 150 },
+                    { text: copadoLabels.CREATEDDATE, filtertype: 'textbox', editable: false, datafield: 'cd', width: 100 }
+                ]
+            } else {
+                gridColumns = [
+                    { text: copadoLabels.STEP_TYPE_METADATA, columntype: 'checkbox', filtertype: 'bool', datafield: 'ms', width: 80 },
+                    { text: copadoLabels.GIT_UPSERTS, columntype: 'checkbox', filtertype: 'bool', datafield: 'gs', width: 80 },
+                    { text: copadoLabels.GIT_DELETIONS, columntype: 'checkbox', filtertype: 'bool', datafield: 'gd', width: 80 },
+                    { text: 'Test Only', columntype: 'checkbox', filtertype: 'bool', datafield: 'to', width: 80 },
+                    { text: 'Retrieve Only', columntype: 'checkbox', filtertype: 'bool', datafield: 'r', width: 80 },
+                    { text: copadoLabels.name, filtertype: 'textbox', filtercondition: 'contains', editable: false, datafield: 'n', width: 220 },
+                    { text: copadoLabels.type, datafield: 't', filtertype: 'checkedlist', editable: false, columntype: 'textbox', width: 150 },
+                    { text: copadoLabels.LastModifiedById, filtertype: 'checkedlist', editable: false, datafield: 'b', width: 150 },
+                    { text: copadoLabels.LastModifiedDate, filtertype: 'textbox', editable: false, datafield: 'd', width: 100 },
+                    { text: copadoLabels.CREATEDBY, filtertype: 'checkedlist', editable: false, datafield: 'cb', width: 150 },
+                    { text: copadoLabels.CREATEDDATE, filtertype: 'textbox', editable: false, datafield: 'cd', width: 100 }
+                ]
+            }
+
             $gridm.jqxGrid({
                 width: '100%',
                 height: height,
@@ -228,19 +270,7 @@ var USselectedMetadata = USselectedMetadata || {};
                 sortable: true,
                 columnsresize: true,
                 localization: localizationobj,
-                columns: [
-                    { text: copadoLabels.STEP_TYPE_METADATA, columntype: 'checkbox', filtertype: 'bool', datafield: 'ms', width: 80 },
-                    { text: copadoLabels.GIT_UPSERTS, columntype: 'checkbox', filtertype: 'bool', datafield: 'gs', width: 80 },
-                    { text: copadoLabels.GIT_DELETIONS, columntype: 'checkbox', filtertype: 'bool', datafield: 'gd', width: 80 },
-                    { text: 'Test Only', columntype: 'checkbox', filtertype: 'bool', datafield: 'to', width: 80 },
-                    { text: 'Retrieve Only', columntype: 'checkbox', filtertype: 'bool', datafield: 'r', width: 80 },
-                    { text: copadoLabels.name, filtertype: 'textbox', filtercondition: 'contains', editable: false, datafield: 'n', width: 220 },
-                    { text: copadoLabels.type, datafield: 't', filtertype: 'checkedlist', editable: false, columntype: 'textbox', width: 150 },
-                    { text: copadoLabels.LastModifiedById, filtertype: 'checkedlist', editable: false, datafield: 'b', width: 150 },
-                    { text: copadoLabels.LastModifiedDate, filtertype: 'textbox', editable: false, datafield: 'd', width: 100 },
-                    { text: copadoLabels.CREATEDBY, filtertype: 'checkedlist', editable: false, datafield: 'cb', width: 150 },
-                    { text: copadoLabels.CREATEDDATE, filtertype: 'textbox', editable: false, datafield: 'cd', width: 100 }
-                ]
+                columns: gridColumns
             });
             $copado('#loadingDiv').hide();
             unlockScreen();
@@ -250,7 +280,7 @@ var USselectedMetadata = USselectedMetadata || {};
          * param {[type]}           [description]
          * @return {[type]}         [description]
          */
-        (app.dedupeDataArrays = function () {
+        (app.dedupeDataArrays = function() {
             setLockScreenMessage('Merging grid data...');
             var keyDictionary = [];
             if (app.metadataArray.length > 0) {
@@ -290,7 +320,7 @@ var USselectedMetadata = USselectedMetadata || {};
                     var classesKey = app.testClassSelections[k].n + 'ApexClass';
                     if (app.valueInArray(keyDictionary, classesKey) == false) {
                         keyDictionary.push(classesKey);
-                        var retOnly = app.retrievesOnly.find(elem => (elem.n + elem.t) === classesKey);
+                        var retOnly = app.retrievesOnly.find(elem => elem.n + elem.t === classesKey);
                         app.dataArray.push(app.createDataArrayRow(app.testClassSelections[k], 'testClasses', retOnly));
                     }
                 }
@@ -324,7 +354,7 @@ var USselectedMetadata = USselectedMetadata || {};
          * @param  {[type]}      [description]
          * @return {[type]}      [description]
          */
-        (app.updateFieldMetadata_Types_in_Selection = function (records) {
+        (app.updateFieldMetadata_Types_in_Selection = function(records) {
             var i,
                 t,
                 selectedTypes = {};
@@ -336,7 +366,7 @@ var USselectedMetadata = USselectedMetadata || {};
                 if (t.ms || t.gs || t.gd) selectedTypes[t.t] = 1;
             }
 
-            var compareArrays = function (array1, array) {
+            var compareArrays = function(array1, array) {
                 // if the other array is a falsy value, return
                 if (!array) return false;
 
@@ -378,13 +408,10 @@ var USselectedMetadata = USselectedMetadata || {};
 
                 var areThereDifferences = (setofSelectedType || setOfUserStoryTypes) && !compareArrays(setofSelectedType, setOfUserStoryTypes);
 
-                console.log('userStorySelectedMetadata:::', areThereDifferences, setofSelectedType, setOfUserStoryTypes);
-
                 if (areThereDifferences) {
                     // NOTE: it must be null in order to clear the multipicklist Metadata_Types_in_Selection__c. Empty string wont do.
                     changes[app.conf.ns + 'Metadata_Types_in_Selection__c'] =
                         setofSelectedType && setofSelectedType.length ? setofSelectedType.join(';') : null;
-                    console.log('userStorySelectedMetadata: sending to update', changes);
                     window.parent.postMessage({ from: 'userStorySelectedMetadata', hasChanges: true, change: changes }, '*');
                 } else {
                     window.parent.postMessage({ from: 'userStorySelectedMetadata', hasChanges: false, change: changes }, '*');
@@ -399,7 +426,7 @@ var USselectedMetadata = USselectedMetadata || {};
          * @param  {[type]}      [description]
          * @return {[type]}      [description]
          */
-        (app.init = function (conf) {
+        (app.init = function(conf) {
             app.conf = conf;
             //do normalize ns to empty string or value
             app.conf.ns = app.conf.ns || '';
