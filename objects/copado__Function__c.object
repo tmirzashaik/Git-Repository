@@ -279,6 +279,7 @@ The class must implement the MCCallBack interface.</inlineHelpText>
     <fields>
         <fullName>copado__Timeout__c</fullName>
         <deprecated>false</deprecated>
+        <description>The number of minutes after which the function will automatically end if there is no response from the function backend execution.</description>
         <externalId>false</externalId>
         <inlineHelpText>Measured in minutes.</inlineHelpText>
         <label>Timeout</label>
@@ -326,6 +327,41 @@ The class must implement the MCCallBack interface.</inlineHelpText>
         <type>Text</type>
         <unique>false</unique>
     </fields>
+    <fields>
+        <fullName>copado__Worker_Size__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Worker Size</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>S</fullName>
+                    <default>true</default>
+                    <label>S</label>
+                </value>
+                <value>
+                    <fullName>M</fullName>
+                    <default>false</default>
+                    <label>M</label>
+                </value>
+                <value>
+                    <fullName>L</fullName>
+                    <default>false</default>
+                    <label>L</label>
+                </value>
+                <value>
+                    <fullName>XL</fullName>
+                    <default>false</default>
+                    <label>XL</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
     <label>Function</label>
     <listViews>
         <fullName>copado__All</fullName>
@@ -349,7 +385,10 @@ The class must implement the MCCallBack interface.</inlineHelpText>
     <validationRules>
         <fullName>copado__Script_must_contain_a_value</fullName>
         <active>true</active>
-        <errorConditionFormula>ISBLANK(TRIM(copado__Script__c))</errorConditionFormula>
+        <errorConditionFormula>AND(
+NOT(ISNEW()),
+ISBLANK(TRIM(copado__Script__c))
+)</errorConditionFormula>
         <errorMessage>Script cannot be empty.</errorMessage>
     </validationRules>
     <visibility>Public</visibility>

@@ -361,6 +361,19 @@
         </valueSet>
     </fields>
     <fields>
+        <fullName>copado__Test__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Test</label>
+        <referenceTo>copado__Test__c</referenceTo>
+        <relationshipLabel>Automations</relationshipLabel>
+        <relationshipName>Automations</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>copado__Type__c</fullName>
         <deprecated>false</deprecated>
         <description>What type of verification will be performed for this quality gate</description>

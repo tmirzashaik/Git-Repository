@@ -89,31 +89,34 @@ public with sharing class CopadoCCMutilities {
     }
     //casts value based on the current sObject field
     public static Object returnCastedValue(Object param, String fname) {
-        Schema.SObjectField field = userStoryFieldsMap.get(fname);
-        String FldType = String.valueOf(field.getDescribe().getType()).toLowerCase();
-        if (FldType == 'textarea' || FldType == 'picklist' || fldType == 'reference') {
-            FldType = 'string';
+        if (null != param) {
+            Schema.SObjectField field = userStoryFieldsMap.get(fname);
+            String FldType = String.valueOf(field.getDescribe().getType()).toLowerCase();
+            if (FldType == 'textarea' || FldType == 'picklist' || fldType == 'reference' || FldType == 'multipicklist') {
+                FldType = 'string';
+            }
+            if (FldType == 'boolean') {
+                return Boolean.valueOf(param);
+            } else if (FldType == 'string') {
+                return String.valueOf(param);
+            } else if (FldType == 'blob') {
+                return (Blob) param;
+            } else if (FldType == 'date') {
+                return Date.valueOf(applySalesforceDateFormatString(param));
+            } else if (FldType == 'datetime') {
+                return Datetime.valueOf(applySalesforceDateTimeFormatString(param));
+            } else if (FldType == 'time') {
+                return (Time) param;
+            } else if (FldType == 'integer') {
+                return Integer.valueOf(param);
+            } else if (FldType == 'long') {
+                return (Long) param;
+            } else if (FldType == 'decimal') {
+                return (Decimal) param;
+            } else if (FldType == 'double') {
+                return Double.valueOf(param);
+            }
         }
-        if (FldType == 'boolean')
-            return Boolean.valueOf(param);
-        if (FldType == 'string')
-            return String.valueOf(param);
-        if (FldType == 'blob')
-            return (Blob) param;
-        if (FldType == 'date')
-            return Date.valueOf(applySalesforceDateFormatString(param));
-        if (FldType == 'datetime')
-            return Datetime.valueOf(applySalesforceDateTimeFormatString(param));
-        if (FldType == 'time')
-            return (Time) param;
-        if (FldType == 'integer')
-            return Integer.valueOf(param);
-        if (FldType == 'long')
-            return (Long) param;
-        if (FldType == 'decimal')
-            return (Decimal) param;
-        if (FldType == 'double')
-            return Double.valueOf(param);
         return null;
     }
     private static String applySalesforceDateFormatString(Object param) {
@@ -123,13 +126,15 @@ public with sharing class CopadoCCMutilities {
         return String.valueOf(param).replace('T', ' ');
     }
 
-    public static Map<String, Id> returnUsers(Boolean enableCommunityUsers){
+    public static Map<String, Id> returnUsers(Boolean enableCommunityUsers) {
         //usermap to match lookup values via third party users' mail addresses
         Map<String, Id> userMap = new Map<String, id>();
         List<User> users;
         try {
-            users = Database.query('SELECT Id, Email FROM User WHERE IsActive = TRUE AND Email != NULL' + (enableCommunityUsers ? '' : ' AND IsPortalEnabled = FALSE '));
-        } catch(QueryException exp) {
+            users = Database.query(
+                'SELECT Id, Email FROM User WHERE IsActive = TRUE AND Email != NULL' + (enableCommunityUsers ? '' : ' AND IsPortalEnabled = FALSE ')
+            );
+        } catch (QueryException exp) {
             //portal or community is not enabled for the org, hence IsPortalEnabled is not available for the environment yet
             //no need to handle this
             users = [SELECT Id, Email FROM User WHERE IsActive = TRUE AND Email != NULL];
@@ -157,11 +162,15 @@ public with sharing class CopadoCCMutilities {
         return fieldMap;
     }
 
-    //returns Name/DeveloperName to Id map of User Story object's recordTypes 
-    public static Map<String, String> returnUserStoryRecordTypeMap(Boolean forJIRA){
+    //returns Name/DeveloperName to Id map of User Story object's recordTypes
+    public static Map<String, String> returnUserStoryRecordTypeMap(Boolean forJIRA) {
         Map<String, String> userStoryRecordTypes = new Map<String, String>();
-        for(RecordType recordType : [SELECT Id, Name, DeveloperName FROM RecordType WHERE IsActive = TRUE AND SobjectType = 'copado__User_Story__c']){
-            if(!forJIRA){
+        for (RecordType recordType : [
+            SELECT Id, Name, DeveloperName
+            FROM RecordType
+            WHERE IsActive = TRUE AND SobjectType = 'copado__User_Story__c'
+        ]) {
+            if (!forJIRA) {
                 userStoryRecordTypes.put(recordType.DeveloperName, recordType.Id);
                 userStoryRecordTypes.put(recordType.Name, recordType.Id);
             } else {
@@ -181,7 +190,7 @@ public with sharing class CopadoCCMutilities {
                     'SELECT Salesforce_Record_Type_Name__c, Third_Party_Record_Type_Name__c FROM Record_Type_Mapping__c WHERE project__c =: pid '
                 )
             ) {
-                if(!forThirdParty){
+                if (!forThirdParty) {
                     recordTypeMap.put(recordType.Third_Party_Record_Type_Name__c, recordType.Salesforce_Record_Type_Name__c);
                 } else {
                     recordTypeMap.put(recordType.Salesforce_Record_Type_Name__c, recordType.Third_Party_Record_Type_Name__c);
@@ -230,7 +239,7 @@ public with sharing class CopadoCCMutilities {
     public static String replaceFromCurly(String strwcurly) {
         return strwcurly.replace('lcurly', '{').replace('rcurly', '}');
     }
-    public static String escapeDoubleQuotes(String value){
+    public static String escapeDoubleQuotes(String value) {
         return value.replace('"', '\\"');
     }
     public static Date convertLongDateToDate(String longDate) {

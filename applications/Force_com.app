@@ -6,4 +6,5 @@
     <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
     <label>Force.com</label>
+    <tabs>standard-Chatter</tabs>
 </CustomApplication>

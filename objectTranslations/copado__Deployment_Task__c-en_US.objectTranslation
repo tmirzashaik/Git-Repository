@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
+        <label><!-- Apply to --></label>
+        <name>copado__Apply_to__c</name>
+        <picklistValues>
+            <masterLabel>All Environments in Pipeline</masterLabel>
+            <translation><!-- All Environments in Pipeline --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Specific Environments in Pipeline</masterLabel>
+            <translation><!-- Specific Environments in Pipeline --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Disable Task for Back-Promotions --></label>
+        <name>copado__Disable_Task_for_Back_Promotions__c</name>
+    </fields>
+    <fields>
         <label><!-- Notify Task Owner --></label>
         <name>copado__Notify_Task_Owner__c</name>
     </fields>

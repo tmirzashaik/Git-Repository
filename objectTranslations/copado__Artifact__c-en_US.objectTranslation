@@ -17,6 +17,10 @@
         <name>copado__Description__c</name>
     </fields>
     <fields>
+        <label><!-- Last Job Execution Id --></label>
+        <name>copado__LastJobExecutionId__c</name>
+    </fields>
+    <fields>
         <help><!-- Enables the package creation with no namespace; available only for unlocked packages. --></help>
         <label><!-- No Namespace --></label>
         <name>copado__No_Namespace__c</name>
@@ -24,9 +28,9 @@
     <fields>
         <help><!-- The org credential where the metadata of the Artifact is going to be retrieved from, for unlocked packages and 2GP.
 The org credential where the unmanaged package is created from. --></help>
-        <label><!-- Source Org Credential --></label>
+        <label><!-- Source Credential --></label>
         <name>copado__Org_Credential__c</name>
-        <relationshipLabel><!-- Packages (Source Org Credential) --></relationshipLabel>
+        <relationshipLabel><!-- Artifacts --></relationshipLabel>
     </fields>
     <fields>
         <help><!-- Related package identifier. Being used as a Package Id for package version creation and also in use into the sfdx-project.json file as a package alias. --></help>
@@ -54,6 +58,11 @@ The org credential where the unmanaged package is created from. --></help>
             <masterLabel>Unlocked</masterLabel>
             <translation><!-- Unlocked --></translation>
         </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Pipeline --></label>
+        <name>copado__Pipeline__c</name>
+        <relationshipLabel><!-- Packages --></relationshipLabel>
     </fields>
     <fields>
         <help><!-- The login URL that the force:auth commands use. If not specified, the default is login.salesforce.com. Override the default value if you want users to authorize to a specific Salesforce instance. --></help>

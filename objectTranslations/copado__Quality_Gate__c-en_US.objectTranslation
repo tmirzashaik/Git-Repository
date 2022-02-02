@@ -80,6 +80,11 @@
         <name>copado__Test_Level__c</name>
     </fields>
     <fields>
+        <label><!-- Test --></label>
+        <name>copado__Test__c</name>
+        <relationshipLabel><!-- Automations --></relationshipLabel>
+    </fields>
+    <fields>
         <help><!-- What type of verification will be performed for this quality gate --></help>
         <label><!-- Type --></label>
         <name>copado__Type__c</name>

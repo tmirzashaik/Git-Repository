@@ -349,7 +349,7 @@ TEXT(copado__Status__c)
     <fields>
         <fullName>copado__Type__c</fullName>
         <deprecated>false</deprecated>
-        <description>If ?Regression Test? or ?User Story Test? is selected, then all Org Credentials associated to that Test Group must be linked to the same environment.</description>
+        <description>If “Regression Test” or “User Story Test” is selected, then all Credentials associated to that Test Group must be linked to the same environment.</description>
         <externalId>false</externalId>
         <inlineHelpText>If ?Regression Test? or ?User Story Test? is selected, then all Org Credentials associated to that Test Group must be linked to the same environment.</inlineHelpText>
         <label>Type</label>
