@@ -225,6 +225,32 @@
         <type>Default</type>
     </actionOverrides>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>Customer_Account</fullName>
+        <fields>Name</fields>
+        <fields>AccountNumber</fields>
+        <fields>OwnerId</fields>
+        <fields>RecordTypeId</fields>
+        <label>Customer Account</label>
+    </compactLayouts>
+    <compactLayouts>
+        <fullName>Partner_Account</fullName>
+        <fields>Name</fields>
+        <fields>BillingAddress</fields>
+        <fields>NumberOfEmployees</fields>
+        <label>Partner Account</label>
+    </compactLayouts>
+    <compactLayouts>
+        <fullName>Test_Account</fullName>
+        <fields>Type</fields>
+        <label>Test Account</label>
+    </compactLayouts>
+    <compactLayouts>
+        <fullName>Test_New_Account</fullName>
+        <fields>SLASerialNumber__c</fields>
+        <fields>SLA__c</fields>
+        <label>Test New Account</label>
+    </compactLayouts>
     <enableFeeds>true</enableFeeds>
     <enableHistory>false</enableHistory>
     <externalSharingModel>Private</externalSharingModel>
@@ -583,6 +609,7 @@
     <recordTypes>
         <fullName>Customer_Account</fullName>
         <active>true</active>
+        <compactLayoutAssignment>Customer_Account</compactLayoutAssignment>
         <description>For customers and prospects</description>
         <label>Customer Account</label>
         <picklistValues>
@@ -712,6 +739,7 @@
     <recordTypes>
         <fullName>Partner_Account</fullName>
         <active>true</active>
+        <compactLayoutAssignment>Partner_Account</compactLayoutAssignment>
         <description>For consulting partners</description>
         <label>Partner Account</label>
         <picklistValues>
@@ -729,6 +757,7 @@
     <recordTypes>
         <fullName>Test_Account</fullName>
         <active>true</active>
+        <compactLayoutAssignment>Test_Account</compactLayoutAssignment>
         <description>Case testing purposes</description>
         <label>Test Account</label>
         <picklistValues>
@@ -866,6 +895,7 @@
     <recordTypes>
         <fullName>Test_New_Account</fullName>
         <active>true</active>
+        <compactLayoutAssignment>Test_New_Account</compactLayoutAssignment>
         <description>Testing for case</description>
         <label>Test New Account</label>
         <picklistValues>
