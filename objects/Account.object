@@ -600,6 +600,30 @@
         <filterScope>Everything</filterScope>
         <label>Platinum and Gold SLA Customers</label>
     </listViews>
+    <recordTypes>
+        <fullName>Customer_Account</fullName>
+        <active>true</active>
+        <description>For customers and prospects</description>
+        <label>Customer Account</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Partner_Account</fullName>
+        <active>true</active>
+        <description>For consulting partners</description>
+        <label>Partner Account</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Test_Account</fullName>
+        <active>true</active>
+        <description>Case testing purposes</description>
+        <label>Test Account</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Test_New_Account</fullName>
+        <active>true</active>
+        <description>Testing for case</description>
+        <label>Test New Account</label>
+    </recordTypes>
     <searchLayouts>
         <customTabListAdditionalFields>ACCOUNT.NAME</customTabListAdditionalFields>
         <customTabListAdditionalFields>ACCOUNT.ADDRESS1_CITY</customTabListAdditionalFields>
