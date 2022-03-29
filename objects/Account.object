@@ -242,7 +242,6 @@
     </compactLayouts>
     <compactLayouts>
         <fullName>Test_Account</fullName>
-        <fields>Test_Field__c</fields>
         <fields>Type</fields>
         <label>Test Account</label>
     </compactLayouts>
