@@ -142,6 +142,17 @@
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>copado__Hover_Layout</fullName>
+        <fields>Name</fields>
+        <fields>copado__API_Name__c</fields>
+        <fields>copado__Is_Sensitive__c</fields>
+        <fields>copado__ParentId__c</fields>
+        <fields>copado__Pipeline__c</fields>
+        <fields>copado__Environment__c</fields>
+        <fields>copado__User__c</fields>
+        <label>Hover Layout</label>
+    </compactLayouts>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
     <enableActivities>false</enableActivities>
@@ -183,7 +194,7 @@
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <label>Is Sensitive</label>
+        <label>Hide Value</label>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
@@ -216,6 +227,7 @@
     <fields>
         <fullName>copado__UID__c</fullName>
         <deprecated>false</deprecated>
+        <description>Read-only field used internally for system property replacement.</description>
         <externalId>false</externalId>
         <formula>copado__ParentId__c + &quot;-&quot; + copado__API_Name__c</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>

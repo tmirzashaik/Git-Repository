@@ -217,6 +217,11 @@
         <fullName>ServiceAppointmentCount</fullName>
     </fields>
     <fields>
+        <fullName>ServiceTerritoryId</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>StartDate</fullName>
         <trackHistory>false</trackHistory>
     </fields>
@@ -247,6 +252,11 @@
         <fullName>WorkOrderId</fullName>
         <trackHistory>false</trackHistory>
         <type>MasterDetail</type>
+    </fields>
+    <fields>
+        <fullName>WorkTypeId</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
     </fields>
     <searchLayouts>
         <customTabListAdditionalFields>WorkOrder</customTabListAdditionalFields>

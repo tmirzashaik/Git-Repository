@@ -10,7 +10,7 @@ PullRequest.prototype.UrlFactory = function(){
 		var path;
         var type = config.type;
         var url = config.url;
-		if (type === "Github") {
+		if (type === "Github" || type === "Copado Version Control") {
             path = gitHubURL(config.base,config.compare);
         } else if (type === "GitLab") {
             path = gitLabURL(config.base,config.compare);

@@ -15,11 +15,11 @@
     <fields>
         <label><!-- User Story Bundle --></label>
         <name>copado__User_Story_Bundle__c</name>
-        <relationshipLabel><!-- Bundled_UserStories --></relationshipLabel>
+        <relationshipLabel><!-- Bundled User Stories --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- User Story --></label>
         <name>copado__User_Story__c</name>
-        <relationshipLabel><!-- Bundled_UserStories --></relationshipLabel>
+        <relationshipLabel><!-- Bundled User Stories --></relationshipLabel>
     </fields>
 </CustomObjectTranslation>

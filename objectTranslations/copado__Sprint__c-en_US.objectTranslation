@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
+        <label><!-- Actual Velocity --></label>
+        <name>copado__ActualVelocity__c</name>
+    </fields>
+    <fields>
         <label><!-- Days in sprint --></label>
         <name>copado__Days_in_sprint__c</name>
     </fields>
@@ -13,8 +17,16 @@
         <name>copado__Full_time_resources_in_sprint__c</name>
     </fields>
     <fields>
+        <label><!-- Initial Planned Velocity --></label>
+        <name>copado__InitialPlannedVelocity__c</name>
+    </fields>
+    <fields>
         <label><!-- Sprint Goal --></label>
         <name>copado__Objective__c</name>
+    </fields>
+    <fields>
+        <label><!-- Planned Velocity --></label>
+        <name>copado__PlannedVelocity__c</name>
     </fields>
     <fields>
         <label><!-- Project --></label>
@@ -60,6 +72,10 @@
         <relationshipLabel><!-- Sprints --></relationshipLabel>
     </fields>
     <fields>
+        <label><!-- Working Days Left --></label>
+        <name>copado__Working_Days_Left__c</name>
+    </fields>
+    <fields>
         <label><!-- Working days in sprint --></label>
         <name>copado__Working_days_in_sprint__c</name>
     </fields>
@@ -67,4 +83,8 @@
         <label><!-- External Id --></label>
         <name>copadoccmint__External_Id__c</name>
     </fields>
+    <validationRules>
+        <errorMessage><!-- You must introduce an End Date greater than the Start Date. --></errorMessage>
+        <name>copado__EndDate_Should_be_Greater_than_StartDate</name>
+    </validationRules>
 </CustomObjectTranslation>

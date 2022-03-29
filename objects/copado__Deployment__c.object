@@ -86,7 +86,9 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>New</actionName>
-        <type>Default</type>
+        <content>copado__Deployment</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
     </actionOverrides>
     <actionOverrides>
         <actionName>New</actionName>
@@ -128,7 +130,9 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
-        <type>Default</type>
+        <content>copado__Deployment</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
@@ -926,6 +930,18 @@ copado__SUM_Deployed__c / copado__Deployment_Jobs_Count__c,
         <type>DateTime</type>
     </fields>
     <fields>
+        <fullName>copado__Last_Deployment_Execution_Id__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Last Deployment Execution Id</label>
+        <length>18</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>copado__Parent_Deployment__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
@@ -960,6 +976,22 @@ copado__SUM_Deployed__c / copado__Deployment_Jobs_Count__c,
         <referenceTo>copado__Promotion__c</referenceTo>
         <relationshipLabel>Deployments</relationshipLabel>
         <relationshipName>Deployments</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>copado__Rolled_back_Deployment__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Identifies the original deployment that was rolled back for reporting purposes</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Identifies the original deployment that was rolled back for reporting purposes</inlineHelpText>
+        <label>Rolled back Deployment</label>
+        <referenceTo>copado__Deployment__c</referenceTo>
+        <relationshipLabel>Deployments (Rolled back Deployment)</relationshipLabel>
+        <relationshipName>RolledBackDeployments</relationshipName>
         <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>

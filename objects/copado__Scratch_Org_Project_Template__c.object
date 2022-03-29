@@ -415,7 +415,7 @@
         <externalId>false</externalId>
         <label>Source Credential</label>
         <referenceTo>copado__Org__c</referenceTo>
-        <relationshipLabel>Scratch Org Project Templates (Source Org Credential)</relationshipLabel>
+        <relationshipLabel>Scratch Org Project Templates (Source Credential)</relationshipLabel>
         <relationshipName>Scratch_Org_Project_Templates</relationshipName>
         <required>false</required>
         <trackHistory>false</trackHistory>

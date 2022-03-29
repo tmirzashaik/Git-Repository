@@ -160,6 +160,6 @@
     <fields>
         <label><!-- Source Credential --></label>
         <name>copado__Source_Org_Credential__c</name>
-        <relationshipLabel><!-- Scratch Org Project Templates (Source Org Credential) --></relationshipLabel>
+        <relationshipLabel><!-- Scratch Org Project Templates (Source Credential) --></relationshipLabel>
     </fields>
 </CustomObjectTranslation>

@@ -158,7 +158,7 @@
     <fields>
         <fullName>copado__Base_URL__c</fullName>
         <deprecated>false</deprecated>
-        <description>Optional Base URL where this test will be run, if Org Credentials are not specified.</description>
+        <description>Optional Base URL where this test will be run, if Credentials are not specified.</description>
         <externalId>false</externalId>
         <inlineHelpText>Optional Base URL where this test will be run, if Org Credentials are not specified.</inlineHelpText>
         <label>Base URL</label>
@@ -452,9 +452,9 @@ TEXT(copado__Last_Status__c)
     <validationRules>
         <fullName>copado__Credentials_or_BaseURL</fullName>
         <active>true</active>
-        <description>Base url cannot be set if org credentials is defined</description>
+        <description>Base url cannot be set if credentials is defined</description>
         <errorConditionFormula>NOT(ISBLANK(copado__Org_Credential__c)) &amp;&amp; NOT(ISBLANK(copado__Base_URL__c))</errorConditionFormula>
-        <errorMessage>Base URL cannot be populated if Org Credentials were selected.</errorMessage>
+        <errorMessage>Base URL cannot be populated if Credentials were selected.</errorMessage>
     </validationRules>
     <visibility>Public</visibility>
     <webLinks>

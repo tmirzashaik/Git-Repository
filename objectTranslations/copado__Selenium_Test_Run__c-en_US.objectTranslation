@@ -87,7 +87,7 @@
         <name>copado__Salesforce</name>
     </recordTypes>
     <validationRules>
-        <errorMessage><!-- Base URL cannot be populated if Org Credentials were selected. --></errorMessage>
+        <errorMessage><!-- Base URL cannot be populated if Credentials were selected. --></errorMessage>
         <name>copado__Credentials_or_BaseURL</name>
     </validationRules>
     <webLinks>

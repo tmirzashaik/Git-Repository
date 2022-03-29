@@ -17,8 +17,13 @@
         <name>copado__Pipeline_Manager</name>
     </fieldSets>
     <fields>
-        <label><!-- Back Promotion --></label>
+        <label><!-- Is Back-Promotion --></label>
         <name>copado__Back_Promotion__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field is checked by Copado once the promotion is merged and deployed successfully for multi-cloud platform. --></help>
+        <label><!-- Completed --></label>
+        <name>copado__Completed__c</name>
     </fields>
     <fields>
         <label><!-- Connection Behavior --></label>
@@ -51,6 +56,14 @@
         <name>copado__Exclude_From_Auto_Resolve__c</name>
     </fields>
     <fields>
+        <label><!-- Last Deployment Execution Id --></label>
+        <name>copado__Last_Deployment_Execution_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Promotion Execution Id --></label>
+        <name>copado__Last_Promotion_Execution_Id__c</name>
+    </fields>
+    <fields>
         <help><!-- Indicates that this promotion includes a manual conflict resolution. --></help>
         <label><!-- Merge Conflict --></label>
         <name>copado__Merge_Conflict__c</name>
@@ -59,6 +72,11 @@
         <help><!-- Fill this field only if you want to change the selected user stories order on deployment. (usage exp: name asc, copado__backlog_rank__c desc) --></help>
         <label><!-- Order User Stories by --></label>
         <name>copado__Order_by__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field auto-populates and displays the pipeline platform. --></help>
+        <label><!-- Platform --></label>
+        <name>copado__Platform__c</name>
     </fields>
     <fields>
         <help><!-- The selected Project should be linked to an active Deployment Flow --></help>
@@ -72,7 +90,7 @@
         <relationshipLabel><!-- Promotions --></relationshipLabel>
     </fields>
     <fields>
-        <label><!-- Send Deployment Complete email --></label>
+        <label><!-- Notify When Complete --></label>
         <name>copado__Send_Deployment_Complete_email__c</name>
     </fields>
     <fields>
@@ -134,4 +152,8 @@
         <errorMessage><!-- Back Promotions to Scratch Orgs are not allowed --></errorMessage>
         <name>copado__Scratch_Orgs_Disabled_for_Back_Promoting</name>
     </validationRules>
+    <webLinks>
+        <label><!-- Rollback --></label>
+        <name>copado__Rollback</name>
+    </webLinks>
 </CustomObjectTranslation>
