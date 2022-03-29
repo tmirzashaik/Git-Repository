@@ -733,32 +733,12 @@
                 <default>false</default>
             </values>
             <values>
-                <fullName>Test</fullName>
-                <default>false</default>
-            </values>
-            <values>
                 <fullName>Web</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
         <picklistValues>
             <picklist>Industry</picklist>
-            <values>
-                <fullName>Agriculture</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Apparel</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Banking</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Biotechnology</fullName>
-                <default>false</default>
-            </values>
             <values>
                 <fullName>Consulting</fullName>
                 <default>false</default>
