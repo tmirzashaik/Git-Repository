@@ -71,11 +71,15 @@ var operationTypeAttachmentName;
             var gitMetadataAttachment = dw.u.getAttach(app.conf.data.userStoryId, 'Git MetaData');
             var gitMetadataItems = Base64.decode(gitMetadataAttachment[0].Body);
             allMetadataItems.push(...JSON.parse(gitMetadataItems));
-
+            
+            var retrieveOnlyMetaDataAttachment = dw.u.getAttach(app.conf.data.userStoryId, 'RetrieveOnly MetaData');
+            var retrieveOnlyMetaDataItems = Base64.decode(retrieveOnlyMetaDataAttachment[0].Body);
+            allMetadataItems.push(...JSON.parse(retrieveOnlyMetaDataItems));
+            
             var commitedMetadataItems = getCommitedMetadata(app.conf.data.userStoryId);
             allMetadataItems.push(...commitedMetadataItems);
             var reCommitItems = processRetrieveOnly(allMetadataItems);
-
+            
             setWithoutRebinding(app.userStoryMD, reCommitItems);
         }
         app.grid.reloadSelectionsJSON(app.userStoryMD, 1);
@@ -279,14 +283,13 @@ var operationTypeAttachmentName;
 
                     for (const member of sourceMembers) {
                         const isEqual = (mdt) => mdt.t === member.MemberType && mdt.n === member.MemberName;
-                        const index = allMdt.findIndex(isEqual);
-
+                        const index = allMdt.findIndex(isEqual);                       
                         const mdtWrapper = {
                             t: member.MemberType,
                             n: member.MemberName,
-                            b: member.LastModifiedBy.Name,
+                            b: dw.u.getHtmlDecodedString(member.LastModifiedBy.Name),
                             d: member.LastModifiedDate.substr(0, member.LastModifiedDate.indexOf('T')),
-                            cb: member.CreatedBy.Name,
+                            cb: dw.u.getHtmlDecodedString(member.CreatedBy.Name),
                             cd: member.CreatedDate.substr(0, member.CreatedDate.indexOf('T'))
                         };
 
@@ -296,7 +299,7 @@ var operationTypeAttachmentName;
                             } else {
                                 allMdt.splice(index, 1, mdtWrapper);
                             }
-                        } else {
+                        } else if (!member.IsNameObsolete) {
                             const isSameType = (mdt) => mdt.t === member.MemberType;
                             const i = allMdt.findIndex(isSameType);
                             allMdt.splice(i, 0, mdtWrapper);
@@ -308,7 +311,18 @@ var operationTypeAttachmentName;
             }
             reRenderHeader();
             unlockScreen();
-            app.resetGrid();
+            const selectedMdt = [];
+            app.grid.allMetaData.forEach((metadataItem) => {
+                if(metadataItem.s === true){
+                    selectedMdt.push(metadataItem);
+                }
+            });
+            app.selectDx = false;
+            app.grid.resetGrid(app.conf);
+            app.grid.selectedMetadata = selectedMdt;
+            app.grid.render();
+            app.grid.loadMetaData();
+            app.grid._reapplyFilters(0);
         })
 
     };
@@ -457,11 +471,12 @@ var operationTypeAttachmentName;
         var nameMatched;
         var namePresent;
         var alertMessage;
+        var userTimezoneOffset;
 
         app.grid.allMetaData.forEach((metadataItem) => {
             compDate = new Date(metadataItem.d);
-            compDate.setHours(0, 0, 0, 0);
-            metadataDateMatched = compDate.getTime() >= selectedDate.getTime();
+            userTimezoneOffset = compDate.getTimezoneOffset() * 60000;
+            metadataDateMatched = (compDate.getTime() + userTimezoneOffset) >= selectedDate.getTime();
             nameMatched = metadataItem.b && (dw.u.removeDiacritics(metadataItem.b.toUpperCase()) == dw.u.removeDiacritics(createByName.toUpperCase()));
             if (metadataDateMatched && nameMatched) {
                 autoSelectedItems.push(metadataItem);

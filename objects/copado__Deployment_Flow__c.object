@@ -218,6 +218,22 @@
         </valueSet>
     </fields>
     <fields>
+        <fullName>copado__CommitJobTemplate__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Select the Job Template that implements the commit action for this Pipeline</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select the Job Template that implements the commit action for this Pipeline</inlineHelpText>
+        <label>Commit Job Template</label>
+        <referenceTo>copado__JobTemplate__c</referenceTo>
+        <relationshipLabel>Pipelines (Commit Job Template)</relationshipLabel>
+        <relationshipName>Pipelines2</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>copado__Copado_DX_Mode__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -272,9 +288,38 @@
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Deployment Automation</label>
+        <lookupFilter>
+            <active>true</active>
+            <errorMessage>Only active automation templates are allowed</errorMessage>
+            <filterItems>
+                <field>copado__Deployment__c.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Automation Template</value>
+            </filterItems>
+            <filterItems>
+                <field>copado__Deployment__c.copado__Active__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
         <referenceTo>copado__Deployment__c</referenceTo>
         <relationshipLabel>Pipelines (Deployment Automation)</relationshipLabel>
         <relationshipName>DeploymentPipelines</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>copado__Deployment_Job_Template__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Deployment Job Template</label>
+        <referenceTo>copado__JobTemplate__c</referenceTo>
+        <relationshipLabel>Pipelines (Deployment Job Template)</relationshipLabel>
+        <relationshipName>Pipelines1</relationshipName>
         <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
@@ -529,7 +574,36 @@ This value will prefill the order by field on related Promotion record creation 
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Promotion Automation</label>
+        <lookupFilter>
+            <active>true</active>
+            <errorMessage>Only active automation templates are allowed</errorMessage>
+            <filterItems>
+                <field>copado__Deployment__c.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Automation Template</value>
+            </filterItems>
+            <filterItems>
+                <field>copado__Deployment__c.copado__Active__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
         <referenceTo>copado__Deployment__c</referenceTo>
+        <relationshipLabel>Pipelines</relationshipLabel>
+        <relationshipName>Pipelines</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>copado__Promotion_Job_Template__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Promotion Job Template</label>
+        <referenceTo>copado__JobTemplate__c</referenceTo>
         <relationshipLabel>Pipelines</relationshipLabel>
         <relationshipName>Pipelines</relationshipName>
         <required>false</required>
@@ -586,6 +660,17 @@ This value will prefill the order by field on related Promotion record creation 
         <searchResultsAdditionalFields>LAST_UPDATE</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>copado__Unique_Template_for_promote_and_deploy</fullName>
+        <active>true</active>
+        <description>A pipeline cannot have the same template for both Promote and Deploy</description>
+        <errorConditionFormula>AND(
+  NOT(ISBLANK(copado__Promotion_Automation__c)), 
+  copado__Promotion_Automation__c ==  copado__Deployment_Automation__c
+)</errorConditionFormula>
+        <errorDisplayField>copado__Deployment_Automation__c</errorDisplayField>
+        <errorMessage>A pipeline cannot have the same template for both Promote and Deploy</errorMessage>
+    </validationRules>
     <visibility>Public</visibility>
     <webLinks>
         <fullName>copado__Find_Replace_Rule_Editor</fullName>
@@ -638,6 +723,17 @@ This value will prefill the order by field on related Promotion record creation 
         <openType>replace</openType>
         <protected>false</protected>
         <url>/apex/{!IF(CONTAINS($Action.copado__User_Story__c.New, &apos;copado__&apos;), &apos;copado__&apos;, &apos;&apos;)}ManageSeleniumTesting?regression=true&amp;flowId={!copado__Deployment_Flow__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>copado__Pipeline_Wizard</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>page</linkType>
+        <masterLabel>Launch Pipeline Wizard</masterLabel>
+        <openType>replace</openType>
+        <page>copado__NewPipeline</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
     </webLinks>
     <webLinks>
         <fullName>copado__Select_Main_Branch</fullName>

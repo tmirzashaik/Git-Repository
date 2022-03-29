@@ -20,6 +20,7 @@
                     <value>3</value>
                 </componentInstanceProperties>
                 <componentName>force:highlightsPanel</componentName>
+                <identifier>force_highlightsPanel</identifier>
             </componentInstance>
         </itemInstances>
         <name>header</name>
@@ -33,6 +34,7 @@
                     <value>required</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Name</fieldItem>
+                <identifier>RecordNameField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -42,6 +44,7 @@
                     <value>required</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.copado__Metadata_Group__c</fieldItem>
+                <identifier>RecordMetadata_Group__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -51,6 +54,7 @@
                     <value>required</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.copado__Automation_Template__c</fieldItem>
+                <identifier>RecordAutomation_Template__cField</identifier>
                 <visibilityRule>
                     <criteria>
                         <leftValue>{!Record.copado__Type__c}</leftValue>
@@ -67,6 +71,7 @@
                     <value>required</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.copado__Test_Level__c</fieldItem>
+                <identifier>RecordTest_Level__cField</identifier>
                 <visibilityRule>
                     <criteria>
                         <leftValue>{!Record.copado__Type__c}</leftValue>
@@ -79,6 +84,7 @@
         <itemInstances>
             <fieldInstance>
                 <fieldItem>Record.copado__Compliance_Rule_Group__c</fieldItem>
+                <identifier>RecordCompliance_Rule_Group__cField</identifier>
                 <visibilityRule>
                     <criteria>
                         <leftValue>{!Record.copado__Type__c}</leftValue>
@@ -91,6 +97,7 @@
         <itemInstances>
             <fieldInstance>
                 <fieldItem>Record.copado__Manual_Task_Owner__c</fieldItem>
+                <identifier>RecordManual_Task_Owner__cField</identifier>
                 <visibilityRule>
                     <booleanFilter>1 OR 2 OR 3</booleanFilter>
                     <criteria>
@@ -118,6 +125,7 @@
                     <value>required</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.copado__Selenium_Test_Group__c</fieldItem>
+                <identifier>RecordSelenium_Test_Group__cField</identifier>
                 <visibilityRule>
                     <criteria>
                         <leftValue>{!Record.copado__Type__c}</leftValue>
@@ -134,6 +142,7 @@
                     <value>required</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.copado__Static_Code_Analysis_Settings__c</fieldItem>
+                <identifier>RecordStatic_Code_Analysis_Settings__cField</identifier>
                 <visibilityRule>
                     <criteria>
                         <leftValue>{!Record.copado__Type__c}</leftValue>
@@ -146,6 +155,7 @@
         <itemInstances>
             <fieldInstance>
                 <fieldItem>Record.copado__Score_Threshold__c</fieldItem>
+                <identifier>RecordScore_Threshold__cField</identifier>
                 <visibilityRule>
                     <criteria>
                         <leftValue>{!Record.copado__Type__c}</leftValue>
@@ -162,6 +172,7 @@
         <itemInstances>
             <fieldInstance>
                 <fieldItem>Record.copado__Type__c</fieldItem>
+                <identifier>RecordType__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -171,11 +182,13 @@
                     <value>required</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.copado__Execution_Sequence__c</fieldItem>
+                <identifier>RecordExecution_Sequence__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
             <fieldInstance>
                 <fieldItem>Record.copado__Connection_Behavior__c</fieldItem>
+                <identifier>RecordConnection_Behavior__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-9495684c-01e9-4268-8edd-dc89e98a9585</name>
@@ -189,6 +202,7 @@
                     <value>Facet-f7fb8187-036c-4140-8d99-c06040cfe2e4</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:column</componentName>
+                <identifier>flexipage_column</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -198,6 +212,7 @@
                     <value>Facet-9495684c-01e9-4268-8edd-dc89e98a9585</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:column</componentName>
+                <identifier>flexipage_column2</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-f13ba0b3-6284-4557-989e-7916548edd0e</name>
@@ -211,6 +226,7 @@
                     <value>readonly</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.copado__DataJSON__c</fieldItem>
+                <identifier>RecordDataJSON__cField</identifier>
                 <visibilityRule>
                     <criteria>
                         <leftValue>{!Record.copado__Type__c}</leftValue>
@@ -235,6 +251,7 @@
                     <value>Facet-6b0f6678-3693-43b9-8612-1dd3c7ea61aa</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:column</componentName>
+                <identifier>flexipage_column3</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -244,6 +261,7 @@
                     <value>Facet-923aad26-57f8-435f-8651-bcfafe4bbce5</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:column</componentName>
+                <identifier>flexipage_column4</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-d5edfaab-c00c-4218-bde3-9eec92b69bd0</name>
@@ -261,6 +279,7 @@
                     <value>Detail</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:fieldSection</componentName>
+                <identifier>flexipage_fieldSection</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -278,6 +297,7 @@
                     <value>false</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:visualforcePage</componentName>
+                <identifier>flexipage_visualforcePage</identifier>
                 <visibilityRule>
                     <criteria>
                         <leftValue>{!Record.copado__Type__c}</leftValue>
@@ -298,6 +318,7 @@
                     <value>Fields Updated By Copado</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:fieldSection</componentName>
+                <identifier>flexipage_fieldSection2</identifier>
                 <visibilityRule>
                     <criteria>
                         <leftValue>{!Record.copado__Type__c}</leftValue>
@@ -334,6 +355,7 @@
                     <value>true</value>
                 </componentInstanceProperties>
                 <componentName>force:relatedListSingleContainer</componentName>
+                <identifier>force_relatedListSingleContainer</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-900c85db-8be3-4229-a417-56944f751998</name>
@@ -355,6 +377,7 @@
                     <value>Standard.Tab.detail</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:tab</componentName>
+                <identifier>detailTab</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -372,6 +395,7 @@
                     <value>Executions History</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:tab</componentName>
+                <identifier>customTab</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-2c76cad5-13e2-4be4-b806-085ea9c74688</name>
@@ -385,6 +409,7 @@
                     <value>Facet-2c76cad5-13e2-4be4-b806-085ea9c74688</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:tabset</componentName>
+                <identifier>flexipage_tabset</identifier>
             </componentInstance>
         </itemInstances>
         <name>main</name>

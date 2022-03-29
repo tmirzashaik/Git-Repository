@@ -141,7 +141,18 @@
         <type>Default</type>
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
-    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayoutAssignment>copado__Sprint_Compact_Layout</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>copado__Sprint_Compact_Layout</fullName>
+        <fields>Name</fields>
+        <fields>copado__Status__c</fields>
+        <fields>copado__End_Date__c</fields>
+        <fields>copado__Working_Days_Left__c</fields>
+        <fields>copado__InitialPlannedVelocity__c</fields>
+        <fields>copado__PlannedVelocity__c</fields>
+        <fields>copado__ActualVelocity__c</fields>
+        <label>Sprint Compact Layout</label>
+    </compactLayouts>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
     <description>If a project is broken down into multiple sprints this object should be used.</description>
@@ -155,6 +166,19 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>copado__ActualVelocity__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Actual Velocity</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
     <fields>
         <fullName>copado__Days_in_sprint__c</fullName>
         <deprecated>false</deprecated>
@@ -192,6 +216,19 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>copado__InitialPlannedVelocity__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Initial Planned Velocity</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>copado__Objective__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -201,6 +238,19 @@
         <trackTrending>false</trackTrending>
         <type>LongTextArea</type>
         <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>copado__PlannedVelocity__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Planned Velocity</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>copado__Project__c</fullName>
@@ -303,6 +353,41 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>copado__Working_Days_Left__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>IF(copado__End_Date__c &lt; TODAY(), 0,  IF(TODAY()&lt;copado__Start_Date__c , (CASE(MOD( copado__Start_Date__c - DATE(1985,6,24),7),
+0 , CASE( MOD( copado__End_Date__c - copado__Start_Date__c ,7),1,2,2,3,3,4,4,5,5,5,6,5,1),
+1 , CASE( MOD( copado__End_Date__c - copado__Start_Date__c ,7),1,2,2,3,3,4,4,4,5,4,6,5,1),
+2 , CASE( MOD( copado__End_Date__c - copado__Start_Date__c ,7),1,2,2,3,3,3,4,3,5,4,6,5,1),
+3 , CASE( MOD( copado__End_Date__c - copado__Start_Date__c ,7),1,2,2,2,3,2,4,3,5,4,6,5,1),
+4 , CASE( MOD( copado__End_Date__c - copado__Start_Date__c ,7),1,1,2,1,3,2,4,3,5,4,6,5,1),
+5 , CASE( MOD( copado__End_Date__c - copado__Start_Date__c ,7),1,0,2,1,3,2,4,3,5,4,6,5,0),
+6 , CASE( MOD( copado__End_Date__c - copado__Start_Date__c ,7),1,1,2,2,3,3,4,4,5,5,6,5,0),
+999)
++
+(FLOOR(( copado__End_Date__c - copado__Start_Date__c )/7)*5)), (CASE(MOD( TODAY() - DATE(1985,6,24),7),
+0 , CASE( MOD( copado__End_Date__c - TODAY() ,7),1,2,2,3,3,4,4,5,5,5,6,5,1),
+1 , CASE( MOD( copado__End_Date__c - TODAY() ,7),1,2,2,3,3,4,4,4,5,4,6,5,1),
+2 , CASE( MOD( copado__End_Date__c - TODAY() ,7),1,2,2,3,3,3,4,3,5,4,6,5,1),
+3 , CASE( MOD( copado__End_Date__c - TODAY() ,7),1,2,2,2,3,2,4,3,5,4,6,5,1),
+4 , CASE( MOD( copado__End_Date__c - TODAY() ,7),1,1,2,1,3,2,4,3,5,4,6,5,1),
+5 , CASE( MOD( copado__End_Date__c - TODAY() ,7),1,0,2,1,3,2,4,3,5,4,6,5,0),
+6 , CASE( MOD( copado__End_Date__c - TODAY() ,7),1,1,2,2,3,3,4,4,5,5,6,5,0),
+999)
++
+(FLOOR(( copado__End_Date__c - TODAY() )/7)*5))) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Working Days Left</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>copado__Working_days_in_sprint__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -375,5 +460,11 @@
         <searchResultsAdditionalFields>copado__Status__c</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>copado__EndDate_Should_be_Greater_than_StartDate</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF( AND(OR(ISCHANGED(copado__End_Date__c),ISCHANGED(copado__Start_Date__c)), copado__End_Date__c &lt;= copado__Start_Date__c), true, false)</errorConditionFormula>
+        <errorMessage>You must introduce an End Date greater than the Start Date.</errorMessage>
+    </validationRules>
     <visibility>Public</visibility>
 </CustomObject>

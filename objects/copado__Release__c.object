@@ -357,6 +357,14 @@
     <pluralLabel>Releases</pluralLabel>
     <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>copado__Validate_spaces_in_version</fullName>
+        <active>true</active>
+        <description>Make sure no spaces are there in version field</description>
+        <errorConditionFormula>CONTAINS(copado__Version__c,&quot; &quot;)</errorConditionFormula>
+        <errorDisplayField>copado__Version__c</errorDisplayField>
+        <errorMessage>please dont include spaces in version field</errorMessage>
+    </validationRules>
     <visibility>Public</visibility>
     <webLinks>
         <fullName>copado__Mass_add_to_Release</fullName>

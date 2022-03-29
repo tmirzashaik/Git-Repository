@@ -6,6 +6,14 @@
         <name>copado__ApexCallback__c</name>
     </fields>
     <fields>
+        <label><!-- Custom Function Used Credits --></label>
+        <name>copado__Custom_Function_Used_Credits__c</name>
+    </fields>
+    <fields>
+        <label><!-- Custom Function Used Minutes --></label>
+        <name>copado__Custom_Function_Used_Minutes__c</name>
+    </fields>
+    <fields>
         <help><!-- Used to track multi-step deployment overall results. --></help>
         <label><!-- Deployment --></label>
         <name>copado__Deployment__c</name>
@@ -34,9 +42,34 @@
         <name>copado__Error_Message__c</name>
     </fields>
     <fields>
+        <label><!-- Function Worker Size --></label>
+        <name>copado__Function_Worker_Size__c</name>
+        <picklistValues>
+            <masterLabel>L</masterLabel>
+            <translation><!-- L --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M</masterLabel>
+            <translation><!-- M --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S</masterLabel>
+            <translation><!-- S --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>XL</masterLabel>
+            <translation><!-- XL --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
         <help><!-- Copado Function that triggered this result. --></help>
         <label><!-- Function --></label>
         <name>copado__Function__c</name>
+        <relationshipLabel><!-- Results --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Job Step --></label>
+        <name>copado__JobStep__c</name>
         <relationshipLabel><!-- Results --></relationshipLabel>
     </fields>
     <fields>
@@ -105,6 +138,11 @@
             <masterLabel>Success</masterLabel>
             <translation><!-- Success --></translation>
         </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Test --></label>
+        <name>copado__Test__c</name>
+        <relationshipLabel><!-- Results --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- Timeout --></label>
