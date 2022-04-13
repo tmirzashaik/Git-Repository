@@ -295,6 +295,11 @@
                     <default>false</default>
                     <label>400</label>
                 </value>
+                <value>
+                    <fullName>500</fullName>
+                    <default>false</default>
+                    <label>500</label>
+                </value>
             </valueSetDefinition>
         </valueSet>
     </fields>
@@ -690,6 +695,10 @@
             </values>
             <values>
                 <fullName>400</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>500</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
