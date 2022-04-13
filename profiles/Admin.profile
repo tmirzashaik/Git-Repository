@@ -128,6 +128,16 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Account.Automated_BackPromtotion_Test__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.Automated__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Account.BillingAddress</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -144,6 +154,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Account.CustomerPriority__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.Customer_Name__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -254,6 +269,16 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Account.Site</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.Support_Level__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.Test_Field__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>

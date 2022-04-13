@@ -415,6 +415,16 @@
         </valueSet>
     </fields>
     <fields>
+        <fullName>Customer_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Customer Name</label>
+        <length>10</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>DandbCompanyId</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Lookup</type>
@@ -720,6 +730,21 @@
                 <default>false</default>
             </values>
         </picklistValues>
+        <picklistValues>
+            <picklist>Support_Level__c</picklist>
+            <values>
+                <fullName>Gold</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Platinum</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Silver</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
     </recordTypes>
     <recordTypes>
         <fullName>Customer_Account</fullName>
@@ -892,6 +917,21 @@
             </values>
             <values>
                 <fullName>20</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Support_Level__c</picklist>
+            <values>
+                <fullName>Gold</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Platinum</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Silver</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
