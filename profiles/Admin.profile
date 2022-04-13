@@ -2748,6 +2748,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Test__c.Rollback_testing_Latest__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Test__c.Rollback_testing__c</field>
         <readable>true</readable>
     </fieldPermissions>
