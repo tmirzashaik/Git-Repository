@@ -177,6 +177,17 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>Test_Case_00048975__c</fullName>
+        <description>Test for case 00048975 to Deploy OLS for standard object as false</description>
+        <externalId>false</externalId>
+        <label>Test Case 00048975</label>
+        <length>15</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>TimeFrameEndUnit</fullName>
         <trackHistory>false</trackHistory>
     </fields>
