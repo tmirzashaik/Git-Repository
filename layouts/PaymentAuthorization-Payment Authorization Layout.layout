@@ -30,14 +30,6 @@
                 <behavior>Required</behavior>
                 <field>ProcessingMode</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>TotalPaymentCaptureAmount</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>Balance</field>
-            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -59,10 +51,6 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Comments</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>TotalAuthReversalAmount</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>

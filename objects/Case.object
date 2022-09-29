@@ -480,7 +480,7 @@
     </fields>
     <fields>
         <fullName>Status</fullName>
-        <trackFeedHistory>true</trackFeedHistory>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
@@ -510,6 +510,18 @@
     <fields>
         <fullName>SuppliedPhone</fullName>
         <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>Test__c</fullName>
+        <externalId>false</externalId>
+        <label>Test</label>
+        <length>24</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>Type</fullName>
@@ -546,24 +558,6 @@
         <label>All Open Cases</label>
     </listViews>
     <listViews>
-        <fullName>InternationalEscalations</fullName>
-        <filterScope>Queue</filterScope>
-        <label>International - Escalations</label>
-        <queue>InternationalEscalations</queue>
-    </listViews>
-    <listViews>
-        <fullName>InternationalPlatinumGold</fullName>
-        <filterScope>Queue</filterScope>
-        <label>International - Platinum/Gold</label>
-        <queue>InternationalPlatinumGold</queue>
-    </listViews>
-    <listViews>
-        <fullName>InternationalSilverBronze</fullName>
-        <filterScope>Queue</filterScope>
-        <label>International - Silver/Bronze</label>
-        <queue>InternationalSilverBronze</queue>
-    </listViews>
-    <listViews>
         <fullName>MyCases</fullName>
         <filterScope>Mine</filterScope>
         <label>My Cases</label>
@@ -577,30 +571,6 @@
             <value>0</value>
         </filters>
         <label>My Open Cases</label>
-    </listViews>
-    <listViews>
-        <fullName>PartnerRelations</fullName>
-        <filterScope>Queue</filterScope>
-        <label>Partner Relations</label>
-        <queue>PartnerRelations</queue>
-    </listViews>
-    <listViews>
-        <fullName>USEscalations</fullName>
-        <filterScope>Queue</filterScope>
-        <label>US - Escalations</label>
-        <queue>USEscalations</queue>
-    </listViews>
-    <listViews>
-        <fullName>USPlatinumGold</fullName>
-        <filterScope>Queue</filterScope>
-        <label>US - Platinum/Gold</label>
-        <queue>USPlatinumGold</queue>
-    </listViews>
-    <listViews>
-        <fullName>USSilverBronze</fullName>
-        <filterScope>Queue</filterScope>
-        <label>US - Silver/Bronze</label>
-        <queue>USSilverBronze</queue>
     </listViews>
     <searchLayouts>
         <customTabListAdditionalFields>CASES.CASE_NUMBER</customTabListAdditionalFields>

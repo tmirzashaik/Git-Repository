@@ -10,16 +10,17 @@
     <caseFeedReadUnreadLtng>false</caseFeedReadUnreadLtng>
     <caseMergeInLightning>false</caseMergeInLightning>
     <closeCaseThroughStatusChange>false</closeCaseThroughStatusChange>
-    <defaultCaseFeedLayoutOn>false</defaultCaseFeedLayoutOn>
-    <defaultCaseOwner>thrisha@copado.com.partner</defaultCaseOwner>
+    <defaultCaseFeedLayoutOn>true</defaultCaseFeedLayoutOn>
+    <defaultCaseOwner>tmirzashaik@copado.com.uat</defaultCaseOwner>
     <defaultCaseOwnerType>User</defaultCaseOwnerType>
-    <defaultCaseUser>thrisha@copado.com.partner</defaultCaseUser>
+    <defaultCaseUser>tmirzashaik@copado.com.uat</defaultCaseUser>
     <emailToCase>
         <enableEmailToCase>false</enableEmailToCase>
     </emailToCase>
-    <enableCaseFeed>false</enableCaseFeed>
-    <enableCollapseEmailThread>false</enableCollapseEmailThread>
+    <enableCaseFeed>true</enableCaseFeed>
+    <enableCollapseEmailThread>true</enableCollapseEmailThread>
     <enableEarlyEscalationRuleTriggers>false</enableEarlyEscalationRuleTriggers>
+    <enableEscalateQfiToCaseInternal>false</enableEscalateQfiToCaseInternal>
     <enableMultiLangSolnSrchCSS>false</enableMultiLangSolnSrchCSS>
     <enableMultiLangSolnSrchPKB>false</enableMultiLangSolnSrchPKB>
     <enableMultiLangSolution>false</enableMultiLangSolution>

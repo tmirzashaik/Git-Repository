@@ -5,13 +5,13 @@
     <enableCaseFeedRelativeTimestamps>true</enableCaseFeedRelativeTimestamps>
     <enableChatter>true</enableChatter>
     <enableChatterEmoticons>false</enableChatterEmoticons>
-    <enableFeedEdit>false</enableFeedEdit>
+    <enableFeedEdit>true</enableFeedEdit>
     <enableFeedPinning>true</enableFeedPinning>
     <enableFeedsDraftPosts>true</enableFeedsDraftPosts>
     <enableFeedsRichText>true</enableFeedsRichText>
-    <enableInviteCsnUsers>false</enableInviteCsnUsers>
+    <enableInviteCsnUsers>true</enableInviteCsnUsers>
     <enableOutOfOfficeEnabledPref>false</enableOutOfOfficeEnabledPref>
-    <enableRichLinkPreviewsInFeed>false</enableRichLinkPreviewsInFeed>
+    <enableRichLinkPreviewsInFeed>true</enableRichLinkPreviewsInFeed>
     <enableTodayRecsInFeed>true</enableTodayRecsInFeed>
     <unlistedGroupsEnabled>false</unlistedGroupsEnabled>
 </ChatterSettings>

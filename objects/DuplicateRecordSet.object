@@ -134,10 +134,6 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>ParentId</fullName>
-        <type>Lookup</type>
-    </fields>
-    <fields>
         <fullName>RecordCount</fullName>
     </fields>
     <sharingModel>ReadWrite</sharingModel>

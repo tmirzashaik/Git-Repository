@@ -11,13 +11,13 @@
     <canViewThumbnailAssets>false</canViewThumbnailAssets>
     <enableAnalyticsSharingEnable>true</enableAnalyticsSharingEnable>
     <enableAutoCompleteCombo>true</enableAutoCompleteCombo>
-    <enableAutonomousExperience>false</enableAutonomousExperience>
     <enableDashboardComponentSnapshot>false</enableDashboardComponentSnapshot>
     <enableDashboardFlexiTable>true</enableDashboardFlexiTable>
     <enableDynamicGaugeChartPref>false</enableDynamicGaugeChartPref>
     <enableEmailReportsToPortalUsers>false</enableEmailReportsToPortalUsers>
+    <enableFirebirdEditor>false</enableFirebirdEditor>
     <enableFloatingReportHeaders>true</enableFloatingReportHeaders>
-    <enableInsights>false</enableInsights>
+    <enableInsights>true</enableInsights>
     <enableLightningReportBuilder>false</enableLightningReportBuilder>
     <enableLotusNotesImages>false</enableLotusNotesImages>
     <enableLwcInDashboards>false</enableLwcInDashboards>
@@ -31,6 +31,7 @@
     <enableReportHideXlsExportPref>false</enableReportHideXlsExportPref>
     <enableReportInlineEditPref>false</enableReportInlineEditPref>
     <enableReportNotificationsEnable>true</enableReportNotificationsEnable>
+    <enableRequestPrioritySchdl>false</enableRequestPrioritySchdl>
     <enableS1AnalyticsEclairEnable>true</enableS1AnalyticsEclairEnable>
     <enableS3OutputConnector>false</enableS3OutputConnector>
     <enableSFXJoinedReportsEnable>false</enableSFXJoinedReportsEnable>
@@ -39,14 +40,18 @@
     <enableSnowflakeOutputConnector>false</enableSnowflakeOutputConnector>
     <enableTableauHyperOutputConnector>false</enableTableauHyperOutputConnector>
     <enableUseOldChartsLookAndFeel>false</enableUseOldChartsLookAndFeel>
+    <enableWaveAssetsNewDateVersion>false</enableWaveAssetsNewDateVersion>
     <enableWaveIndexMVDim>true</enableWaveIndexMVDim>
     <enableWaveIndexMVDimV2>false</enableWaveIndexMVDimV2>
     <enableWaveRecordNavigation>false</enableWaveRecordNavigation>
     <enableWaveReplication>false</enableWaveReplication>
     <enableWaveSharingInheritance>false</enableWaveSharingInheritance>
     <enableWaveSqlInQueryApi>false</enableWaveSqlInQueryApi>
+    <enableWaveTrendedDatasetCleanup>false</enableWaveTrendedDatasetCleanup>
     <maxHoursAppInProgress>48</maxHoursAppInProgress>
+    <recipeDirectDataPref>true</recipeDirectDataPref>
+    <recipePreCachingOptOut>false</recipePreCachingOptOut>
+    <recipeStagedDataPref>false</recipeStagedDataPref>
     <replaceBlankMeasuresWithNulls>false</replaceBlankMeasuresWithNulls>
-    <sonicEnabled>false</sonicEnabled>
     <turnOnTimeZones>false</turnOnTimeZones>
 </AnalyticsSettings>
