@@ -22,7 +22,7 @@
         </quickActionLayoutColumns>
         <quickActionLayoutColumns/>
     </quickActionLayout>
-    <standardLabel>New</standardLabel>
+    <standardLabel>AddMember</standardLabel>
     <targetObject>CollaborationGroupMember</targetObject>
     <targetParentField>CollaborationGroup</targetParentField>
     <type>Create</type>

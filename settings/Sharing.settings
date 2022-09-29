@@ -2,7 +2,7 @@
 <SharingSettings xmlns="http://soap.sforce.com/2006/04/metadata">
     <deferGroupMembership>false</deferGroupMembership>
     <deferSharingRules>false</deferSharingRules>
-    <enableAssetSharing>false</enableAssetSharing>
+    <enableAssetSharing>true</enableAssetSharing>
     <enableCommunityUserVisibility>true</enableCommunityUserVisibility>
     <enableExternalSharingModel>true</enableExternalSharingModel>
     <enableManagerGroups>false</enableManagerGroups>

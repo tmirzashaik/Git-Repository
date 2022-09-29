@@ -1,6 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Layout xmlns="http://soap.sforce.com/2006/04/metadata">
     <emailDefault>false</emailDefault>
+    <feedLayout>
+        <autocollapsePublisher>true</autocollapsePublisher>
+        <compactFeed>true</compactFeed>
+        <feedFilterPosition>LeftFixed</feedFilterPosition>
+        <feedFilters>
+            <feedFilterType>AllUpdates</feedFilterType>
+        </feedFilters>
+        <feedFilters>
+            <feedFilterType>FeedItemType</feedFilterType>
+            <feedItemType>CallLogPost</feedItemType>
+        </feedFilters>
+        <feedFilters>
+            <feedFilterType>FeedItemType</feedFilterType>
+            <feedItemType>TextPost</feedItemType>
+        </feedFilters>
+        <feedFilters>
+            <feedFilterType>FeedItemType</feedFilterType>
+            <feedItemType>ChangeStatusPost</feedItemType>
+        </feedFilters>
+        <feedFilters>
+            <feedFilterType>FeedItemType</feedFilterType>
+            <feedItemType>ActivityEvent</feedItemType>
+        </feedFilters>
+        <fullWidthFeed>true</fullWidthFeed>
+        <hideSidebar>true</hideSidebar>
+        <highlightExternalFeedItems>false</highlightExternalFeedItems>
+        <rightComponents>
+            <componentType>HelpAndToolLinks</componentType>
+        </rightComponents>
+        <rightComponents>
+            <componentType>Following</componentType>
+        </rightComponents>
+        <rightComponents>
+            <componentType>Followers</componentType>
+        </rightComponents>
+        <rightComponents>
+            <componentType>Topics</componentType>
+        </rightComponents>
+        <rightComponents>
+            <componentType>CustomLinks</componentType>
+        </rightComponents>
+        <rightComponents>
+            <componentType>CustomButtons</componentType>
+        </rightComponents>
+        <useInlineFiltersInConsole>false</useInlineFiltersInConsole>
+    </feedLayout>
     <headers>PersonalTagging</headers>
     <headers>PublicTagging</headers>
     <layoutSections>
@@ -168,6 +214,12 @@
             <quickActionName>FeedItem.TextPost</quickActionName>
         </quickActionListItems>
         <quickActionListItems>
+            <quickActionName>Case.LogACall</quickActionName>
+        </quickActionListItems>
+        <quickActionListItems>
+            <quickActionName>Case.ChangeStatus</quickActionName>
+        </quickActionListItems>
+        <quickActionListItems>
             <quickActionName>FeedItem.ContentPost</quickActionName>
         </quickActionListItems>
         <quickActionListItems>
@@ -231,8 +283,64 @@
     <runAssignmentRulesDefault>false</runAssignmentRulesDefault>
     <showEmailCheckbox>true</showEmailCheckbox>
     <showHighlightsPanel>true</showHighlightsPanel>
-    <showInteractionLogPanel>true</showInteractionLogPanel>
-    <showKnowledgeComponent>false</showKnowledgeComponent>
+    <showInteractionLogPanel>false</showInteractionLogPanel>
+    <showKnowledgeComponent>true</showKnowledgeComponent>
     <showRunAssignmentRulesCheckbox>true</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>true</showSubmitAndAttachButton>
+    <summaryLayout>
+        <masterLabel>00h1a0000012AHE</masterLabel>
+        <sizeX>3</sizeX>
+        <sizeY>4</sizeY>
+        <summaryLayoutItems>
+            <field>ContactId</field>
+            <posX>0</posX>
+            <posY>0</posY>
+        </summaryLayoutItems>
+        <summaryLayoutItems>
+            <field>AccountId</field>
+            <posX>0</posX>
+            <posY>1</posY>
+        </summaryLayoutItems>
+        <summaryLayoutItems>
+            <field>ContactPhone</field>
+            <posX>0</posX>
+            <posY>2</posY>
+        </summaryLayoutItems>
+        <summaryLayoutItems>
+            <field>CaseNumber</field>
+            <posX>1</posX>
+            <posY>0</posY>
+        </summaryLayoutItems>
+        <summaryLayoutItems>
+            <field>CreatedDate</field>
+            <posX>1</posX>
+            <posY>1</posY>
+        </summaryLayoutItems>
+        <summaryLayoutItems>
+            <field>Subject</field>
+            <posX>1</posX>
+            <posY>2</posY>
+        </summaryLayoutItems>
+        <summaryLayoutItems>
+            <field>Description</field>
+            <posX>1</posX>
+            <posY>3</posY>
+        </summaryLayoutItems>
+        <summaryLayoutItems>
+            <field>Status</field>
+            <posX>2</posX>
+            <posY>0</posY>
+        </summaryLayoutItems>
+        <summaryLayoutItems>
+            <field>Priority</field>
+            <posX>2</posX>
+            <posY>1</posY>
+        </summaryLayoutItems>
+        <summaryLayoutItems>
+            <field>OwnerId</field>
+            <posX>2</posX>
+            <posY>2</posY>
+        </summaryLayoutItems>
+        <summaryLayoutStyle>CaseInteraction</summaryLayoutStyle>
+    </summaryLayout>
 </Layout>

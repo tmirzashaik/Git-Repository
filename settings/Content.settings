@@ -15,7 +15,6 @@
     <enableFilesUsrShareNetRestricted>false</enableFilesUsrShareNetRestricted>
     <enableJPGPreviews>false</enableJPGPreviews>
     <enableLibraryManagedFiles>false</enableLibraryManagedFiles>
-    <enableShowChatterFilesInContent>false</enableShowChatterFilesInContent>
     <enableSiteGuestUserToUploadFiles>false</enableSiteGuestUserToUploadFiles>
     <enableUploadFilesOnAttachments>false</enableUploadFilesOnAttachments>
     <setValidContentTypeForAtchDocDownload>false</setValidContentTypeForAtchDocDownload>
