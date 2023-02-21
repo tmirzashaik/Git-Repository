@@ -10,3 +10,5 @@ private class TemperatureConverterTest {
         System.assertEquals(100,celsius,'Boiling point temperature not expected.');
     }
 }
+
+//Test for case 00062656
