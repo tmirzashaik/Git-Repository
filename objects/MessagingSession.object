@@ -181,24 +181,28 @@
         <customTabListAdditionalFields>MessagingChannel</customTabListAdditionalFields>
         <customTabListAdditionalFields>MessagingEndUser</customTabListAdditionalFields>
         <customTabListAdditionalFields>Owner</customTabListAdditionalFields>
+        <customTabListAdditionalFields>PlatformType</customTabListAdditionalFields>
         <customTabListAdditionalFields>Status</customTabListAdditionalFields>
         <customTabListAdditionalFields>StartTime</customTabListAdditionalFields>
         <customTabListAdditionalFields>EndTime</customTabListAdditionalFields>
         <lookupDialogsAdditionalFields>MessagingChannel</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>MessagingEndUser</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>Owner</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>PlatformType</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>Status</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>StartTime</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>EndTime</lookupDialogsAdditionalFields>
         <lookupPhoneDialogsAdditionalFields>MessagingChannel</lookupPhoneDialogsAdditionalFields>
         <lookupPhoneDialogsAdditionalFields>MessagingEndUser</lookupPhoneDialogsAdditionalFields>
         <lookupPhoneDialogsAdditionalFields>Owner</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>PlatformType</lookupPhoneDialogsAdditionalFields>
         <lookupPhoneDialogsAdditionalFields>Status</lookupPhoneDialogsAdditionalFields>
         <lookupPhoneDialogsAdditionalFields>StartTime</lookupPhoneDialogsAdditionalFields>
         <lookupPhoneDialogsAdditionalFields>EndTime</lookupPhoneDialogsAdditionalFields>
         <searchResultsAdditionalFields>MessagingChannel</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>MessagingEndUser</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>Owner</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>PlatformType</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>Status</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>StartTime</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>EndTime</searchResultsAdditionalFields>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Policy Term --></label>
+        <name>vlocity_ins__AssetTermId__c</name>
+        <relationshipLabel><!-- Policy Term Tracking Entry --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Calculated Initial Amount --></label>
+        <name>vlocity_ins__CalculatedInitialAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Calculated Initial Value --></label>
+        <name>vlocity_ins__CalculatedInitialValue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Claim Coverage --></label>
+        <name>vlocity_ins__ClaimCoverageId__c</name>
+        <relationshipLabel><!-- Policy Term Tracking Entry --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Claim --></label>
+        <name>vlocity_ins__ClaimId__c</name>
+        <relationshipLabel><!-- Policy Term Tracking Entry --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Claim Line Item --></label>
+        <name>vlocity_ins__ClaimLineItemId__c</name>
+        <relationshipLabel><!-- Policy Term Tracking Entry --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Initial Amount --></label>
+        <name>vlocity_ins__InitialAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Initial Value --></label>
+        <name>vlocity_ins__InitialValue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Insured Item --></label>
+        <name>vlocity_ins__InsuredItemId__c</name>
+        <relationshipLabel><!-- Policy Term Tracking Entry --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Insured Party --></label>
+        <name>vlocity_ins__InsuredPartyId__c</name>
+        <relationshipLabel><!-- Policy Term Tracking Entry --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Involved Party --></label>
+        <name>vlocity_ins__InvolvedPartyId__c</name>
+        <relationshipLabel><!-- Policy Term Tracking Entry --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Involved Property --></label>
+        <name>vlocity_ins__InvolvedPropertyId__c</name>
+        <relationshipLabel><!-- Policy Term Tracking Entry --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Posted Amount --></label>
+        <name>vlocity_ins__PostedAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Posted Value --></label>
+        <name>vlocity_ins__PostedValue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Remaining Amount --></label>
+        <name>vlocity_ins__RemainingAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Remaining Value --></label>
+        <name>vlocity_ins__RemainingValue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Numerical Order --></label>
+        <name>vlocity_ins__Sequence__c</name>
+    </fields>
+</CustomObjectTranslation>

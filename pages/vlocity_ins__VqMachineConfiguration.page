@@ -1,0 +1,5 @@
+<apex:page standardStylesheets="false" sidebar="false" showHeader="false" standardController="vlocity_ins__VqMachine__c" extensions="vlocity_ins.VqController" >
+	<body>
+	<div>This page is deprecated.</div>
+	</body>
+</apex:page>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Test</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Tests</value>
+    </caseValues>
+    <fields>
+        <label><!-- Rollback_testing_Latest --></label>
+        <name>Rollback_testing_Latest__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rollback_testing --></label>
+        <name>Rollback_testing__c</name>
+    </fields>
+    <fields>
+        <label><!-- Test --></label>
+        <name>Test__c</name>
+    </fields>
+    <fields>
+        <label><!-- Test_for_Commit --></label>
+        <name>Test_for_Commit__c</name>
+    </fields>
+    <fields>
+        <label><!-- Test_for_DoneToday --></label>
+        <name>Test_for_DoneToday__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This object is a custom metadata type to setup the power attribute term detail. It is to support different duration terms for 236. It can also be flexible to add more types of term definitions. It is also possible to use this custom metadata type to support quote/policy custom terms in the future releases.</description>
+    <fields>
+        <fullName>vlocity_ins__DurationUnitofMeasure__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Unit of Mesure in Month / Day</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Duration Unit of Measure</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Month</fullName>
+                    <default>true</default>
+                    <label>Month</label>
+                </value>
+                <value>
+                    <fullName>Day</fullName>
+                    <default>false</default>
+                    <label>Day</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>vlocity_ins__DurationValue__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Value of Duration in Months / Days.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Duration Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>vlocity_ins__Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>It represents the type of term</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Type</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Duration</fullName>
+                    <default>true</default>
+                    <label>Duration</label>
+                </value>
+                <value>
+                    <fullName>Rolling</fullName>
+                    <default>false</default>
+                    <label>Rolling</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>Insurance Term Configuration</label>
+    <pluralLabel>Insurance Term Configurations</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,628 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Accreditation Type --></label>
+        <name>vlocity_ins__AccreditationType__c</name>
+        <picklistValues>
+            <masterLabel>Fellowship</masterLabel>
+            <translation><!-- Fellowship --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Internship</masterLabel>
+            <translation><!-- Internship --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Residency</masterLabel>
+            <translation><!-- Residency --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>University</masterLabel>
+            <translation><!-- University --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Agency Name --></label>
+        <name>vlocity_ins__AgencyName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Certification # --></label>
+        <name>vlocity_ins__CertificationNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>vlocity_ins__ContactId__c</name>
+        <relationshipLabel><!-- Provider Education --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Degree Through --></label>
+        <name>vlocity_ins__DegreeThroughDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Education Type --></label>
+        <name>vlocity_ins__EducationType__c</name>
+        <picklistValues>
+            <masterLabel>Dental Hygiene (ASDH)</masterLabel>
+            <translation><!-- Dental Hygiene (ASDH) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Doctor of Chiropractic (DC)</masterLabel>
+            <translation><!-- Doctor of Chiropractic (DC) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Doctor of Dental Medicine (DMD)</masterLabel>
+            <translation><!-- Doctor of Dental Medicine (DMD) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Doctor of Dental Surgery (DDS)</masterLabel>
+            <translation><!-- Doctor of Dental Surgery (DDS) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Doctor of Medicine (MD)</masterLabel>
+            <translation><!-- Doctor of Medicine (MD) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Doctor of Optometry (OD)</masterLabel>
+            <translation><!-- Doctor of Optometry (OD) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Doctor of Osteopathic Medicine (DO)</masterLabel>
+            <translation><!-- Doctor of Osteopathic Medicine (DO) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Doctor of Physical Therapy (DPT)</masterLabel>
+            <translation><!-- Doctor of Physical Therapy (DPT) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Master of Public Health (MPH)</masterLabel>
+            <translation><!-- Master of Public Health (MPH) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Master of Science in Occupational Therapy (MSOT)</masterLabel>
+            <translation><!-- Master of Science in Occupational Therapy (MSOT) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Master of Social Work (MSW)</masterLabel>
+            <translation><!-- Master of Social Work (MSW) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nurse Practioner (NP)</masterLabel>
+            <translation><!-- Nurse Practioner (NP) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Occupational Therapy (OT)</masterLabel>
+            <translation><!-- Occupational Therapy (OT) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Physician Assistant (PA)</masterLabel>
+            <translation><!-- Physician Assistant (PA) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Podiatric Medicine (DPM)</masterLabel>
+            <translation><!-- Podiatric Medicine (DPM) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Radiation Therapy (RT)</masterLabel>
+            <translation><!-- Radiation Therapy (RT) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Registered Nurse (RM)</masterLabel>
+            <translation><!-- Registered Nurse (RM) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Respiratory Therapy (RT)</masterLabel>
+            <translation><!-- Respiratory Therapy (RT) --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Hours Applied --></label>
+        <name>vlocity_ins__HoursApplied__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hours Needed to Renew --></label>
+        <name>vlocity_ins__HoursNeededToRenew__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hours Required --></label>
+        <name>vlocity_ins__HoursRequired__c</name>
+    </fields>
+    <fields>
+        <label><!-- Institution Address --></label>
+        <name>vlocity_ins__InstitutionAddress__c</name>
+    </fields>
+    <fields>
+        <label><!-- Institution Name --></label>
+        <name>vlocity_ins__InstitutionName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Jurisdiction --></label>
+        <name>vlocity_ins__Jurisdiction__c</name>
+        <picklistValues>
+            <masterLabel>AK</masterLabel>
+            <translation><!-- AK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AL</masterLabel>
+            <translation><!-- AL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AR</masterLabel>
+            <translation><!-- AR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AZ</masterLabel>
+            <translation><!-- AZ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CA</masterLabel>
+            <translation><!-- CA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CO</masterLabel>
+            <translation><!-- CO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CT</masterLabel>
+            <translation><!-- CT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DE</masterLabel>
+            <translation><!-- DE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FL</masterLabel>
+            <translation><!-- FL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GA</masterLabel>
+            <translation><!-- GA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HI</masterLabel>
+            <translation><!-- HI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IA</masterLabel>
+            <translation><!-- IA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ID</masterLabel>
+            <translation><!-- ID --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IL</masterLabel>
+            <translation><!-- IL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IN</masterLabel>
+            <translation><!-- IN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KS</masterLabel>
+            <translation><!-- KS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KY</masterLabel>
+            <translation><!-- KY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LA</masterLabel>
+            <translation><!-- LA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MA</masterLabel>
+            <translation><!-- MA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MD</masterLabel>
+            <translation><!-- MD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ME</masterLabel>
+            <translation><!-- ME --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MI</masterLabel>
+            <translation><!-- MI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MN</masterLabel>
+            <translation><!-- MN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MO</masterLabel>
+            <translation><!-- MO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MS</masterLabel>
+            <translation><!-- MS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MT</masterLabel>
+            <translation><!-- MT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NC</masterLabel>
+            <translation><!-- NC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ND</masterLabel>
+            <translation><!-- ND --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NE</masterLabel>
+            <translation><!-- NE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NH</masterLabel>
+            <translation><!-- NH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NJ</masterLabel>
+            <translation><!-- NJ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NM</masterLabel>
+            <translation><!-- NM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NV</masterLabel>
+            <translation><!-- NV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NY</masterLabel>
+            <translation><!-- NY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OH</masterLabel>
+            <translation><!-- OH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OK</masterLabel>
+            <translation><!-- OK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OR</masterLabel>
+            <translation><!-- OR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PA</masterLabel>
+            <translation><!-- PA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RI</masterLabel>
+            <translation><!-- RI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SC</masterLabel>
+            <translation><!-- SC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SD</masterLabel>
+            <translation><!-- SD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TN</masterLabel>
+            <translation><!-- TN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TX</masterLabel>
+            <translation><!-- TX --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT</masterLabel>
+            <translation><!-- UT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VA</masterLabel>
+            <translation><!-- VA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VT</masterLabel>
+            <translation><!-- VT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WA</masterLabel>
+            <translation><!-- WA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WI</masterLabel>
+            <translation><!-- WI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WV</masterLabel>
+            <translation><!-- WV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WY</masterLabel>
+            <translation><!-- WY --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Program Completed Date --></label>
+        <name>vlocity_ins__ProgramCompletedDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Program Name --></label>
+        <name>vlocity_ins__ProgramName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Program Start Date --></label>
+        <name>vlocity_ins__ProgramStartDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Specialty Type --></label>
+        <name>vlocity_ins__SpecialtyType__c</name>
+        <picklistValues>
+            <masterLabel>001 – General Practice</masterLabel>
+            <translation><!-- 001 – General Practice --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>002 – Family Practice</masterLabel>
+            <translation><!-- 002 – Family Practice --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>003 – Internal Medicine</masterLabel>
+            <translation><!-- 003 – Internal Medicine --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>004 – Geriatrics</masterLabel>
+            <translation><!-- 004 – Geriatrics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>005 – Primary Care – Physician Assistants </masterLabel>
+            <translation><!-- 005 – Primary Care – Physician Assistants  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>006 – Primary Care – Nurse Practitioners</masterLabel>
+            <translation><!-- 006 – Primary Care – Nurse Practitioners --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>007 – Allergy and Immunology</masterLabel>
+            <translation><!-- 007 – Allergy and Immunology --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>008 – Cardiology</masterLabel>
+            <translation><!-- 008 – Cardiology --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>009 – NOT IN USE</masterLabel>
+            <translation><!-- 009 – NOT IN USE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>010 – Chiropractor </masterLabel>
+            <translation><!-- 010 – Chiropractor  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>011 – Dermatology</masterLabel>
+            <translation><!-- 011 – Dermatology --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>012 – Endocrinology</masterLabel>
+            <translation><!-- 012 – Endocrinology --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>013 – ENT/Otolaryngology</masterLabel>
+            <translation><!-- 013 – ENT/Otolaryngology --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>014 – Gastroenterology </masterLabel>
+            <translation><!-- 014 – Gastroenterology  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>015 – General Surgery</masterLabel>
+            <translation><!-- 015 – General Surgery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>016 – Gynecology, OB/GYN</masterLabel>
+            <translation><!-- 016 – Gynecology, OB/GYN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>017 – Infectious Diseases</masterLabel>
+            <translation><!-- 017 – Infectious Diseases --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>018 – Nephrology</masterLabel>
+            <translation><!-- 018 – Nephrology --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>019 – Neurology</masterLabel>
+            <translation><!-- 019 – Neurology --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>020 – Neurosurgery</masterLabel>
+            <translation><!-- 020 – Neurosurgery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>021 – Oncology - Medical, Surgical</masterLabel>
+            <translation><!-- 021 – Oncology - Medical, Surgical --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>022 – Oncology - Radiation/Radiation Oncology</masterLabel>
+            <translation><!-- 022 – Oncology - Radiation/Radiation Oncology --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>023 – Ophthalmology</masterLabel>
+            <translation><!-- 023 – Ophthalmology --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>024 – NOT IN USE</masterLabel>
+            <translation><!-- 024 – NOT IN USE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>025 – Orthopedic Surgery</masterLabel>
+            <translation><!-- 025 – Orthopedic Surgery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>026 – Physiatry, Rehabilitative Medicine</masterLabel>
+            <translation><!-- 026 – Physiatry, Rehabilitative Medicine --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>027 – Plastic Surgery</masterLabel>
+            <translation><!-- 027 – Plastic Surgery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>028 – Podiatry</masterLabel>
+            <translation><!-- 028 – Podiatry --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>029 – Psychiatry</masterLabel>
+            <translation><!-- 029 – Psychiatry --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>030 – Pulmonology</masterLabel>
+            <translation><!-- 030 – Pulmonology --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>031 – Rheumatology</masterLabel>
+            <translation><!-- 031 – Rheumatology --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>032 – NOT IN USE</masterLabel>
+            <translation><!-- 032 – NOT IN USE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>033 – Urology</masterLabel>
+            <translation><!-- 033 – Urology --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>034 – Vascular Surgery</masterLabel>
+            <translation><!-- 034 – Vascular Surgery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>035 – Cardiothoracic Surgery</masterLabel>
+            <translation><!-- 035 – Cardiothoracic Surgery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>040 – Acute Inpatient Hospitals</masterLabel>
+            <translation><!-- 040 – Acute Inpatient Hospitals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>041 – Cardiac Surgery Program</masterLabel>
+            <translation><!-- 041 – Cardiac Surgery Program --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>042 – Cardiac Catheterization Services</masterLabel>
+            <translation><!-- 042 – Cardiac Catheterization Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>043 – Critical Care Services – Intensive Care Units (ICU)</masterLabel>
+            <translation><!-- 043 – Critical Care Services – Intensive Care Units (ICU) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>044 – Outpatient Dialysis</masterLabel>
+            <translation><!-- 044 – Outpatient Dialysis --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>045 – Surgical Services (Outpatient or ASC)</masterLabel>
+            <translation><!-- 045 – Surgical Services (Outpatient or ASC) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>046 – Skilled Nursing Facilities</masterLabel>
+            <translation><!-- 046 – Skilled Nursing Facilities --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>047 – Diagnostic Radiology</masterLabel>
+            <translation><!-- 047 – Diagnostic Radiology --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>048 – Mammography</masterLabel>
+            <translation><!-- 048 – Mammography --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>049 – Physical Therapy</masterLabel>
+            <translation><!-- 049 – Physical Therapy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>050 – Occupational Therapy</masterLabel>
+            <translation><!-- 050 – Occupational Therapy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>051 – Speech Therapy</masterLabel>
+            <translation><!-- 051 – Speech Therapy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>052 – Inpatient Psychiatric Facility Services</masterLabel>
+            <translation><!-- 052 – Inpatient Psychiatric Facility Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>053 – NOT IN USE</masterLabel>
+            <translation><!-- 053 – NOT IN USE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>054 – Orthotics and Prosthetics</masterLabel>
+            <translation><!-- 054 – Orthotics and Prosthetics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>055 – Home Health</masterLabel>
+            <translation><!-- 055 – Home Health --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>056 – Durable Medical Equipment</masterLabel>
+            <translation><!-- 056 – Durable Medical Equipment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>057 – Outpatient Infusion/Chemotherapy</masterLabel>
+            <translation><!-- 057 – Outpatient Infusion/Chemotherapy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>058 – NOT IN USE</masterLabel>
+            <translation><!-- 058 – NOT IN USE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>059 – NOT IN USE</masterLabel>
+            <translation><!-- 059 – NOT IN USE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>060 – NOT IN USE</masterLabel>
+            <translation><!-- 060 – NOT IN USE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>061 – Heart Transplant Program</masterLabel>
+            <translation><!-- 061 – Heart Transplant Program --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>062 – Heart/Lung Transplant Program</masterLabel>
+            <translation><!-- 062 – Heart/Lung Transplant Program --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>063 – NOT IN USE</masterLabel>
+            <translation><!-- 063 – NOT IN USE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>064 – Kidney Transplant Program</masterLabel>
+            <translation><!-- 064 – Kidney Transplant Program --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>065 – Liver Transplant Program</masterLabel>
+            <translation><!-- 065 – Liver Transplant Program --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>066 – Lung Transplant Program</masterLabel>
+            <translation><!-- 066 – Lung Transplant Program --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>067 – Pancreas Transplant Program</masterLabel>
+            <translation><!-- 067 – Pancreas Transplant Program --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>vlocity_ins__Status__c</name>
+        <picklistValues>
+            <masterLabel>Active</masterLabel>
+            <translation><!-- Active --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Expired</masterLabel>
+            <translation><!-- Expired --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inactive</masterLabel>
+            <translation><!-- Inactive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending</masterLabel>
+            <translation><!-- Pending --></translation>
+        </picklistValues>
+    </fields>
+</CustomObjectTranslation>

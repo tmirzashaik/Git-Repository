@@ -114,38 +114,87 @@
     </actionOverrides>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <enableFeeds>false</enableFeeds>
+    <fieldSets>
+        <fullName>vlocity_ins__StoryFieldSet</fullName>
+        <description>Display in story list</description>
+        <displayedFields>
+            <field>Subject</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ActivityDate</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Status</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Priority</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Type</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Description</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>StoryFieldSet</label>
+    </fieldSets>
     <fields>
         <fullName>ActivityDate</fullName>
+        <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>CallDisposition</fullName>
+        <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>CallDurationInSeconds</fullName>
+        <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>CallObject</fullName>
+        <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>CallType</fullName>
+        <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>CompletedDateTime</fullName>
+        <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>Description</fullName>
+        <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>Email</fullName>
     </fields>
     <fields>
         <fullName>IsRecurrence</fullName>
+        <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>IsReminderSet</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>IsVisibleInSelfService</fullName>
+        <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>OwnerId</fullName>
+        <trackHistory>false</trackHistory>
         <type>Lookup</type>
     </fields>
     <fields>
@@ -153,20 +202,25 @@
     </fields>
     <fields>
         <fullName>Priority</fullName>
+        <trackHistory>false</trackHistory>
         <type>Picklist</type>
     </fields>
     <fields>
         <fullName>RecurrenceInterval</fullName>
+        <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>RecurrenceRegeneratedType</fullName>
+        <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>Status</fullName>
+        <trackHistory>false</trackHistory>
         <type>Picklist</type>
     </fields>
     <fields>
         <fullName>Subject</fullName>
+        <trackHistory>false</trackHistory>
         <type>Picklist</type>
     </fields>
     <fields>
@@ -174,14 +228,17 @@
     </fields>
     <fields>
         <fullName>Type</fullName>
+        <trackHistory>false</trackHistory>
         <type>Picklist</type>
     </fields>
     <fields>
         <fullName>WhatId</fullName>
+        <trackHistory>false</trackHistory>
         <type>Lookup</type>
     </fields>
     <fields>
         <fullName>WhoId</fullName>
+        <trackHistory>false</trackHistory>
         <type>Lookup</type>
     </fields>
     <listViews>
@@ -361,6 +418,115 @@
         </filters>
         <label>ENCODED:{!FilterNames.Task_UnscheduledTasks}</label>
     </listViews>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>vlocity_ins__MobilePhoneTask</fullName>
+        <active>true</active>
+        <description>Mobile Phone Task</description>
+        <label>MobilePhoneTask</label>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deferred</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Started</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Waiting on someone else</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subject</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Send Letter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Send Quote</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>vlocity_ins__EventStatus__c</picklist>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Started</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Shared</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>vlocity_ins__ProviderSiteVisitReason__c</picklist>
+            <values>
+                <fullName>Medical Record Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Site Review - Provider Facility</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Site Review - Provider Practitioner</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
     <searchLayouts/>
     <sharingModel>Private</sharingModel>
 </CustomObject>

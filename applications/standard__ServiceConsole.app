@@ -162,6 +162,7 @@
     <defaultLandingTab>standard-home</defaultLandingTab>
     <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
     <isServiceCloudConsole>true</isServiceCloudConsole>
     <preferences>
         <enableCustomizeMyTabs>false</enableCustomizeMyTabs>
@@ -179,6 +180,7 @@
     <tabs>standard-Case</tabs>
     <tabs>standard-Opportunity</tabs>
     <tabs>standard-Lead</tabs>
+    <tabs>standard-Knowledge</tabs>
     <workspaceConfig>
         <mappings>
             <tab>standard-Account</tab>
@@ -190,6 +192,9 @@
         <mappings>
             <fieldName>AccountId</fieldName>
             <tab>standard-Contact</tab>
+        </mappings>
+        <mappings>
+            <tab>standard-Knowledge</tab>
         </mappings>
         <mappings>
             <tab>standard-Lead</tab>

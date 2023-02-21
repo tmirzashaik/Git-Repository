@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Active --></label>
+        <name>vlocity_ins__IsActive__c</name>
+    </fields>
+    <fields>
+        <label><!-- Trigger class name --></label>
+        <name>vlocity_ins__ListenerClassName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Priority of the trigger --></label>
+        <name>vlocity_ins__Priority__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sobject type of the trigger --></label>
+        <name>vlocity_ins__SObjectType__c</name>
+        <picklistValues>
+            <masterLabel>Attribute Assignment</masterLabel>
+            <translation><!-- Attribute Assignment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product</masterLabel>
+            <translation><!-- Product --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product2</masterLabel>
+            <translation><!-- Product2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vlocity Object or Object Type</masterLabel>
+            <translation><!-- Vlocity Object or Object Type --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vlocity Picklist</masterLabel>
+            <translation><!-- Vlocity Picklist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vlocity Picklist Value</masterLabel>
+            <translation><!-- Vlocity Picklist Value --></translation>
+        </picklistValues>
+    </fields>
+</CustomObjectTranslation>

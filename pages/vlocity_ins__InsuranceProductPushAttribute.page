@@ -1,0 +1,26 @@
+<apex:page docType="html-5.0" standardController="Product2" extensions="vlocity_ins.InsuranceProductPushAttributeController" applyHtmlTag="false" showHeader="false" sidebar="false" applyBodyTag="false">
+    <apex:slds />
+    <apex:form >
+        <br/><h2>{!pushAttributeMessage}</h2><br/><br/>
+        <apex:pageBlock rendered="{!isBatchMode}">
+            <br/><apex:outputLabel >{!$Label.vlocity_ins__JobSize}</apex:outputLabel>
+            <apex:input value="{!jobSize}" label="jobsize" type="number" id="theJobSize" style="margin-left:25px;width:40px"/><br/>
+            <br/><apex:outputLabel >{!$Label.vlocity_ins__BatchSize}</apex:outputLabel>
+            <apex:input value="{!batchSize}" label="batchSize" type="number" id="theBatchSize" style="margin-left:15px;width:40px"/><br/>
+        </apex:pageBlock>
+        <br/><apex:commandLink action="{!pushAttribute}">
+            <apex:commandButton value="{!$Label.vlocity_ins__OmniContinue}"/>
+        </apex:commandLink>
+        <br/><br/><apex:outputText value="{!$Label.vlocity_ins__InsProductPushAttributeBatchSubmitted}" rendered="{!isBatchSubmitted}"/><br/>
+        <br/><br/><apex:outputText value="{!resultMessage}" rendered="{!isPushed}"/><br/>
+        <apex:repeat value="{!updatedProducts}" var="prod">
+            <apex:outputText value="{!prod.Name}"/><br/>
+        </apex:repeat>
+        <br/><br/><apex:outputText value="{!failedPushMessage}" rendered="{!isFailedPush}"/><br/>
+        <apex:repeat value="{!failedPushProducts}" var="fprod">
+            <apex:outputText value="{!fprod.Name}"/><br/>
+        </apex:repeat>
+        <br/><br/><apex:outputText value="{!noProductsMessage}" rendered="{!isNotPushed}"/><br/>
+        <br/><br/><apex:outputText value="{!exceptionMessage}" rendered="{!hasException}"/><br/>            
+    </apex:form>
+</apex:page>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentName>vlocity_ins:cardDesignerHeader</componentName>
+                <identifier>cardDesignerHeader</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>header</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentName>vlocity_ins:cardPreview</componentName>
+                <identifier>cardPreview</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>card</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentName>vlocity_ins:rightSidebar</componentName>
+                <identifier>rightSidebar</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentName>vlocity_ins:carddesignerCommon</componentName>
+                <identifier>carddesignerCommon</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>sidebar</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <masterLabel>Vlocity Card Designer</masterLabel>
+    <sobjectType>vlocity_ins__VlocityCard__c</sobjectType>
+    <template>
+        <name>vlocity_ins:cardsDesignerTemplate</name>
+    </template>
+    <type>RecordPage</type>
+</FlexiPage>

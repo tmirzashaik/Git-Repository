@@ -1,0 +1,2 @@
+<apex:page standardController="Account" id="fapage" docType="html-5.0">
+</apex:page>

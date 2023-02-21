@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Applicable Item --></label>
+        <name>vlocity_ins__ApplicableItem__c</name>
+    </fields>
+    <fields>
+        <label><!-- Policy Coverage --></label>
+        <name>vlocity_ins__AssetCoverageId__c</name>
+        <relationshipLabel><!-- Policy Terms --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Asset Version --></label>
+        <name>vlocity_ins__AssetId__c</name>
+        <relationshipLabel><!-- Policy Terms --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Attribute Class --></label>
+        <name>vlocity_ins__AttributeClass__c</name>
+    </fields>
+    <fields>
+        <label><!-- Attribute Code --></label>
+        <name>vlocity_ins__AttributeCode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Attribute --></label>
+        <name>vlocity_ins__AttributeId__c</name>
+        <relationshipLabel><!-- Policy Terms --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Attribute Scope --></label>
+        <name>vlocity_ins__AttributeScope__c</name>
+    </fields>
+    <fields>
+        <label><!-- Benefit Type --></label>
+        <name>vlocity_ins__AttributeSubType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Duration Type --></label>
+        <name>vlocity_ins__DurationType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Effective Year --></label>
+        <name>vlocity_ins__EffectiveYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- Initial Amount --></label>
+        <name>vlocity_ins__InitialAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Initial Value --></label>
+        <name>vlocity_ins__InitialValue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Insured Item --></label>
+        <name>vlocity_ins__InsuredItemId__c</name>
+        <relationshipLabel><!-- Policy Terms --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Insured Party --></label>
+        <name>vlocity_ins__InsuredPartyId__c</name>
+        <relationshipLabel><!-- Policy Terms --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Is Active --></label>
+        <name>vlocity_ins__IsActive__c</name>
+    </fields>
+    <fields>
+        <label><!-- ClaimLineItemClaimedAmount --></label>
+        <name>vlocity_ins__IsClaimLineItemClaimedAmountAction__c</name>
+    </fields>
+    <fields>
+        <label><!-- PaymentAttempted --></label>
+        <name>vlocity_ins__IsPaymentAttemptedAction__c</name>
+    </fields>
+    <fields>
+        <label><!-- ReserveAdjustmentAttempted --></label>
+        <name>vlocity_ins__IsReserveAdjustmentAttemptedAction__c</name>
+    </fields>
+    <fields>
+        <label><!-- Original Policy --></label>
+        <name>vlocity_ins__OriginalAssetId__c</name>
+        <relationshipLabel><!-- Policy Terms (Original Policy) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Reference Policy Number --></label>
+        <name>vlocity_ins__ReferencePolicyNumber__c</name>
+    </fields>
+    <validationRules>
+        <errorMessage><!-- Effective Year must be a valid year. --></errorMessage>
+        <name>vlocity_ins__EffectiveYearValidation</name>
+    </validationRules>
+</CustomObjectTranslation>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help><!-- The parent Fulfilment Diagram associated with the detail Fulfilment Diagram OPD. --></help>
+        <label><!-- Fulfilment Diagram --></label>
+        <name>vlocity_ins__FulfilmentDiagram__c</name>
+        <relationshipLabel><!-- Fulfilment Diagram OPDs --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- The detail Orchestration Plan Definition associated with the parent Fulfilment Diagram OPD. --></help>
+        <label><!-- Orchestration Plan Definition --></label>
+        <name>vlocity_ins__OrchestrationPlanDefinition__c</name>
+        <relationshipLabel><!-- Fulfilment Diagram OPDs --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- The swimlane display order for the Orchestration Plan Definition. For example, if 3 is specified, the Orchestration Plan Definition displays in the third swimlane. Minimum of 1 and maximum of 99. --></help>
+        <label><!-- Swimlane Order --></label>
+        <name>vlocity_ins__SwimlaneOrder__c</name>
+    </fields>
+</CustomObjectTranslation>

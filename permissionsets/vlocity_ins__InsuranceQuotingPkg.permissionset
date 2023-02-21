@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customPermissions>
+        <enabled>true</enabled>
+        <name>vlocity_ins__InsuranceProductCatalogRuntime</name>
+    </customPermissions>
+    <customPermissions>
+        <enabled>true</enabled>
+        <name>vlocity_ins__InsuranceQuoting</name>
+    </customPermissions>
+    <description>Allows the user to access custom insurance quoting features.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Insurance Quoting Package</label>
+</PermissionSet>

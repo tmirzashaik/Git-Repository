@@ -152,6 +152,18 @@
     <fields>
         <fullName>RejectionLabel</fullName>
     </fields>
+    <fields>
+        <fullName>vlocity_ins__VlocityActionId__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Vlocity Action</label>
+        <referenceTo>vlocity_ins__VlocityAction__c</referenceTo>
+        <relationshipLabel>Recommendations</relationshipLabel>
+        <relationshipName>Recommendations</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
     <listViews>
         <fullName>All_Recommendations</fullName>
         <filterScope>Everything</filterScope>

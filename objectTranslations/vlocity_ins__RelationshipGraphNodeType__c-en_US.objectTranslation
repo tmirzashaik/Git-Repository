@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help><!-- Required. JSON code that lists the fields to return for this node type in this graph. --></help>
+        <label><!-- Field List --></label>
+        <name>vlocity_ins__FieldList__c</name>
+    </fields>
+    <fields>
+        <label><!-- Global Key --></label>
+        <name>vlocity_ins__GlobalKey__c</name>
+    </fields>
+    <fields>
+        <help><!-- Id of the relationship graph to which this node type definition belongs. --></help>
+        <label><!-- Relationship Graph --></label>
+        <name>vlocity_ins__GraphId__c</name>
+        <relationshipLabel><!-- Relationship Graph Node Types --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Object type for this node, such as Contact. For a custom object, include the namespace, for example vlocity_ins__Group__c. --></help>
+        <label><!-- Object API Name --></label>
+        <name>vlocity_ins__ObjectApiName__c</name>
+    </fields>
+    <fields>
+        <help><!-- Optional record type for the object, such as ServiceAggregator for an Account object. --></help>
+        <label><!-- Record Type Name --></label>
+        <name>vlocity_ins__RecordTypeName__c</name>
+    </fields>
+</CustomObjectTranslation>

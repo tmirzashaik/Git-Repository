@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Birthdate --></label>
+        <name>vlocity_ins__Birthdate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dependent Type --></label>
+        <name>vlocity_ins__DependentType__c</name>
+        <picklistValues>
+            <masterLabel>Child</masterLabel>
+            <translation><!-- Child --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>None</masterLabel>
+            <translation><!-- None --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Spouse</masterLabel>
+            <translation><!-- Spouse --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- First Name --></label>
+        <name>vlocity_ins__FirstName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Gender --></label>
+        <name>vlocity_ins__Gender__c</name>
+        <picklistValues>
+            <masterLabel>Female</masterLabel>
+            <translation><!-- Female --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Male</masterLabel>
+            <translation><!-- Male --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Insured Group Census --></label>
+        <name>vlocity_ins__InsuredGroupCensusId__c</name>
+        <relationshipLabel><!-- Insured Group Census Members --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Primary --></label>
+        <name>vlocity_ins__IsPrimaryMember__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Name --></label>
+        <name>vlocity_ins__LastName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Member Type --></label>
+        <name>vlocity_ins__MemberType__c</name>
+        <picklistValues>
+            <masterLabel>Cobra</masterLabel>
+            <translation><!-- Cobra --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Declined</masterLabel>
+            <translation><!-- Declined --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Full Time</masterLabel>
+            <translation><!-- Full Time --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Part Time</masterLabel>
+            <translation><!-- Part Time --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- No. Dependents --></label>
+        <name>vlocity_ins__NumberOfDependents__c</name>
+    </fields>
+    <fields>
+        <label><!-- Primary Census Member --></label>
+        <name>vlocity_ins__RelatedInsuredCensusMemberId__c</name>
+        <relationshipLabel><!-- Insured Group Census Member --></relationshipLabel>
+    </fields>
+</CustomObjectTranslation>

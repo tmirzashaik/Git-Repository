@@ -40,6 +40,69 @@
         <visibleLines>25</visibleLines>
     </fields>
     <label>Knowledge</label>
+    <listViews>
+        <fullName>archived_articles</fullName>
+        <columns>TITLE</columns>
+        <columns>ABSTRACT</columns>
+        <columns>ARTICLE_NUMBER</columns>
+        <columns>LANGUAGE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>PUBLISH_STATUS</field>
+            <operation>equals</operation>
+            <value>3</value>
+        </filters>
+        <filters>
+            <field>LANGUAGE</field>
+            <operation>equals</operation>
+            <value>en_US</value>
+        </filters>
+        <label>Archived Articles</label>
+    </listViews>
+    <listViews>
+        <fullName>draft_articles</fullName>
+        <columns>TITLE</columns>
+        <columns>ABSTRACT</columns>
+        <columns>ARTICLE_NUMBER</columns>
+        <columns>LANGUAGE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>PUBLISH_STATUS</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>LANGUAGE</field>
+            <operation>equals</operation>
+            <value>en_US</value>
+        </filters>
+        <label>Draft Articles</label>
+    </listViews>
+    <listViews>
+        <fullName>published_articles</fullName>
+        <columns>TITLE</columns>
+        <columns>ABSTRACT</columns>
+        <columns>ARTICLE_NUMBER</columns>
+        <columns>LANGUAGE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>PUBLISH_STATUS</field>
+            <operation>equals</operation>
+            <value>2</value>
+        </filters>
+        <filters>
+            <field>LANGUAGE</field>
+            <operation>equals</operation>
+            <value>en_US</value>
+        </filters>
+        <label>Published Articles</label>
+    </listViews>
     <pluralLabel>Knowledge</pluralLabel>
-    <searchLayouts />
+    <recordTypes>
+        <fullName>FAQ</fullName>
+        <active>true</active>
+        <description>This can be used for simple question and answer articles</description>
+        <label>FAQ</label>
+    </recordTypes>
+    <searchLayouts/>
 </CustomObject>

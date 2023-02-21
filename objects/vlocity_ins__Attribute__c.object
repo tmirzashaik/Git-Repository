@@ -1,0 +1,996 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>Represents the definition of an attribute which can be used for profiling, describing or configuring items tracked in the database.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fieldSets>
+        <fullName>vlocity_ins__ConsoleAdminSearch</fullName>
+        <description>Vlocity Industry Console</description>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>vlocity_ins__Code__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>vlocity_ins__UniqueNameField__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>vlocity_ins__AttributeCategoryId__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>vlocity_ins__ValueType__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>vlocity_ins__Value__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Console Admin Search</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>vlocity_ins__ListAttributesForExport</fullName>
+        <availableFields>
+            <field>vlocity_ins__AttributeCategoryName__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <description>This field set is used to decide what fields to display in the list of attributes for exporting.</description>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>vlocity_ins__ActiveFlg__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>List Attributes for Export</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>vlocity_ins__NewAttribute</fullName>
+        <description>Vlocity Industry Console</description>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>vlocity_ins__UniqueNameField__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>vlocity_ins__Code__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>vlocity_ins__Description__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>vlocity_ins__ValueType__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>vlocity_ins__AttributeCategoryId__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>vlocity_ins__ExcludeFromBasketCache__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>New Attribute</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>vlocity_ins__VlocityAdmin</fullName>
+        <description>VlocityAdmin Field Set</description>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>vlocity_ins__Code__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>vlocity_ins__DisplaySequence__c</field>
+            <isFieldManaged>true</isFieldManaged>
+            <isRequired>true</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>vlocity_ins__Filterable__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>vlocity_ins__Configurable__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>vlocity_ins__IsCloneable__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>vlocity_ins__ActiveFlg__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>vlocity_ins__IsPrivate__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>vlocity_ins__AttributeGroupType__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>vlocity_ins__AttributeClass__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>vlocity_ins__AttributeScope__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>vlocity_ins__ApplicableActions__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>vlocity_ins__ApplicableItem__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>vlocity_ins__ValueType__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>vlocity_ins__SubType__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>vlocity_ins__DurationType__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>VlocityAdmin</label>
+    </fieldSets>
+    <fields>
+        <fullName>vlocity_ins__ActiveFlg__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Indicates if the attribute is active. Only active attributes can be assigned.</description>
+        <externalId>false</externalId>
+        <label>Active</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>vlocity_ins__ApplicableActions__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Applicable Actions</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>ClaimLineItemClaimedAmountEntered</fullName>
+                    <default>false</default>
+                    <label>ClaimLineItemClaimedAmountEntered</label>
+                </value>
+                <value>
+                    <fullName>PaymentAttempted</fullName>
+                    <default>false</default>
+                    <label>PaymentAttempted</label>
+                </value>
+                <value>
+                    <fullName>ReserveAdjustmentAttempted</fullName>
+                    <default>false</default>
+                    <label>ReserveAdjustmentAttempted</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>vlocity_ins__ApplicableItem__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Applicable Item</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Any</fullName>
+                    <default>false</default>
+                    <label>Any</label>
+                </value>
+                <value>
+                    <fullName>Property</fullName>
+                    <default>false</default>
+                    <label>Property</label>
+                </value>
+                <value>
+                    <fullName>Person</fullName>
+                    <default>false</default>
+                    <label>Person</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>vlocity_ins__AttributeCategoryCode__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Formula: Code of the parent attribute category.</description>
+        <externalId>false</externalId>
+        <formula>vlocity_ins__AttributeCategoryId__r.vlocity_ins__Code__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Attribute Category Code</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>vlocity_ins__AttributeCategoryId__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Parent attribute category. Used for organizing the attributes into groupings.</description>
+        <externalId>false</externalId>
+        <label>Attribute Category</label>
+        <referenceTo>vlocity_ins__AttributeCategory__c</referenceTo>
+        <relationshipLabel>Attributes</relationshipLabel>
+        <relationshipName>Attributes</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>true</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>vlocity_ins__AttributeCategoryName__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Formula: Name of the parent attribute category.</description>
+        <externalId>false</externalId>
+        <formula>vlocity_ins__AttributeCategoryId__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Attribute Category Name</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>vlocity_ins__AttributeClass__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Attribute Class</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Limit</fullName>
+                    <default>false</default>
+                    <label>Limit - Currency</label>
+                </value>
+                <value>
+                    <fullName>ScopeCountLimit</fullName>
+                    <default>false</default>
+                    <label>Limit - Scope Count</label>
+                </value>
+                <value>
+                    <fullName>UnitCountLimit</fullName>
+                    <default>false</default>
+                    <label>Limit - Claim Line Item Unit Count</label>
+                </value>
+                <value>
+                    <fullName>Deductible</fullName>
+                    <default>false</default>
+                    <label>Deductible</label>
+                </value>
+                <value>
+                    <fullName>Copay</fullName>
+                    <default>false</default>
+                    <label>Copay</label>
+                </value>
+                <value>
+                    <fullName>Coinsurance</fullName>
+                    <default>false</default>
+                    <label>Coinsurance</label>
+                </value>
+                <value>
+                    <fullName>OutOfPocketMax</fullName>
+                    <default>false</default>
+                    <label>Out Of Pocket Max</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>vlocity_ins__AttributeGroupType__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Attribute Group Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>In-Network</fullName>
+                    <default>false</default>
+                    <label>In-Network</label>
+                </value>
+                <value>
+                    <fullName>Out-Of-Network</fullName>
+                    <default>false</default>
+                    <label>Out-Of-Network</label>
+                </value>
+                <value>
+                    <fullName>Link Group</fullName>
+                    <default>false</default>
+                    <label>Link Group</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>vlocity_ins__AttributeScope__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Attribute Scope</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Policy</fullName>
+                    <default>false</default>
+                    <label>Policy</label>
+                </value>
+                <value>
+                    <fullName>Policy Coverage</fullName>
+                    <default>false</default>
+                    <label>Policy Coverage</label>
+                </value>
+                <value>
+                    <fullName>Claim</fullName>
+                    <default>false</default>
+                    <label>Claim</label>
+                </value>
+                <value>
+                    <fullName>Claim Coverage</fullName>
+                    <default>false</default>
+                    <label>Claim Coverage</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>vlocity_ins__AutoCode__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Autonumber field optionally used to generate a unique attribute code.</description>
+        <displayFormat>ATTRIBUTE-{000}</displayFormat>
+        <externalId>false</externalId>
+        <label>Auto Code</label>
+        <trackTrending>false</trackTrending>
+        <type>AutoNumber</type>
+    </fields>
+    <fields>
+        <fullName>vlocity_ins__Code__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <deprecated>false</deprecated>
+        <description>Unique code for this attribute.</description>
+        <externalId>true</externalId>
+        <label>Code</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>vlocity_ins__Configurable__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>For product attributes, indicates if this attribute is configurable. When configurable, the user can configure the attribute after adding the Product to the cart.</description>
+        <externalId>false</externalId>
+        <label>Configurable</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>vlocity_ins__CustomConfigUiTemplate__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Information describing the Vlocity UI Template or HTML/JavaScript to render when users ask to configure this attribute value. Useful when the user needs to interact with an external system to choose the attribute value (such as picking a phone number for a new mobile phone).</description>
+        <externalId>false</externalId>
+        <label>Custom Config UI Template</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>vlocity_ins__Description__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Description of this attribute.</description>
+        <externalId>false</externalId>
+        <label>Description</label>
+        <length>1000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>vlocity_ins__DisplaySequence__c</fullName>
+        <defaultValue>1</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Display sequence for this attribute within pick lists.</description>
+        <externalId>false</externalId>
+        <label>Display Sequence</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>vlocity_ins__DurationType__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Duration Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Calendar Year</fullName>
+                    <default>false</default>
+                    <label>Calendar Year</label>
+                </value>
+                <value>
+                    <fullName>Policy Term</fullName>
+                    <default>true</default>
+                    <label>Policy Term</label>
+                </value>
+                <value>
+                    <fullName>Lifetime</fullName>
+                    <default>false</default>
+                    <label>Lifetime</label>
+                </value>
+                <value>
+                    <fullName>Rolling12Month</fullName>
+                    <default>false</default>
+                    <label>Rolling 12 Month</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>vlocity_ins__EffectiveFromDate__c</fullName>
+        <deprecated>false</deprecated>
+        <description>For product attributes, the start date at which this attribute becomes available to end users.</description>
+        <externalId>false</externalId>
+        <label>Effectivity Start Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>vlocity_ins__EffectiveUntilDate__c</fullName>
+        <deprecated>false</deprecated>
+        <description>For product attributes, the end date after which this attribute is unavailable to end users.</description>
+        <externalId>false</externalId>
+        <label>Effectivity End Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>vlocity_ins__ExcludeFromBasketCache__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>For product attributes, indicates if this attribute should be excluded from Basket Cache Key. When ExcludeFromBasketCache__c is false, Attribute will be included while generating basket cache key.</description>
+        <externalId>false</externalId>
+        <label>Exclude From Basket Cache</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>vlocity_ins__Filterable__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>For product attributes, indicates if this attribute is enabled as a product selection filter.</description>
+        <externalId>false</externalId>
+        <label>Filterable</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>vlocity_ins__GlobalKey__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The globally unique identifier of the Product. Used to identify the product across Salesforce
+            instances.</description>
+        <externalId>false</externalId>
+        <label>Global Key</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>vlocity_ins__HelpText__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Help text to display when end users are configuring this attribute.</description>
+        <externalId>false</externalId>
+        <label>Help Text</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>vlocity_ins__IsCloneable__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Whether this attribute should be cloned while cloning a line item.</description>
+        <externalId>false</externalId>
+        <label>Cloneable</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>vlocity_ins__IsEncrypted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field indicates if attribute values need to be encrypted.</description>
+        <externalId>false</externalId>
+        <label>Encrypted</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>vlocity_ins__IsNotAssetizable__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field indicates if this attribute assignment should not be part of an Inventory Item.</description>
+        <externalId>false</externalId>
+        <label>Not Assetizable</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>vlocity_ins__IsPrivate__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Whether the attribute is private to the owner or not. When unchecked, the attribute can be viewed and selected by all end users when associated to objects. When checked (therefore private) this attribute will only be visible to the user who created it.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Is this attribute private to the owner (not visible to other users)?</inlineHelpText>
+        <label>Private</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>vlocity_ins__OwnerId__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>ID of the User that is considered the owner of this attribute.</description>
+        <externalId>false</externalId>
+        <label>Owner</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>VlocityAttributes</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>vlocity_ins__PicklistId__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>ID of the Vlocity Picklist that provides the valid values for this attribute.</description>
+        <externalId>false</externalId>
+        <label>Picklist</label>
+        <referenceTo>vlocity_ins__Picklist__c</referenceTo>
+        <relationshipLabel>Vlocity Attributes</relationshipLabel>
+        <relationshipName>Vlocity_Attributes</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>vlocity_ins__SubType__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Benefit Type</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>vlocity_ins__UniqueNameField__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <deprecated>false</deprecated>
+        <description>Unique name for this attribute.</description>
+        <externalId>false</externalId>
+        <label>Unique Name</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>vlocity_ins__ValueType__c</fullName>
+        <deprecated>false</deprecated>
+        <description>For product attributes, identifies the data type of this attribute (e.g., number, percent, text, or checkbox).</description>
+        <externalId>false</externalId>
+        <label>Value Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Currency</fullName>
+                    <default>false</default>
+                    <label>Currency</label>
+                </value>
+                <value>
+                    <fullName>Percent</fullName>
+                    <default>false</default>
+                    <label>Percent</label>
+                </value>
+                <value>
+                    <fullName>Text</fullName>
+                    <default>true</default>
+                    <label>Text</label>
+                </value>
+                <value>
+                    <fullName>Number</fullName>
+                    <default>false</default>
+                    <label>Number</label>
+                </value>
+                <value>
+                    <fullName>Checkbox</fullName>
+                    <default>false</default>
+                    <label>Checkbox</label>
+                </value>
+                <value>
+                    <fullName>Date</fullName>
+                    <default>false</default>
+                    <label>Date</label>
+                </value>
+                <value>
+                    <fullName>Datetime</fullName>
+                    <default>false</default>
+                    <label>Datetime</label>
+                </value>
+                <value>
+                    <fullName>Picklist</fullName>
+                    <default>false</default>
+                    <label>Picklist</label>
+                </value>
+                <value>
+                    <fullName>Multi Picklist</fullName>
+                    <default>false</default>
+                    <label>Multi Picklist</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>vlocity_ins__Value__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Default value for this attribute when assigned to an object.</description>
+        <externalId>false</externalId>
+        <label>Default Value</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>vlocity_ins__isDefaultHidden__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Hidden By Default</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Vlocity Attribute</label>
+    <nameField>
+        <label>Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Vlocity Attributes</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>vlocity_ins__ActiveFlg__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>vlocity_ins__AttributeCategoryId__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>vlocity_ins__ActiveFlg__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>vlocity_ins__AttributeCategoryId__c</lookupDialogsAdditionalFields>
+        <searchResultsAdditionalFields>vlocity_ins__ActiveFlg__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>vlocity_ins__AttributeCategoryId__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>vlocity_ins__BooleanType</fullName>
+        <active>true</active>
+        <errorConditionFormula>(( TEXT( vlocity_ins__ValueType__c ) = &apos;Checkbox&apos;)) &amp;&amp;  NOT(ISBLANK( vlocity_ins__Value__c )) &amp;&amp; NOT(( vlocity_ins__Value__c = &apos;true&apos; ) || ( vlocity_ins__Value__c = &apos;false&apos; ))</errorConditionFormula>
+        <errorMessage>Value must be a Boolean.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>vlocity_ins__DateTimeType</fullName>
+        <active>true</active>
+        <errorConditionFormula>(( TEXT( vlocity_ins__ValueType__c ) = &apos;DateTime&apos;)) &amp;&amp;  NOT( ISBLANK( vlocity_ins__Value__c )) &amp;&amp; ( ISBLANK(DATETIMEVALUE( vlocity_ins__Value__c )))</errorConditionFormula>
+        <errorMessage>Value must be a valid DateTime Type YYYY-MM-DD .</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>vlocity_ins__DateType</fullName>
+        <active>true</active>
+        <errorConditionFormula>(( TEXT( vlocity_ins__ValueType__c )  = &apos;Date&apos;))  &amp;&amp;  NOT( ISBLANK( vlocity_ins__Value__c )) &amp;&amp;  ( ISBLANK(DATEVALUE( vlocity_ins__Value__c )))</errorConditionFormula>
+        <errorMessage>Value must be a valid Date Type YYYY-MM-DD.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>vlocity_ins__NumberType</fullName>
+        <active>true</active>
+        <errorConditionFormula>(( TEXT( vlocity_ins__ValueType__c )  = &apos;Number&apos;)|| ( TEXT( vlocity_ins__ValueType__c )  = &apos;Percent&apos;) || ( TEXT( vlocity_ins__ValueType__c )  = &apos;Currency&apos;))  &amp;&amp;  NOT( ISBLANK( vlocity_ins__Value__c ))  &amp;&amp; NOT( ISNUMBER( vlocity_ins__Value__c ))</errorConditionFormula>
+        <errorMessage>Value must be a Number.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>vlocity_ins__PicklistType</fullName>
+        <active>true</active>
+        <errorConditionFormula>(( TEXT( vlocity_ins__ValueType__c )  = &apos;Picklist&apos;)|| ( TEXT( vlocity_ins__ValueType__c )  = &apos;Multi Picklist&apos;))  &amp;&amp;  ( ISBLANK(  vlocity_ins__PicklistId__c ))</errorConditionFormula>
+        <errorMessage>Picklist must be selected for Picklist and Multi Picklist type attributes.</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>vlocity_ins__Export</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Export</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/apex.js&quot;)}
+var namespace_prefix = &apos;&apos;; 
+var gettingnamespace = sforce.connection.query(&quot;SELECT NamespacePrefix FROM ApexClass where Name = &apos;ApplicationUtilities&apos; LIMIT 1&quot;); 
+var getname = gettingnamespace.getArray(&quot;records&quot;); 
+if(getname.length &gt; 0) 
+{ 
+namespace_prefix = getname[0].NamespacePrefix; 
+}
+if (namespace_prefix==null || namespace_prefix==&apos;&apos;)
+window.location = &apos;apex/AttributeListSelectToExportPage?Id=&apos; + &apos;{!vlocity_ins__AttributeCategory__c.Id}&apos;;
+else
+window.location = &apos;apex/&apos;+namespace_prefix+&apos;__AttributeListSelectToExportPage?Id=&apos; + &apos;{!vlocity_ins__AttributeCategory__c.Id}&apos;</url>
+    </webLinks>
+    <webLinks>
+        <fullName>vlocity_ins__Merge</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Merge</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/apex.js&quot;)} 
+var namespace_prefix = &apos;&apos;; 
+var gettingnamespace = sforce.connection.query(&quot;SELECT NamespacePrefix FROM ApexClass where Name = &apos;ApplicationUtilities&apos; LIMIT 1&quot;); 
+var getname = gettingnamespace.getArray(&quot;records&quot;); 
+if(getname.length &gt; 0) 
+{ 
+namespace_prefix = getname[0].NamespacePrefix; 
+} 
+if (namespace_prefix==null || namespace_prefix==&apos;&apos;) 
+window.location = &apos;apex/AttributeListSelectToMergePage?Id=&apos; + &apos;{!vlocity_ins__AttributeCategory__c.Id}&apos;; 
+else 
+window.location = &apos;apex/&apos;+namespace_prefix+&apos;__AttributeListSelectToMergePage?Id=&apos; + &apos;{!vlocity_ins__AttributeCategory__c.Id}&apos;</url>
+    </webLinks>
+</CustomObject>

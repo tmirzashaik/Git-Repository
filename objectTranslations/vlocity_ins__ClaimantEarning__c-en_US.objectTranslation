@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Amount --></label>
+        <name>vlocity_ins__Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Claim --></label>
+        <name>vlocity_ins__ClaimId__c</name>
+        <relationshipLabel><!-- Claimant Earnings --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Claimant --></label>
+        <name>vlocity_ins__ClaimantId__c</name>
+        <relationshipLabel><!-- Claimant Earnings --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- End Date --></label>
+        <name>vlocity_ins__EndDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Source --></label>
+        <name>vlocity_ins__Source__c</name>
+        <picklistValues>
+            <masterLabel>Rental Income</masterLabel>
+            <translation><!-- Rental Income --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tips</masterLabel>
+            <translation><!-- Tips --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wages</masterLabel>
+            <translation><!-- Wages --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Start Date --></label>
+        <name>vlocity_ins__StartDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>vlocity_ins__Status__c</name>
+        <picklistValues>
+            <masterLabel>Invalidated</masterLabel>
+            <translation><!-- Invalidated --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Stated</masterLabel>
+            <translation><!-- Stated --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>vlocity_ins__Type__c</name>
+        <picklistValues>
+            <masterLabel>Actual</masterLabel>
+            <translation><!-- Actual --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Average</masterLabel>
+            <translation><!-- Average --></translation>
+        </picklistValues>
+    </fields>
+</CustomObjectTranslation>

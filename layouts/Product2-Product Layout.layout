@@ -14,6 +14,10 @@
                 <behavior>Edit</behavior>
                 <field>ProductCode</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CanUseQuantitySchedule</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -23,6 +27,10 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Family</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CanUseRevenueSchedule</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>

@@ -1,0 +1,5 @@
+<apex:page id="XOMDSIDebugPage" standardController="vlocity_ins__OrchestrationItemDefinition__c" extensions="vlocity_ins.XOMDSIDebugControllerExtension" docType="html-5.0" applyBodyTag="false" sideBar="false">
+    <c:XOMIllustration title="{!$Label.vlocity_ins__VFPageDepricatedText}"
+        showReturn="false">
+    </c:XOMIllustration>
+</apex:page>

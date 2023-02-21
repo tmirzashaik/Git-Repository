@@ -130,6 +130,10 @@
     <enableFeeds>false</enableFeeds>
     <externalSharingModel>Private</externalSharingModel>
     <fields>
+        <fullName>ApptStartTimeIntvlInMin</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
         <fullName>BlockTimeAfterAppointment</fullName>
         <trackHistory>false</trackHistory>
     </fields>

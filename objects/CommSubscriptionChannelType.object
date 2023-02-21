@@ -136,6 +136,11 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>DataUsePurposeId</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>EngagementChannelTypeId</fullName>
         <inlineHelpText>The engagement channel type record associated with the communication subscription channel type.</inlineHelpText>
         <trackHistory>false</trackHistory>

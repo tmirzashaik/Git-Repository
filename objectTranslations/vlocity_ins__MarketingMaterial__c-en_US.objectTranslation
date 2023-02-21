@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Account --></label>
+        <name>vlocity_ins__AccountId__c</name>
+        <relationshipLabel><!-- Marketing Materials --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>vlocity_ins__Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unit Value --></label>
+        <name>vlocity_ins__UnitValue__c</name>
+    </fields>
+</CustomObjectTranslation>

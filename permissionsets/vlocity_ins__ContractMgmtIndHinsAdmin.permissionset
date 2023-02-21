@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customPermissions>
+        <enabled>true</enabled>
+        <name>vlocity_ins__ContractMgmtIndHinsAdmin</name>
+    </customPermissions>
+    <customPermissions>
+        <enabled>true</enabled>
+        <name>vlocity_ins__ContractMgmtIndHinsRuntime</name>
+    </customPermissions>
+    <customPermissions>
+        <enabled>true</enabled>
+        <name>vlocity_ins__DocGenIndHinsDesigner</name>
+    </customPermissions>
+    <customPermissions>
+        <enabled>true</enabled>
+        <name>vlocity_ins__DocGenIndHinsRuntime</name>
+    </customPermissions>
+    <description>Allows admin users to monitor, maintain, configure, and manage contract lifecycles.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>ContractMgmtInd HINS Admin User</label>
+</PermissionSet>

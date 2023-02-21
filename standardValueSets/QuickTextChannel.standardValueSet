@@ -31,4 +31,9 @@
         <default>false</default>
         <label>Task</label>
     </standardValue>
+    <standardValue>
+        <fullName>Knowledge</fullName>
+        <default>false</default>
+        <label>Knowledge</label>
+    </standardValue>
 </StandardValueSet>

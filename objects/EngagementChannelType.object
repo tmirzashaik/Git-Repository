@@ -135,6 +135,10 @@
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
+        <fullName>IsActive</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
         <fullName>Name</fullName>
         <trackHistory>false</trackHistory>
     </fields>
@@ -143,6 +147,11 @@
         <trackHistory>false</trackHistory>
         <type>Lookup</type>
     </fields>
+    <fields>
+        <fullName>UsageType</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
     <listViews>
         <fullName>All_EngagementChannelTypes</fullName>
         <filterScope>Everything</filterScope>
@@ -150,7 +159,11 @@
     </listViews>
     <searchLayouts>
         <customTabListAdditionalFields>ContactPointType</customTabListAdditionalFields>
+        <customTabListAdditionalFields>IsActive</customTabListAdditionalFields>
+        <customTabListAdditionalFields>UsageType</customTabListAdditionalFields>
         <searchResultsAdditionalFields>ContactPointType</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>IsActive</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>UsageType</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>Private</sharingModel>
 </CustomObject>

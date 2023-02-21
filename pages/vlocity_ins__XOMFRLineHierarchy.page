@@ -1,0 +1,5 @@
+<apex:page standardController="vlocity_ins__FulfilmentRequest__c" extensions="vlocity_ins.XOMFRLineAndInventoryItemController,vlocity_ins.XOMThorLocalizationController,vlocity_ins.XOMUserInfoControllerExtension" showHeader="false" sidebar="false" applyHtmlTag="false">
+    <c:XOMIllustration title="{!$Label.vlocity_ins__VFPageDepricatedText}"
+            showReturn="false">
+    </c:XOMIllustration>
+</apex:page>

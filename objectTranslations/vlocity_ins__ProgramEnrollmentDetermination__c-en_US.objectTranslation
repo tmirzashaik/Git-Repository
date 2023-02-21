@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Eligibility Amount --></label>
+        <name>vlocity_ins__EligibilityAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Eligibility Determination --></label>
+        <name>vlocity_ins__EligibilityDetermination__c</name>
+        <picklistValues>
+            <masterLabel>Eligible</masterLabel>
+            <translation><!-- Eligible --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Eligible</masterLabel>
+            <translation><!-- Not Eligible --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Active --></label>
+        <name>vlocity_ins__IsActive__c</name>
+    </fields>
+    <fields>
+        <label><!-- Most Recent Determination Date --></label>
+        <name>vlocity_ins__MostRecentDeterminationDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Program Enrollment --></label>
+        <name>vlocity_ins__ProgramEnrollmentId__c</name>
+        <relationshipLabel><!-- Enrollment Determinations --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>vlocity_ins__Type__c</name>
+        <picklistValues>
+            <masterLabel>Change of Circumstances</masterLabel>
+            <translation><!-- Change of Circumstances --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Preliminary Determination</masterLabel>
+            <translation><!-- Preliminary Determination --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Scheduled Determination</masterLabel>
+            <translation><!-- Scheduled Determination --></translation>
+        </picklistValues>
+    </fields>
+</CustomObjectTranslation>

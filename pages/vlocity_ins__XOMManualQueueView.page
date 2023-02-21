@@ -1,0 +1,6 @@
+<!-- Displays Manual Tasks assigned to a Queue in off-platform -->
+<apex:page showHeader="false" sidebar="false" standardController="vlocity_ins__ManualQueue__c" extensions="vlocity_ins.XOMCatalogObjectControllerExtension,vlocity_ins.XOMOffPlatformAccessConfigController,vlocity_ins.XOMThorLocalizationController,vlocity_ins.XOMOMPLAuthController" standardStylesheets="false" docType="html-5.0">
+    <c:XOMIllustration title="{!$Label.vlocity_ins__VFPageDepricatedText}"
+            showReturn="false">
+    </c:XOMIllustration>
+</apex:page>

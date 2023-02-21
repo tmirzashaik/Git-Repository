@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Determination Amount --></label>
+        <name>vlocity_ins__ActiveDeterminationAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Eligibility Determination --></label>
+        <name>vlocity_ins__ActiveEligibilityDetermination__c</name>
+        <picklistValues>
+            <masterLabel>Eligible</masterLabel>
+            <translation><!-- Eligible --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Eligible</masterLabel>
+            <translation><!-- Not Eligible --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Attribute Selected Values --></label>
+        <name>vlocity_ins__AttributeSelectedValues__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current Scheduled Redetermination Date --></label>
+        <name>vlocity_ins__CurrentScheduledRedeterminationDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Days Since Application Filed --></label>
+        <name>vlocity_ins__DaysSinceApplicationFiled__c</name>
+    </fields>
+    <fields>
+        <label><!-- Days since Notice of Redetermination --></label>
+        <name>vlocity_ins__DaysSinceNoticeOfRedetermination__c</name>
+    </fields>
+    <fields>
+        <label><!-- Days until Scheduled Redetermination --></label>
+        <name>vlocity_ins__DaysUntilCurrentRedetermination__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>vlocity_ins__Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Determination Cycle --></label>
+        <name>vlocity_ins__DeterminationCycle__c</name>
+        <picklistValues>
+            <masterLabel>12 months</masterLabel>
+            <translation><!-- 12 months --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 months</masterLabel>
+            <translation><!-- 3 months --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6 months</masterLabel>
+            <translation><!-- 6 months --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Active --></label>
+        <name>vlocity_ins__IsActive__c</name>
+    </fields>
+    <fields>
+        <label><!-- Removed --></label>
+        <name>vlocity_ins__IsRemoved__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Notice of Redetermination Date --></label>
+        <name>vlocity_ins__LastNoticeOfRedeterminationDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Redetermination Date --></label>
+        <name>vlocity_ins__LastRedeterminationDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Scheduled Redetermination Date --></label>
+        <name>vlocity_ins__LastScheduledRedeterminationDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Most Recent Determination Date --></label>
+        <name>vlocity_ins__MostRecentDeterminationDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notices of Redetermination --></label>
+        <name>vlocity_ins__NoticesOfRedetermination__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of Refusals --></label>
+        <name>vlocity_ins__NumberOfRefusals__c</name>
+    </fields>
+    <fields>
+        <label><!-- Primary Applicant --></label>
+        <name>vlocity_ins__PrimaryApplicantName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Primary Applicant --></label>
+        <name>vlocity_ins__PrimaryContactId__c</name>
+        <relationshipLabel><!-- Program Enrollment Primary Contact --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Program --></label>
+        <name>vlocity_ins__ProgramId__c</name>
+        <relationshipLabel><!-- Program Enrollment Program --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Program Type --></label>
+        <name>vlocity_ins__ProgramType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reason For Removal --></label>
+        <name>vlocity_ins__ReasonForRemoval__c</name>
+        <picklistValues>
+            <masterLabel>No Response</masterLabel>
+            <translation><!-- No Response --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Eligible</masterLabel>
+            <translation><!-- Not Eligible --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Stage --></label>
+        <name>vlocity_ins__Stage__c</name>
+        <picklistValues>
+            <masterLabel>Approved for Waitlist</masterLabel>
+            <translation><!-- Approved for Waitlist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closed</masterLabel>
+            <translation><!-- Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending Review</masterLabel>
+            <translation><!-- Pending Review --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Waitlist</masterLabel>
+            <translation><!-- Waitlist --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>vlocity_ins__Status__c</name>
+        <picklistValues>
+            <masterLabel>Enrolled</masterLabel>
+            <translation><!-- Enrolled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Enrolled</masterLabel>
+            <translation><!-- Not Enrolled --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>vlocity_ins__Type__c</name>
+        <picklistValues>
+            <masterLabel>Medicaid</masterLabel>
+            <translation><!-- Medicaid --></translation>
+        </picklistValues>
+    </fields>
+    <validationRules>
+        <errorMessage><!-- Please select reason/s for removal --></errorMessage>
+        <name>vlocity_ins__WaitlistRemovedReasonNotNull</name>
+    </validationRules>
+</CustomObjectTranslation>

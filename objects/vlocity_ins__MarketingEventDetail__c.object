@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>This object will represent Marketing Event details such as the Agenda.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>false</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>vlocity_ins__ExternalTopicDescription__c</fullName>
+        <deprecated>false</deprecated>
+        <description>External Description for the topic.</description>
+        <externalId>false</externalId>
+        <label>External Topic Description</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>vlocity_ins__InternalTopicDescription__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Description for the topic, set internally by the Marketing Event Manager.</description>
+        <externalId>false</externalId>
+        <label>Internal Topic Description</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>vlocity_ins__MarketingEventId__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The parent Marketing Event for this Marketing Event Detail.</description>
+        <externalId>false</externalId>
+        <label>Marketing Event</label>
+        <referenceTo>vlocity_ins__MarketingEvent__c</referenceTo>
+        <relationshipLabel>Marketing Event Details</relationshipLabel>
+        <relationshipName>MarketingEvent</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>vlocity_ins__SessionDate__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Date on which this Marketing Event session is scheduled for.</description>
+        <externalId>false</externalId>
+        <label>Session Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>vlocity_ins__SessionEndTime__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Time on the session date, when this Marketing Event session is scheduled to end at.</description>
+        <externalId>false</externalId>
+        <label>Session End Time</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Time</type>
+    </fields>
+    <fields>
+        <fullName>vlocity_ins__SessionStartTime__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Time on the session date, when this Marketing Event session would commence at.</description>
+        <externalId>false</externalId>
+        <label>Session Start Time</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Time</type>
+    </fields>
+    <fields>
+        <fullName>vlocity_ins__TopicName__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This will be the name of the Topic, to be covered at a specific session at the Marketing Event.</description>
+        <externalId>false</externalId>
+        <label>Topic Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>vlocity_ins__TopicSpeakerContactId__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>The Contact who will be presenting the topic at the Marketing Event.</description>
+        <externalId>false</externalId>
+        <label>Topic Speaker</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Marketing Event Details</relationshipLabel>
+        <relationshipName>MarketingEventDetails</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>vlocity_ins__TopicSpeakerURL__c</fullName>
+        <deprecated>false</deprecated>
+        <description>External link for this session&apos;s topic speaker. For instance, the speaker&apos;s LinkedIn page.</description>
+        <externalId>false</externalId>
+        <label>Topic Speaker URL</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <label>Marketing Event Detail</label>
+    <nameField>
+        <label>Marketing Event Detail Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Marketing Event Details</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>vlocity_ins__MarketingEventDetailSessionDateRule</fullName>
+        <active>true</active>
+        <description>This rule checks that the Session Date for a given Marketing Event Detail is within that Event&apos;s Start and End Dates.</description>
+        <errorConditionFormula>AND((vlocity_ins__SessionDate__c  &gt;=  vlocity_ins__MarketingEventId__r.vlocity_ins__EventStartDate__c),(vlocity_ins__SessionDate__c  &lt;=  vlocity_ins__MarketingEventId__r.vlocity_ins__EventEndDate__c))</errorConditionFormula>
+        <errorDisplayField>vlocity_ins__SessionDate__c</errorDisplayField>
+        <errorMessage>The Session Date for a given Marketing Event Detail must be within that Event&apos;s Start and End Dates.</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>vlocity_ins__IsActive__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Enable and disable the settings</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Active</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>vlocity_ins__ListenerClassName__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Class name of the trigger listener</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Trigger class name</label>
+        <length>255</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>vlocity_ins__Priority__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Priority of the trigger.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Priority of the trigger</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>vlocity_ins__SObjectType__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Name of the Sobject type for which trigger/handler gets invoked</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Sobject type of the trigger</label>
+        <required>true</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Attribute Assignment</fullName>
+                    <default>false</default>
+                    <label>Attribute Assignment</label>
+                </value>
+                <value>
+                    <fullName>Product</fullName>
+                    <default>false</default>
+                    <label>Product</label>
+                </value>
+                <value>
+                    <fullName>Product2</fullName>
+                    <default>false</default>
+                    <label>Product2</label>
+                </value>
+                <value>
+                    <fullName>Vlocity Object or Object Type</fullName>
+                    <default>false</default>
+                    <label>Vlocity Object or Object Type</label>
+                </value>
+                <value>
+                    <fullName>Vlocity Picklist</fullName>
+                    <default>false</default>
+                    <label>Vlocity Picklist</label>
+                </value>
+                <value>
+                    <fullName>Vlocity Picklist Value</fullName>
+                    <default>false</default>
+                    <label>Vlocity Picklist Value</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>Trigger Listener</label>
+    <pluralLabel>Trigger Listeners</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

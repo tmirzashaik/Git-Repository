@@ -3,6 +3,7 @@
     <formFactors>Large</formFactors>
     <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
     <label>Lightning Scheduler Setup</label>
     <navType>Standard</navType>
     <tabs>standard-LightningSchedulerSetupAssistant</tabs>
