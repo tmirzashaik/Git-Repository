@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Test for Muting permissions</label>
+    <mutingPermissionSets>Test_for_Muting_permissions_Muted</mutingPermissionSets>
+    <permissionSets>Knowledge_LSF_Permission_Set</permissionSets>
+    <permissionSets>force__CRMUserPsl</permissionSets>
+    <permissionSets>force__SchedulingFacilityManagerPsl</permissionSets>
+    <permissionSets>force__SlackServiceUser</permissionSets>
+    <permissionSets>force__StandardEinsteinActivityCapturePsl</permissionSets>
+    <permissionSets>vlocity_ins__DocGenIndHinsRuntime</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>
