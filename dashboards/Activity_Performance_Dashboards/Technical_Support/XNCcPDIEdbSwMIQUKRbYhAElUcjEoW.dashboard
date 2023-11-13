@@ -54,7 +54,7 @@
     </dashboardGridLayout>
     <dashboardType>SpecifiedUser</dashboardType>
     <isGridLayout>true</isGridLayout>
-    <runningUser>tmirzashaik@copado.com.dev</runningUser>
+    <runningUser>{!Environment.username}</runningUser>
     <textColor>#000000</textColor>
     <title>Support: Case Assignment Notification</title>
     <titleColor>#000000</titleColor>
