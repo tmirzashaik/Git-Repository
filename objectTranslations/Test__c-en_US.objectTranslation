@@ -9,23 +9,19 @@
         <value>Tests</value>
     </caseValues>
     <fields>
-        <label><!-- Rollback_testing_Latest --></label>
+        <label></label>
         <name>Rollback_testing_Latest__c</name>
     </fields>
     <fields>
-        <label><!-- Rollback_testing --></label>
+        <label></label>
         <name>Rollback_testing__c</name>
     </fields>
     <fields>
-        <label><!-- Test --></label>
-        <name>Test__c</name>
-    </fields>
-    <fields>
-        <label><!-- Test_for_Commit --></label>
+        <label></label>
         <name>Test_for_Commit__c</name>
     </fields>
     <fields>
-        <label><!-- Test_for_DoneToday --></label>
+        <label></label>
         <name>Test_for_DoneToday__c</name>
     </fields>
     <startsWith>Consonant</startsWith>
