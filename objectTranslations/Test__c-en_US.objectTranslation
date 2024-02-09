@@ -9,19 +9,15 @@
         <value>Tests</value>
     </caseValues>
     <fields>
-        <label><!-- SnapshotDifferencesTest --></label>
+        <label></label>
         <name>SnapshotDifferencesTest__c</name>
     </fields>
     <fields>
-        <label><!-- Test2 --></label>
+        <label></label>
         <name>Test2__c</name>
     </fields>
     <fields>
-        <label><!-- Test --></label>
-        <name>Test__c</name>
-    </fields>
-    <fields>
-        <label><!-- Test_for_Commit --></label>
+        <label></label>
         <name>Test_for_Commit__c</name>
     </fields>
     <startsWith>Consonant</startsWith>

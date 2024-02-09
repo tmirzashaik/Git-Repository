@@ -2843,11 +2843,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Test__c.Test__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>Test__c.Test_for_Commit__c</field>
         <readable>false</readable>
     </fieldPermissions>
