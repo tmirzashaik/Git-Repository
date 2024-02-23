@@ -169,6 +169,7 @@
     <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
     <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <isOmniPinnedViewEnabled>false</isOmniPinnedViewEnabled>
     <isServiceCloudConsole>true</isServiceCloudConsole>
     <label>Vlocity Console Application</label>
     <preferences>
@@ -188,7 +189,15 @@
     <tabs>standard-Lead</tabs>
     <tabs>standard-Opportunity</tabs>
     <tabs>vlocity_ins__CustomerInteraction__c</tabs>
+    <tabs>Property__c</tabs>
+    <tabs>Energy_Audit__c</tabs>
     <workspaceConfig>
+        <mappings>
+            <tab>Energy_Audit__c</tab>
+        </mappings>
+        <mappings>
+            <tab>Property__c</tab>
+        </mappings>
         <mappings>
             <tab>standard-Account</tab>
         </mappings>

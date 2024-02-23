@@ -8,6 +8,7 @@
     <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
     <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <isOmniPinnedViewEnabled>false</isOmniPinnedViewEnabled>
     <label>Fulfilment Designer</label>
     <navType>Standard</navType>
     <tabs>vlocity_ins__FulfilmentDiagram__c</tabs>
