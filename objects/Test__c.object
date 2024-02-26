@@ -178,7 +178,7 @@
     </fields>
     <fields>
         <fullName>Test__c</fullName>
-        <description>Rollback testing</description>
+        <description>Test for case #00087450 - Latest</description>
         <externalId>false</externalId>
         <label>Test</label>
         <length>250</length>
