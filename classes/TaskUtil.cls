@@ -1,6 +1,6 @@
 public class TaskUtil {
     public static String getTaskPriority(String leadState) {
-        // Validate input
+        // Validate input - adding commit for testing
         if (String.isBlank(leadState) || leadState.length() > 2) {
             return null;
         }
