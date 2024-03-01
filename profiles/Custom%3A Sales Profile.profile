@@ -16,6 +16,11 @@
         <visible>true</visible>
     </applicationVisibilities>
     <applicationVisibilities>
+        <application>standard__Commerce</application>
+        <default>false</default>
+        <visible>true</visible>
+    </applicationVisibilities>
+    <applicationVisibilities>
         <application>standard__Community</application>
         <default>false</default>
         <visible>true</visible>
@@ -185,6 +190,14 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>Dashboard_Pal__DashboardPalCtrl</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>Dashboard_Pal__DashboardPalTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>ForgotPasswordController</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -250,14 +263,6 @@
     </classAccesses>
     <classAccesses>
         <apexClass>TaskUtilTest</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>TemperatureConverter</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>TemperatureConverterTest</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -13908,6 +13913,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>AuthorizationFormText.DetailAuthorizationFormText</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>AuthorizationFormText.FullAuthorizationFormUrl</field>
         <readable>true</readable>
@@ -14610,6 +14620,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Contact.Level__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Contact.Loan_Amount__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -15574,6 +15589,31 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Energy_Audit__c.Account__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Energy_Audit__c.Annual_Energy_Usage_kWh__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Energy_Audit__c.Audit_Notes__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Energy_Audit__c.Average_Annual_Electric_Cost__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Energy_Audit__c.Type_of_Installation__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Entitlement.AssetId</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -15741,6 +15781,31 @@
         <editable>false</editable>
         <field>Event.vlocity_ins__Verified__c</field>
         <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>FulfillmentOrder.FulfilledFromLocationId</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>FulfillmentOrder.FulfilledToAddress</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>FulfillmentOrder.FulfilledToEmailAddress</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>FulfillmentOrder.FulfilledToPhone</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>FulfillmentOrder.TotalProductAmount</field>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -16124,43 +16189,63 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Location.VisitorAddressId</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>MessagingEndUser.AccountId</field>
-        <readable>false</readable>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>MessagingEndUser.ContactId</field>
-        <readable>false</readable>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>MessagingEndUser.HasInitialResponseSent</field>
-        <readable>false</readable>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>MessagingEndUser.IsOptedOut</field>
-        <readable>false</readable>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>MessagingEndUser.LeadId</field>
-        <readable>false</readable>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>MessagingSession.CaseId</field>
-        <readable>false</readable>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>MessagingSession.LeadId</field>
-        <readable>false</readable>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>MessagingSession.OpportunityId</field>
-        <readable>false</readable>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Offer__c.Contact__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Offer__c.Offer_Amount__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Offer__c.Target_Close_Date__c</field>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -17028,6 +17113,51 @@
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>PricebookEntry.vlocity_ins__DRBundleName__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>PricebookEntry.vlocity_ins__DRError__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>PricebookEntry.vlocity_ins__DRProgressData__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>PricebookEntry.vlocity_ins__DRStatus__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>PricebookEntry.vlocity_ins__FloorPrice__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>PricebookEntry.vlocity_ins__OverageCharge__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>PricebookEntry.vlocity_ins__OverageUOM__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>PricebookEntry.vlocity_ins__RecurringPrice__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>PricebookEntry.vlocity_ins__RecurringUOM__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Product2.CanUseQuantitySchedule</field>
         <readable>true</readable>
@@ -17494,12 +17624,22 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Promotion.ExclusivityType</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Promotion.IsAutomatic</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
         <field>Promotion.IsCommercePromotion</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Promotion.IsQualCriteriaNotRequiredPerApplication</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -18468,6 +18608,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>ServiceAppointmentAttendee.Status</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>ServiceContract.AccountId</field>
         <readable>true</readable>
@@ -18683,8 +18828,83 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Shipment.ActualDeliveryDate</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Shipment.DeliveredToId</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Shipment.Description</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Shipment.ExpectedDeliveryDate</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Shipment.FulfillmentOrderId</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Shipment.Provider</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Shipment.ReturnOrderId</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Shipment.ShipFromAddress</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Shipment.ShipToAddress</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Shipment.Status</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Shipment.TrackingNumber</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Shipment.TrackingUrl</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>ShipmentItem.FulfillmentOrderLineItemId</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>ShipmentItem.ReturnOrderLineItemId</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>SkillRequirement.SkillLevel</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>SocialPersona.SourceApp</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -18794,6 +19014,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Test__c.Test__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Test__c.Test_for_Commit__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -18813,6 +19038,11 @@
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>User.Dashboard_Pal__Default_Dashboard__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>User.vlocity_ins__DocuSignEmail__c</field>
         <readable>false</readable>
@@ -18830,6 +19060,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>User.vlocity_ins__OMplusSyncEnabled__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>WebStoreInventorySource.IsEnabled</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -19148,9 +19383,59 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>WorkType.BlockTimeAfterAppointment</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>WorkType.BlockTimeAfterUnit</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>WorkType.BlockTimeBeforeAppointment</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>WorkType.BlockTimeBeforeUnit</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>WorkType.DefaultAppointmentType</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>WorkType.OperatingHoursId</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>WorkType.Test_Case_00048975__c</field>
         <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>WorkType.TimeFrameEndUnit</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>WorkType.TimeFrameStartUnit</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>WorkType.TimeframeEnd</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>WorkType.TimeframeStart</field>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -40405,6 +40690,9 @@
         <layout>CartDeliveryGroup-Cart Delivery Group Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>CartDeliveryGroupMethod-Cart Delivery Group Method Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>CartItem-Cart Item Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -40489,6 +40777,9 @@
         <layout>EmailMessage-Email Message Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>Energy_Audit__c-Energy Audit Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>EngagementChannelType-Engagement Channel Type Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -40510,7 +40801,25 @@
         <layout>FinanceTransaction-Finance Transaction Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>FulfillmentOrder-Fulfillment Order Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>FulfillmentOrderItemAdjustment-Fulfillment Order Item Adjustment Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>FulfillmentOrderItemTax-Fulfillment Order Item Tax Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>FulfillmentOrderLineItem-Fulfillment Order Product Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>Global-Global Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Goal-Goal Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>GoalLink-Goal Link Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Idea-Idea Layout</layout>
@@ -40523,6 +40832,9 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>InvoiceLine-Invoice Line Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>JobTracker-Job Tracker Layout - Winter %2716</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Knowledge__kav-Knowledge Layout</layout>
@@ -40539,6 +40851,23 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>Macro-Macro Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Metric-Completion Metric Layout</layout>
+        <recordType>Metric.Completion</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Metric-Metric Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Metric-Metric Layout</layout>
+        <recordType>Metric.Progress</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>MetricDataLink-Metric Data Link Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Offer__c-Offer Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>OperatingHours-Operating Hours Layout</layout>
@@ -40593,6 +40922,9 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>ProductConsumptionSchedule-Product Consumption Schedule Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Property__c-Property Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>QuickText-Quick Text Layout</layout>
@@ -40703,6 +41035,9 @@
         <layout>UserProvisioningRequest-User Provisioning Request Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>Waitlist-%5F%5FMISSING LABEL%5F%5F PropertyFile - val Waitlist not found in section StandardLayouts</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>WebCart-Cart Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -40718,10 +41053,31 @@
         <layout>WebStoreConfig-Web Store Configuration Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>WorkCoaching-Coaching Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>WorkFeedback-Feedback Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>WorkFeedbackQuestion-Feedback Question Layout - Winter %2716</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>WorkFeedbackQuestionSet-Feedback Question Set Layout - Winter %2716</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>WorkFeedbackRequest-Feedback Request Layout - Winter %2716</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>WorkFeedbackTemplate-Feedback Template Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>WorkOrder-Work Order Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>WorkOrderLineItem-Work Order Line Item Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>WorkPerformanceCycle-Performance Cycle Layout - Winter %2716</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>WorkType-Work Type Layout</layout>
@@ -40733,6 +41089,12 @@
         <layout>WorkTypeGroupMember-Work Type Group Member Layout</layout>
     </layoutAssignments>
     <objectPermissions>
+        <object>AIPredictionEvent</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>AIRecordInsight</object>
+    </objectPermissions>
+    <objectPermissions>
         <allowCreate>true</allowCreate>
         <allowDelete>true</allowDelete>
         <allowEdit>true</allowEdit>
@@ -40740,6 +41102,33 @@
         <modifyAllRecords>false</modifyAllRecords>
         <object>Account</object>
         <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <object>AccountBrand</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>AccountContactRelation</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>Address</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>AppAnalyticsQueryRequest</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>AppointmentCategory</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>AppointmentInvitation</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>AppointmentInvitee</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>AppointmentScheduleLog</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>AppointmentTopicTimeSlot</object>
     </objectPermissions>
     <objectPermissions>
         <allowCreate>true</allowCreate>
@@ -40751,6 +41140,60 @@
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
+        <object>AssetAction</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>AssetActionSource</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>AssetRelationship</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>AssetStatePeriod</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>AssetTokenEvent</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>AssignedResource</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>AssociatedLocation</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>AsyncOperationEvent</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>AsyncOperationLog</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>AsyncOperationStatus</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>Attachment</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>AuthorizationForm</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>AuthorizationFormConsent</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>AuthorizationFormDataUse</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>AuthorizationFormText</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>BatchApexErrorEvent</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>BusinessBrand</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>BuyerGroup</object>
+    </objectPermissions>
+    <objectPermissions>
         <allowCreate>true</allowCreate>
         <allowDelete>true</allowDelete>
         <allowEdit>true</allowEdit>
@@ -40758,6 +41201,36 @@
         <modifyAllRecords>false</modifyAllRecords>
         <object>Campaign</object>
         <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <object>CampaignMember</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>CartCheckoutSession</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>CartDeliveryGroup</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>CartDeliveryGroupMethod</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>CartDeliveryGroupMethodAdj</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>CartItem</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>CartItemPriceAdjustment</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>CartRelatedItem</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>CartTax</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>CartValidationOutput</object>
     </objectPermissions>
     <objectPermissions>
         <allowCreate>true</allowCreate>
@@ -40769,6 +41242,51 @@
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
+        <object>CaseComment</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>CaseExternalDocument</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>ChannelProgram</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>ChannelProgramLevel</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>ChannelProgramMember</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>ChatterActivity</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>CollaborationGroup</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>CollaborationGroupMember</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>CollaborationGroupRecord</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>CommSubscription</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>CommSubscriptionChannelType</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>CommSubscriptionConsent</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>CommSubscriptionTiming</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>ConsumptionRate</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>ConsumptionSchedule</object>
+    </objectPermissions>
+    <objectPermissions>
         <allowCreate>true</allowCreate>
         <allowDelete>true</allowDelete>
         <allowEdit>true</allowEdit>
@@ -40776,6 +41294,36 @@
         <modifyAllRecords>false</modifyAllRecords>
         <object>Contact</object>
         <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <object>ContactPointAddress</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>ContactPointConsent</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>ContactPointEmail</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>ContactPointPhone</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>ContactPointTypeConsent</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>ContactRequest</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>ContentDistribution</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>ContentDocument</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>ContentDocumentLink</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>ContentVersion</object>
     </objectPermissions>
     <objectPermissions>
         <allowCreate>false</allowCreate>
@@ -40796,6 +41344,39 @@
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
+        <object>Coupon</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>CouponCodeRedemption</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>CreditMemo</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>CreditMemoInvApplication</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>CreditMemoLine</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>Customer</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>DandBCompany</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>DataObjectDataChgEvent</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>DataUseLegalBasis</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>DataUsePurpose</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>DelegatedAccount</object>
+    </objectPermissions>
+    <objectPermissions>
         <allowCreate>false</allowCreate>
         <allowDelete>false</allowDelete>
         <allowEdit>false</allowEdit>
@@ -40803,6 +41384,27 @@
         <modifyAllRecords>false</modifyAllRecords>
         <object>Document</object>
         <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <object>DuplicateRecordItem</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>DuplicateRecordSet</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>EmailBounceEvent</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>EmailMessage</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>Energy_Audit__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>EngagementChannelType</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>EngagementChannelWorkType</object>
     </objectPermissions>
     <objectPermissions>
         <allowCreate>false</allowCreate>
@@ -40823,6 +41425,60 @@
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
+        <object>EntityMilestone</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>Event</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>EventRelayFeedback</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>ExperienceDiagnosticEvent</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>FOStatusChangedEvent</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>FeedComment</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>FeedItem</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>FulfillOrdItemQtyChgEvent</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>Idea</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>IdeaComment</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>Image</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>Individual</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>InventoryItemReservation</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>InventoryReservation</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>Invoice</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>InvoiceLine</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>Knowledge__ka</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>Knowledge__kav</object>
+    </objectPermissions>
+    <objectPermissions>
         <allowCreate>true</allowCreate>
         <allowDelete>true</allowDelete>
         <allowEdit>true</allowEdit>
@@ -40830,6 +41486,66 @@
         <modifyAllRecords>false</modifyAllRecords>
         <object>Lead</object>
         <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <object>LegalEntity</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>LinkedArticle</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>Location</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>LocationGroup</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>LocationGroupAssignment</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>LogoutEventStream</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>MLModel</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>MLModelFactor</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>MLModelFactorComponent</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>MLModelMetric</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>Macro</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>MacroUsage</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>MessagingDeliveryError</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>MessagingEndUser</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>MessagingSession</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>NetworkMember</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>Note</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>Offer__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>OperatingHours</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>OperatingHoursHoliday</object>
     </objectPermissions>
     <objectPermissions>
         <allowCreate>true</allowCreate>
@@ -40841,6 +41557,63 @@
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
+        <object>OpportunityContactRole</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>OpportunityLineItem</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>OpportunityLineItemSchedule</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>OpportunityRelatedDeleteLog</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>Order</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>OrderItem</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>OrgDeleteRequest</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>OrgLifecycleNotification</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>OrgMetric</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>OrgMetricScanResult</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>OrgMetricScanSummary</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>Partner</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>PartnerFundAllocation</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>PartnerFundClaim</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>PartnerFundRequest</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>PartnerMarketingBudget</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>PartyConsent</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>PendingOrdSumProcEvent</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>PlatformStatusAlertEvent</object>
+    </objectPermissions>
+    <objectPermissions>
         <allowCreate>false</allowCreate>
         <allowDelete>false</allowDelete>
         <allowEdit>false</allowEdit>
@@ -40848,6 +41621,24 @@
         <modifyAllRecords>false</modifyAllRecords>
         <object>Pricebook2</object>
         <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <object>PrivacyJobSession</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>PrivacyObjectSession</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>PrivacyRTBFRequest</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>PrivacySessionRecordFailure</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>ProcessException</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>ProcessExceptionEvent</object>
     </objectPermissions>
     <objectPermissions>
         <allowCreate>false</allowCreate>
@@ -40859,6 +41650,63 @@
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
+        <object>ProductAttribute</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>ProductAttributeSetProduct</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>ProductCatalog</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>ProductCategory</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>ProductCategoryProduct</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>ProductConsumptionSchedule</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>Promotion</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>PromotionLineItemRule</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>PromotionMarketSegment</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>PromotionQualifier</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>PromotionSegment</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>PromotionSegmentBuyerGroup</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>PromotionSegmentSalesStore</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>PromotionTarget</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>PromotionTier</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>PromptAction</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>PromptError</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>Property__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>PushTopic</object>
+    </objectPermissions>
+    <objectPermissions>
         <allowCreate>false</allowCreate>
         <allowDelete>false</allowDelete>
         <allowEdit>false</allowEdit>
@@ -40866,6 +41714,51 @@
         <modifyAllRecords>false</modifyAllRecords>
         <object>QuickText</object>
         <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <object>QuickTextUsage</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>Quote</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>QuoteLineItem</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>Recommendation</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>RecommendationResponse</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>RecordAction</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>RemoteKeyCalloutEvent</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>ResourceAbsence</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>ResourcePreference</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>ReturnOrder</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>ReturnOrderLineItem</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>Seller</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>ServiceAppointment</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>ServiceAppointmentAttendee</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>ServiceAppointmentEvent</object>
     </objectPermissions>
     <objectPermissions>
         <allowCreate>false</allowCreate>
@@ -40877,6 +41770,54 @@
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
+        <object>ServiceResource</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>ServiceResourceSkill</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>ServiceTerritory</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>ServiceTerritoryMember</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>ServiceTerritoryWorkType</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>SetupAssistantStep</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>Shift</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>ShiftEngagementChannel</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>ShiftWorkTopic</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>Shipment</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>ShipmentItem</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>ShippingConfigurationSet</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>ShippingRateArea</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>ShippingRateGroup</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>SiteMarketingDataExtensionMapping</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>SkillRequirement</object>
+    </objectPermissions>
+    <objectPermissions>
         <allowCreate>true</allowCreate>
         <allowDelete>false</allowDelete>
         <allowEdit>false</allowEdit>
@@ -40884,6 +41825,1389 @@
         <modifyAllRecords>false</modifyAllRecords>
         <object>Solution</object>
         <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <object>StandardShippingRate</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>StoreIntegratedService</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>StreamingChannel</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>TableauHostMapping</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>Task</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>Test__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>TimeSlot</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>Topic</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>TopicAssignment</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>User</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>UserPrioritizedRecord</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>UserProvAccount</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>UserProvAccountStaging</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>UserProvMockTarget</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>UserProvisioningLog</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>UserProvisioningRequest</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>Waitlist</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>WaitlistParticipant</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>WaitlistServiceResource</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>WaitlistWorkType</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>WebCart</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>WebCartAdjustmentBasis</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>WebCartAdjustmentGroup</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>WebStore</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>WebStoreBuyerGroup</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>WebStoreCatalog</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>WebStoreConfig</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>WebStoreInventorySource</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>WorkOrder</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>WorkOrderLineItem</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>WorkTypeGroup</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__AccountAppliedPromotionItem__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__AccountAppliedPromotion__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__AccountPriceAdjustment__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__AccountRegulatoryAction__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ActivityContentDocument__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ActivityTemplate__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__AdminTabLayout__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__AgencyAppointment__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__AgencyLicense__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__AgencyPayment__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ApplicationPartyRelationship__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ApplicationTemplate__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__Application__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__AssessmentAnswer__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__AssessmentQuestion__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__Assessment__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__AssetCoverage__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__AssetInsuredItem__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__AssetPartyRelationship__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__AssetPricingAdjustment__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__AssetRevenueScheduleEntry__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__AssetSecurityPosition__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__AssetTermTrackingEntry__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__AssetTerm__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__AssetTransaction__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__AssignmentRule__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__AttributeAssignmentExport__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__AttributeAssignmentRule__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__AttributeAssignment__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__AttributeBinding__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__AttributeCategory__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__Attribute__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__BillingAccount__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__BusinessSiteOffering__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__BusinessSite__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__CachedAPIResponse__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__CachedDataSet__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__CachedFilterableAttribute__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__CachedPriceBookEntryAttributeValue__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__CachedProduct2Translation__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__CachedPromotionTranslation__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__CalculationMatrixColumn__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__CalculationMatrixDimension__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__CalculationMatrixRow__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__CalculationMatrixVersion__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__CalculationMatrix__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__CalculationProcedureStep__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__CalculationProcedureVariable__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__CalculationProcedureVersion__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__CalculationProcedure__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__CallbackURI__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__CampaignContentDocument__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__CampaignMemberActionLog__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__CardFrameworkConfiguration__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__CatalogProductRelationship__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__CatalogRelationship__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__Catalog__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ChargeMeasurement__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ClaimCertificateOfCapacity__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ClaimCoverage__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ClaimLineItem__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ClaimPayment__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ClaimantEarning__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__CompiledAttributeOverride__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ConsoleActionLog__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ConsumerDrug__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ConsumerProvider__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ContactEmployment__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ContactRegulatoryAction__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ContextAction__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ContextDimension__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ContextMappingArgument__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ContextMapping__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ContextRule__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ContextRuleset__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ContextScope__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ContractDocumentAccessControl__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ContractDocumentCollection__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ContractEnvelope__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ContractGroup__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ContractLineItem__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ContractManagementConfigurationSetup__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ContractProviderNetwork__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ContractRecipient__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ContractSection__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ContractTerm__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ContractTypeSetting__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ContractTypeTerm__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ContractType__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ContractVersion__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__CpqConfigurationSetup__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__CustomClassImplementation__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__CustomFieldMap__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__CustomFilterFormula__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__CustomFilter__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__CustomObjectMap__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__CustomerInteractionTopic__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__CustomerInteraction__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__DRBatchQueue__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__DRBulkData__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__DRBundle__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__DREncryption__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__DRMapItem__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__DRMatchingKey__mdt</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__DRWorker__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__Datastore__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__DecompositionRelationship__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__DiagnosisToProcedureCodeMapping__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__DocuSignAnchorTabSetting__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__DocuSignCalloutConfigurationSetup__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__DocuSignEnvelopeObjectLimits__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__DocuSignEnvelopeObjectSetting__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__DocumentClauseCondition__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__DocumentClause__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__DocumentSection__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__DocumentTemplateElement__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__DocumentTemplateSectionCondition__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__DocumentTemplateSection__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__DocumentTemplate__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__DocumentToken__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__Document__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__DrugInteraction__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__DrugSubstitute__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__Drug__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__Element__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__EntityFilterConditionArgument__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__EntityFilterCondition__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__EntityFilterMember__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__EntityFilter__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ErrorCodeNamespace__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ErrorCode__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__EventDuringInteraction__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__EventMessage__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ExpandedInteractionLog__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__FeeScheduleColumnConfiguration__mdt</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__FeeScheduleEntry__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__FeeSchedule__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__FieldSettings__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__FinancialAccountPartyRelationship__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__FinancialAccount__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__FinancialSecurityPosition__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__FinancialSecurity__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__FinancialStatementLineItem__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__FinancialStatement__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__FlowStepFields__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__FormularyDrugStepTherapy__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__FormularyDrug__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__FormularyTier__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__Formulary__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__FulfilmentDiagramOPD__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__FulfilmentDiagram__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__FulfilmentRequestDecompRelationship__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__FulfilmentRequestLineDecompRelationship__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__FulfilmentRequestLineRelationship__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__FulfilmentRequestLineSourceRootOrderItem__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__FulfilmentRequestLine__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__FulfilmentRequest__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__FunctionDefinition__mdt</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__GeneralSettings__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__GenericDocument__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__GenericEnvelope__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__GenericRecipient__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__GlobalAutoNumberSetting__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__GraphCloneSpecial__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__GraphClone__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__GroupCensusMemberPlan__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__GroupCensusMember__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__GroupCensus__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__GroupClassContribution__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__GroupClass__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__HouseholdAddressMatch__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__Household__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__InboundRESTInterface__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__InsClaimReserveTransaction__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__InsurableItem__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__InsuranceClaimInvoice__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__InsuranceClaimInvolvedInjury__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__InsuranceClaimInvolvedProperty__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__InsuranceClaimLitigation__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__InsuranceClaimPartyRelationship__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__InsuranceClaimRecovery__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__InsuranceClaimReport__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__InsuranceClaim__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__InsuranceConfigurationSetup__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__InsuranceNonHeldPolicy__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__InsuranceProgram__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__InsuranceRollupSetting__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__InsuranceTermConfiguration__mdt</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__InsuredGroupCensusMember__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__InsuredGroupCensus__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__InsuredItemCoverage__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__InsuredItemPartyRelationship__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__IntegrationRetryPolicy__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__InteractionLauncherConfiguration__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__InterfaceImplementationDetail__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__InterfaceImplementation__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__Interface_DRGeneric__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__Interface_InsurancePolicy__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__Interface_ProductAttribute__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__InventoryItemDecompositionRelationship__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__InventoryItem__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ItemImplementation__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__Jurisdiction__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__LineOfBusiness__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ManualQueueMember__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ManualQueue__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__MarketingEventDetail__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__MarketingEventRegistration__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__MarketingEvent__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__MarketingMaterialTracking__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__MarketingMaterial__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__MobileConfiguration__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__NonHeldLoss__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__NonHeldPolicy__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__NonHeldProduct__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ObjectAppliedResult__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ObjectClass__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ObjectElement__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ObjectFacet__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ObjectFieldAttribute__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ObjectLayout__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ObjectRuleAssignment__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ObjectSection__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__Occurrence__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__OfferMigrationComponentMapping__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__OfferMigrationPlan__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__OfferPricingComponent__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__OfferingProcedure__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__OmniScriptDefinition__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__OmniScriptInstance__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__OmniScript__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__OmniUserSession__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__OperatingHoursEntry__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__OperatingHours__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__OpportunityAppliedPromotionItem__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__OpportunityAppliedPromotion__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__OpportunityGroup__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__OpportunityLineItemRelationship__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__OpportunityPriceAdjustment__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__OrchestrationDependencyDefinition__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__OrchestrationDependency__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__OrchestrationEvent__e</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__OrchestrationItemDefinition__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__OrchestrationItemLog__b</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__OrchestrationItemRelationship__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__OrchestrationItemSource__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__OrchestrationItem__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__OrchestrationPlanDefinition__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__OrchestrationPlan__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__OrchestrationQueueAssignmentRule__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__OrchestrationQueue__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__OrchestrationScenario__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__OrchestrationSchedulerImplementation__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__OrderAppliedPromotionItem__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__OrderAppliedPromotion__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__OrderEventLogEntry__b</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__OrderItemPriceAdjustment__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__OrderItemRelationship__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__OrderPriceAdjustment__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__OrderRelationship__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__OrderUpdate__e</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__OutboundConfiguration__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__OverrideDefinition__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__PDFDocumentTemplate__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__PartyMaintenanceJobConfiguration__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__PartyMergeMetadata__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__PartyMergeRequest__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__PartyRelationshipType__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__PartyRelationship__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__Party__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__PaymentMethod__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__PicklistSelectionEntry__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__PicklistValue__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__Picklist__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__PolicyClaimRelationship__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__PolicyCreditSurcharge__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__PolicyLineItem__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__PolicyPartyRelationship__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__PolicyTransaction__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__PolicyWithdrawalSurrenderLoan__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__Policy__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__Premises__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__PriceListEntry__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__PriceList__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__PricingComponentRelationship__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__PricingComponent__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__PricingElement__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__PricingPlanStep__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__PricingPlan__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__PricingVariableBinding__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__PricingVariable__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ProducerAppointment__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ProducerEducation__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ProducerLicense__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ProducerPayment__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ProductAttribXN__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ProductChildItem__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ProductConfigurationChangeLog__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ProductConfigurationProcedure__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ProductJurisdictionNetwork__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ProductManagementConfiguration__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ProductRelationshipType__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ProductRelationship__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ProductRequirement__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ProductTemplate__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ProductionCode__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ProfSegAssignment__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ProfilingSegmentCategory__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ProfilingSegment__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ProgramEnrollmentDetermination__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ProgramEnrollmentMember__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ProgramEnrollment__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ProgramOutcome__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ProjectItem__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__Project__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__PromotionApplicableProduct__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__PromotionIncludedProduct__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__PromotionItem__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__PromotionPricingAlteration__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__Promotion__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ProviderAccountLicense__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ProviderContactLicense__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ProviderEducation__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ProviderFeeScheduleEntry__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ProviderFeeSchedule__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ProviderNetworkFormularyDrugPrice__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ProviderNetworkMember__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ProviderNetworkTier__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ProviderNetwork__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ProviderTaxonomy__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__QuoteAppliedPromotionItem__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__QuoteAppliedPromotion__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__QuoteGroupClassContribution__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__QuoteGroup__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__QuoteItemRelationship__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__QuoteLineItemGroupClass__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__QuoteLineItemPricingAdjustment__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__QuoteLineItemRateBreakout__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__QuoteLineItemRelationship__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__QuotePricingAdjustment__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__RateBandTier__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__RateBand__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__RelationshipGraphConfigurationSetup__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__RelationshipGraphDetails__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__RelationshipGraphNodeType__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__RelationshipGraphTraversal__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__RelationshipGraph__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__RemoteUrlTemplate__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__RuleAction__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__RuleAssignment__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__RuleFilter__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__RuleProperty__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__RuleVariable__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__Rule__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__RunTriggerAndWorkFlow__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__SICCode__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ScreeningRuleGroup__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ScreeningRule__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ServicePoint__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__Stage__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__StateTransition__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__Statement__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__StoryListPageLimit__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__StoryObjectConfiguration__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__StringTranslation__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__String__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__Subscription__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__SyncDeltaControl__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__SyncDeltaObject__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__SyncDeltaSnapshot__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__SystemInterface__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__System__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__TemplateDesignerConfiguration__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__TestResult__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__ThorOrchestrationQueue__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__TimePlan__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__TimePolicy__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__TrailingDocumentPlaceholder__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__TriggerListener__mdt</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__TriggerSetup__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__UICustomization__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__UISettings__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__UiFacet__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__UiSection__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__UserCalendar__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__UserNotification__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__Venue__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__VersionAwareObjectRelationship__mdt</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__VlocityAPIMetadata__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__VlocityAction__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__VlocityAttachment__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__VlocityCard__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__VlocityCode__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__VlocityContractServiceLog__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__VlocityDataCache__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__VlocityDataPackConfiguration__mdt</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__VlocityDataPack__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__VlocityDocuSignBranding__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__VlocityDocuSignTemplate__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__VlocityErrorLogEntry__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__VlocityFunctionArgument__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__VlocityFunction__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__VlocityLibraryOrganization__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__VlocityPartyRecordTypeSetting__mdt</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__VlocityScheduledJob__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__VlocitySearchWidgetActionsSetup__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__VlocitySearchWidgetSetup__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__VlocityStateModelVersion__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__VlocityStateModel__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__VlocityStateTransitionRule__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__VlocityStateTransition__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__VlocityState__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__VlocitySystemLog__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__VlocityTrackingComponent__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__VlocityTrackingEntry__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__VlocityTrackingEvent__e</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__VlocityTrackingGroup__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__VlocityUILayout__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__VlocityUITemplate__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__VlocityUniqueIdGeneratorSetting__mdt</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__VlocityWebTrackingConfiguration__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__VlocityWebTrackingEventType__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__VqMachineResource__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__VqMachine__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__VqResource__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__WorkSetSettings__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__XOMCustomLabelsCache__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__XOMEventListener__mdt</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__XOMParameter__c</object>
+    </objectPermissions>
+    <objectPermissions>
+        <object>vlocity_ins__XOMSetup__c</object>
     </objectPermissions>
     <pageAccesses>
         <apexPage>AnswersHome</apexPage>
@@ -42744,6 +45068,16 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
+        <recordType>Metric.Completion</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>true</default>
+        <recordType>Metric.Progress</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
         <recordType>Opportunity.vlocity_ins__MobilePhoneOpportunity</recordType>
         <visible>false</visible>
     </recordTypeVisibilities>
@@ -43233,7 +45567,15 @@
         <visible>false</visible>
     </recordTypeVisibilities>
     <tabVisibilities>
+        <tab>Energy_Audit__c</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
         <tab>Knowledge__kav</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>Property__c</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
@@ -43297,6 +45639,10 @@
         <visibility>Hidden</visibility>
     </tabVisibilities>
     <tabVisibilities>
+        <tab>standard-BuyerGroup</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
         <tab>standard-Campaign</tab>
         <visibility>DefaultOff</visibility>
     </tabVisibilities>
@@ -43319,6 +45665,10 @@
     <tabVisibilities>
         <tab>standard-Chatter</tab>
         <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>standard-CmsAuthorHome</tab>
+        <visibility>DefaultOff</visibility>
     </tabVisibilities>
     <tabVisibilities>
         <tab>standard-CollaborationGroup</tab>
@@ -43358,6 +45708,10 @@
     </tabVisibilities>
     <tabVisibilities>
         <tab>standard-ContactRequest</tab>
+        <visibility>Hidden</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>standard-ContentContribute</tab>
         <visibility>Hidden</visibility>
     </tabVisibilities>
     <tabVisibilities>
@@ -43409,6 +45763,10 @@
         <visibility>DefaultOff</visibility>
     </tabVisibilities>
     <tabVisibilities>
+        <tab>standard-DeleteEvent</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
         <tab>standard-DigitalWallet</tab>
         <visibility>Hidden</visibility>
     </tabVisibilities>
@@ -43421,8 +45779,16 @@
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
+        <tab>standard-EmailTemplate</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
         <tab>standard-EngagementChannelType</tab>
         <visibility>DefaultOff</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>standard-EnhancedLetterhead</tab>
+        <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
         <tab>standard-Entitlement</tab>
@@ -43430,6 +45796,10 @@
     </tabVisibilities>
     <tabVisibilities>
         <tab>standard-Event</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>standard-Feed</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
@@ -43445,7 +45815,23 @@
         <visibility>Hidden</visibility>
     </tabVisibilities>
     <tabVisibilities>
+        <tab>standard-FlowInterview</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>standard-FlowOrchestrationInstance</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>standard-FlowOrchestrationWorkItem</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
         <tab>standard-Forecasting3</tab>
+        <visibility>Hidden</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>standard-FulfillmentOrder</tab>
         <visibility>Hidden</visibility>
     </tabVisibilities>
     <tabVisibilities>
@@ -43458,6 +45844,14 @@
     </tabVisibilities>
     <tabVisibilities>
         <tab>standard-Individual</tab>
+        <visibility>Hidden</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>standard-InventoryItemReservation</tab>
+        <visibility>Hidden</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>standard-InventoryReservation</tab>
         <visibility>Hidden</visibility>
     </tabVisibilities>
     <tabVisibilities>
@@ -43481,7 +45875,27 @@
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
+        <tab>standard-LearningItem</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
         <tab>standard-LegalEntity</tab>
+        <visibility>Hidden</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>standard-LightningBoltHome</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>standard-LightningInstrumentation</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>standard-LightningQuickText</tab>
+        <visibility>Hidden</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>standard-LightningSchedulerSetupAssistant</tab>
         <visibility>Hidden</visibility>
     </tabVisibilities>
     <tabVisibilities>
@@ -43498,6 +45912,18 @@
     </tabVisibilities>
     <tabVisibilities>
         <tab>standard-Macro</tab>
+        <visibility>Hidden</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>standard-MessagingEndUser</tab>
+        <visibility>Hidden</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>standard-MessagingSession</tab>
+        <visibility>Hidden</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>standard-MobileHome</tab>
         <visibility>Hidden</visibility>
     </tabVisibilities>
     <tabVisibilities>
@@ -43573,8 +45999,20 @@
         <visibility>Hidden</visibility>
     </tabVisibilities>
     <tabVisibilities>
+        <tab>standard-ProcessInstanceWorkitem</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
         <tab>standard-Product2</tab>
         <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>standard-ProductCatalog</tab>
+        <visibility>Hidden</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>standard-ProductCategory</tab>
+        <visibility>Hidden</visibility>
     </tabVisibilities>
     <tabVisibilities>
         <tab>standard-ProfilePlatformFeed</tab>
@@ -43657,11 +46095,23 @@
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
+        <tab>standard-Today</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
         <tab>standard-UserProfile</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
         <tab>standard-UserProvisioningRequest</tab>
+        <visibility>Hidden</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>standard-Waitlist</tab>
+        <visibility>DefaultOff</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>standard-WebStoreInventorySource</tab>
         <visibility>Hidden</visibility>
     </tabVisibilities>
     <tabVisibilities>
@@ -44026,8 +46476,88 @@
     </tabVisibilities>
     <userLicense>Salesforce</userLicense>
     <userPermissions>
+        <enabled>false</enabled>
+        <name>AICreateInsightObjects</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>AIViewInsightObjects</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>AccessCMC</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>AccessContentBuilder</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>AccessDisputePrompts</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>AccessToComplaintMgmt</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>AccessToDisputeManagement</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>AccessToServiceProcess</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>AccountSwitcherUser</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ActivateContract</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ActivateOrder</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ActivateSystemModeFlows</name>
+    </userPermissions>
+    <userPermissions>
         <enabled>true</enabled>
         <name>ActivitiesAccess</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>AddAnalyticsRemoteConnections</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>AddDirectMessageMembers</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>AddWaveNotificationRecipients</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>AdvancedCsvDataImportUser</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>AllowEmailIC</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>AllowLightningLogin</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>AllowUniversalSearch</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>AllowViewEditConvertedLeads</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
@@ -44042,6 +46572,134 @@
         <name>ApiEnabled</name>
     </userPermissions>
     <userPermissions>
+        <enabled>false</enabled>
+        <name>ApiUserOnly</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>AppointmentBookingUserAccess</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>AssignPermissionSets</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>AssignTopics</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>AuthorApex</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>AutomaticActivityCapture</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>B2BMarketingAnalyticsUser</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>BotManageBots</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>BotManageBotsTrainingData</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>BulkApiHardDelete</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>BulkMacrosAllowed</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>BypassMFAForUiLogins</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>CMSECEAuthoringAccess</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>CampaignInfluence2</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>CanAccessCE</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>CanApproveFeedPost</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>CanEditDataPrepRecipe</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>CanEditPrompts</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>CanInitiateMessagingSessions</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>CanInsertFeedSystemFields</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>CanManageMaps</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>CanUpdateEmailMessage</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>CanUseNewDashboardBuilder</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>CanVerifyComment</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>CdcReportingCreateReports</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>CdcReportingManageFolders</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>CdcReportingViewReports</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ChangeDashboardColors</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ChatterComposeUiCodesnippet</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ChatterEditOwnPost</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ChatterEditOwnRecordPost</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ChatterFileLink</name>
+    </userPermissions>
+    <userPermissions>
         <enabled>true</enabled>
         <name>ChatterInternalUser</name>
     </userPermissions>
@@ -44054,8 +46712,56 @@
         <name>ChatterOwnGroups</name>
     </userPermissions>
     <userPermissions>
+        <enabled>false</enabled>
+        <name>ClientSecretRotation</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>CloseConversations</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ConfigCustomRecs</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ConfigureDataspaceScope</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ConfigureLiveMessage</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ConnectOrgToEnvironmentHub</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ConsentApiUpdate</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ContactInspectorUser</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ContentAdministrator</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ContentHubUser</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ContentWorkspaces</name>
+    </userPermissions>
+    <userPermissions>
         <enabled>true</enabled>
         <name>ConvertLeads</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>CreateCustomizeDashboards</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
@@ -44066,20 +46772,148 @@
         <name>CreateCustomizeReports</name>
     </userPermissions>
     <userPermissions>
+        <enabled>false</enabled>
+        <name>CreateDashboardFolders</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>CreateLtngTempFolder</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>CreateLtngTempInPub</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>CreateReportFolders</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>CreateReportInLightning</name>
+    </userPermissions>
+    <userPermissions>
         <enabled>true</enabled>
         <name>CreateTopics</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>CreateWorkspaces</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>CustomAppsOnFSMobile</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>CustomMobileAppsAccess</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>CustomSidebarOnAllPages</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>CustomizeApplication</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>DataExport</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>DelegatedPortalUserAdmin</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>DelegatedTwoFactor</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>DeleteActivatedContract</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>DeleteCrMemoAndInvoice</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>DeleteTopics</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>DigitalLendingAdminUser</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>DigitalLendingUser</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
         <name>DistributeFromPersWksp</name>
     </userPermissions>
     <userPermissions>
+        <enabled>false</enabled>
+        <name>DownloadPackageVersionZips</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>EditActivatedOrders</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>EditBillingInfo</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>EditBrandTemplates</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>EditCaseComments</name>
+    </userPermissions>
+    <userPermissions>
         <enabled>true</enabled>
         <name>EditEvent</name>
     </userPermissions>
     <userPermissions>
+        <enabled>false</enabled>
+        <name>EditHtmlTemplates</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>EditKnowledge</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>EditMyDashboards</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>EditMyReports</name>
+    </userPermissions>
+    <userPermissions>
         <enabled>true</enabled>
         <name>EditOppLineItemUnitPrice</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>EditPublicDocuments</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>EditPublicFilters</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>EditPublicTemplates</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>EditReadonlyFields</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>EditRepricing</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
@@ -44090,12 +46924,32 @@
         <name>EditTopics</name>
     </userPermissions>
     <userPermissions>
+        <enabled>false</enabled>
+        <name>EinsteinSearchAnswersUser</name>
+    </userPermissions>
+    <userPermissions>
         <enabled>true</enabled>
         <name>EmailMass</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
         <name>EmailSingle</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>EmbeddedMessagingAgent</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>EnableBCTransactionPolling</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>EnableCommunityAppLauncher</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>EnableIPFSUpload</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
@@ -44106,52 +46960,816 @@
         <name>ExportReport</name>
     </userPermissions>
     <userPermissions>
+        <enabled>false</enabled>
+        <name>FSCArcGraphCommunityUser</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>FSCComprehensiveUserAccess</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>FeedPinning</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ForceTwoFactor</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>GiveRecognitionBadge</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>GovernNetworks</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>HasUnlimitedNBAExecutions</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>HeadlessCMSAccess</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>HideReadByList</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>IdentityConnect</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>IdentityEnabled</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ImportCustomObjects</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ImportLeads</name>
+    </userPermissions>
+    <userPermissions>
         <enabled>true</enabled>
         <name>ImportPersonal</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>InsightsAppAdmin</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>InsightsAppDashboardEditor</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>InsightsAppEltEditor</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>InsightsAppUploadUser</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>InsightsAppUser</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>InsightsCreateApplication</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>IsotopeAccess</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>IsotopeCToCUser</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>IsotopeLEX</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>LMEndMessagingSessionUserPerm</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>LMOutboundMessagingUserPerm</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>LeadInspectorUser</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>LearningManager</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>LifecycleManagementAPIUser</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
         <name>LightningConsoleAllowedForUser</name>
     </userPermissions>
     <userPermissions>
+        <enabled>false</enabled>
+        <name>LightningExperienceUser</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>LightningSchedulerUserAccess</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ListEmailSend</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>LiveMessageAgent</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>LoanOfficerUser</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>LobbyManagementUserAccess</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>LtngPromoReserved01UserPerm</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ManageAnalyticSnapshots</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ManageAuthProviders</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ManageBusinessHourHolidays</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ManageC360AConnections</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ManageCMS</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ManageCallCenters</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ManageCases</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ManageCategories</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ManageCertificates</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ManageChatterMessages</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ManageContentPermissions</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ManageContentProperties</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ManageContentTypes</name>
+    </userPermissions>
+    <userPermissions>
         <enabled>true</enabled>
         <name>ManageCssUsers</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ManageCustomPermissions</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ManageCustomReportTypes</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ManageDashbdsInPubFolders</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ManageDataCategories</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ManageDataIntegrations</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ManageDataMaskPolicies</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ManageDataspaceScope</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ManageDynamicDashboards</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ManageEmailClientConfig</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
         <name>ManageEncryptionKeys</name>
     </userPermissions>
     <userPermissions>
+        <enabled>false</enabled>
+        <name>ManageEntitlements</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ManageExchangeConfig</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ManageExternalConnections</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ManageForecastingCustomData</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ManageHealthCheck</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ManageHubConnections</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ManageInteraction</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ManageInternalUsers</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ManageIpAddresses</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ManageKnowledge</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ManageKnowledgeImportExport</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ManageLeads</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ManageLearningReporting</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ManageLoginAccessPolicies</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ManageMobile</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ManageNamedCredentials</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ManageNetworks</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ManageOrchInstsAndWorkItems</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ManageOrchestrationRuns</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ManagePasswordPolicies</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ManageProfilesPermissionsets</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ManagePropositions</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ManagePvtRptsAndDashbds</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ManageQuotas</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ManageRecommendationStrategies</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ManageReleaseUpdates</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ManageRemoteAccess</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ManageReportsInPubFolders</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ManageRoles</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ManageSearchPromotionRules</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ManageSecurityCommandCenter</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ManageSessionPermissionSets</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ManageSharing</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ManageSolutions</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ManageStores</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ManageSubscriptions</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ManageSurveys</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ManageSynonyms</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ManageTemplatedApp</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ManageTwoFactor</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ManageUnlistedGroups</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ManageUsers</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>MassInlineEdit</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>MergeTopics</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>Microbatching</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ModerateChatter</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ModerateNetworkFeeds</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ModerateNetworkFiles</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ModerateNetworkMessages</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ModerateNetworkUsers</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ModifyAllData</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ModifyDataClassification</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ModifyMetadata</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>NativeWebviewScrolling</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>NewReportBuilder</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>OmnichannelInventoryBasic</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>OmnichannelInventorySync</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>OverrideForecasts</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>PRMChannelMgmtConsoleUser</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>Packaging2</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>Packaging2Delete</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>PasswordNeverExpires</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>PaymentsAPIUser</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>PersonalizationPlatform</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>PersonalizedFinanceUserAccess</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>PortalSuperUser</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>PreventClassicExperience</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>PrivacyDataAccess</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>QueryAllFiles</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>QuipMetricsAccess</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>QuipUserEngagementMetrics</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ReassignOrchestrationWorkItems</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>RemoveDirectMessageMembers</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ResetPasswords</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>RunFlow</name>
+    </userPermissions>
+    <userPermissions>
         <enabled>true</enabled>
         <name>RunReports</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>SalesConsole</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>SalesforceIQInbox</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>SalesforceIQInternal</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>SandboxTestingInCommunityApp</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ScheduleReports</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>SchedulingFacilityManager</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>SchedulingLineAmbassador</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>SegmentIntelligenceUser</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
         <name>SelectFilesFromSalesforce</name>
     </userPermissions>
     <userPermissions>
+        <enabled>false</enabled>
+        <name>SendAnnouncementEmails</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>SendCustomNotifications</name>
+    </userPermissions>
+    <userPermissions>
         <enabled>true</enabled>
         <name>SendSitRequests</name>
     </userPermissions>
     <userPermissions>
-        <enabled>true</enabled>
-        <name>ShareFilesWithNetworks</name>
+        <enabled>false</enabled>
+        <name>ShareInternalArticles</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
         <name>ShowCompanyNameAsUserBadge</name>
     </userPermissions>
     <userPermissions>
+        <enabled>false</enabled>
+        <name>SimpleCsvDataImportUser</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>SkipIdentityConfirmation</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>SolutionImport</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>StageManagementDesignUser</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>StdAutomaticActivityCapture</name>
+    </userPermissions>
+    <userPermissions>
         <enabled>true</enabled>
         <name>SubmitMacrosAllowed</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>SubscribeDashboardRolesGrps</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>SubscribeDashboardToOtherUsers</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>SubscribeReportRolesGrps</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>SubscribeReportToOtherUsers</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>SubscribeReportsRunAsUser</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>SubscribeToLightningDashboards</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
         <name>SubscribeToLightningReports</name>
     </userPermissions>
     <userPermissions>
+        <enabled>false</enabled>
+        <name>TraceXdsQueries</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>TransactionSecurityExempt</name>
+    </userPermissions>
+    <userPermissions>
         <enabled>true</enabled>
         <name>TransactionalEmailSend</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>TransferAnyCase</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>TransferAnyEntity</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>TransferAnyLead</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>TwoFactorApi</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>UnderwriterUser</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>UseAddOrderItemSummaryAPIs</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>UseAssistantDialog</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>UseExchangesAPIs</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>UseFulfillmentAPIs</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>UseMySearch</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>UseOMAnalytics</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>UseOmnichannelInventoryAPIs</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>UseOrderEntry</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>UseQuerySuggestions</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>UseRegisterGuestBuyerAPI</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>UseRepricing</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>UseReturnOrder</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>UseReturnOrderAPIs</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>UseSubscriptionEmails</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>UseTeamReassignWizards</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>UseTemplatedApp</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>UseWebLink</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ViewAllActivities</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ViewAllCustomSettings</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ViewAllData</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ViewAllForecasts</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ViewAllForeignKeyNames</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ViewAllProfiles</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ViewAllUsers</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ViewAnomalyEvents</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ViewContent</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ViewCustomerSentiment</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ViewDataAssessment</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ViewDataCategories</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ViewDataLeakageEvents</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ViewDeveloperName</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ViewEncryptedData</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
@@ -44162,15 +47780,79 @@
         <name>ViewGlobalHeader</name>
     </userPermissions>
     <userPermissions>
+        <enabled>false</enabled>
+        <name>ViewHealthCheck</name>
+    </userPermissions>
+    <userPermissions>
         <enabled>true</enabled>
         <name>ViewHelpLink</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ViewMLModels</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ViewMyTeamsDashboards</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ViewOnlyEmbeddedAppUser</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ViewPlatformEvents</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ViewPrivateStaticResources</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ViewPublicDashboards</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ViewPublicReports</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ViewRestrictionAndScopingRules</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
         <name>ViewRoles</name>
     </userPermissions>
     <userPermissions>
+        <enabled>false</enabled>
+        <name>ViewSecurityCommandCenter</name>
+    </userPermissions>
+    <userPermissions>
         <enabled>true</enabled>
         <name>ViewSetup</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ViewUserPII</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>WaveCommunityUser</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>WaveManagePrivateAssetsUser</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>WaveTabularDownload</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>WorkCalibrationUser</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>WorkDotComUserPerm</name>
     </userPermissions>
 </Profile>
