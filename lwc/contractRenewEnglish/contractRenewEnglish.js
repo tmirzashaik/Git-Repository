@@ -7,7 +7,7 @@ import tmpl from './contractRenewEnglish.html';
 import tmpl_nds from './contractRenewEnglish_nds.html';
 
 /**
- *  IMPORTANT! Generated class DO NOT MODIFY
+ *  IMPORTANT! Generated class DO NOT MODIFY (To generate conflict)
  */
 export default class contractRenewEnglish extends OmniscriptHeader {
     @track jsonDef = {};
