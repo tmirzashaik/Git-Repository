@@ -155,6 +155,28 @@
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
     <fields>
+        <fullName>Rollback_testing_Latest__c</fullName>
+        <externalId>false</externalId>
+        <label>Rollback_testing_Latest</label>
+        <length>28</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Rollback_testing__c</fullName>
+        <externalId>false</externalId>
+        <label>Rollback_testing</label>
+        <length>12</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>SnapshotDifferencesTest__c</fullName>
         <externalId>false</externalId>
         <label>SnapshotDifferencesTest</label>
@@ -178,7 +200,7 @@
     </fields>
     <fields>
         <fullName>Test__c</fullName>
-        <description>Rollback testing</description>
+        <description> testing</description>
         <externalId>false</externalId>
         <label>Test</label>
         <length>250</length>
