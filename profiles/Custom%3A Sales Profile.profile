@@ -3527,6 +3527,21 @@
     <layoutAssignments>
         <layout>WorkTypeGroupMember-Work Type Group Member Layout</layout>
     </layoutAssignments>
+    <loginIpRanges>
+        <description>CopaCLOUD NA (North America)</description>
+        <endAddress>34.73.251.138</endAddress>
+        <startAddress>34.73.251.138</startAddress>
+    </loginIpRanges>
+    <loginIpRanges>
+        <description>CopaCLOUD NA (North America)</description>
+        <endAddress>35.243.255.155</endAddress>
+        <startAddress>35.243.255.155</startAddress>
+    </loginIpRanges>
+    <loginIpRanges>
+        <description>CopaCLOUD NA (North America)</description>
+        <endAddress>104.196.211.229</endAddress>
+        <startAddress>104.196.211.229</startAddress>
+    </loginIpRanges>
     <objectPermissions>
         <allowCreate>true</allowCreate>
         <allowDelete>true</allowDelete>
@@ -3678,6 +3693,15 @@
         <allowRead>true</allowRead>
         <modifyAllRecords>false</modifyAllRecords>
         <object>Solution</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>Test__c</object>
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <recordTypeVisibilities>
@@ -4170,6 +4194,10 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
+        <name>ManageCssUsers</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
         <name>ManageEncryptionKeys</name>
     </userPermissions>
     <userPermissions>
@@ -4203,6 +4231,10 @@
     <userPermissions>
         <enabled>true</enabled>
         <name>ViewEventLogFiles</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ViewGlobalHeader</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
