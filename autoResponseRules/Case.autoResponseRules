@@ -9,7 +9,7 @@
                 <operation>equals</operation>
                 <value>Email</value>
             </criteriaItems>
-            <senderEmail>thrishamirzashaik@gmail.com</senderEmail>
+            <senderEmail>{!Environment.Email}</senderEmail>
             <senderName>Customer Support</senderName>
             <template>Technical_Support/SupportCaseResponse</template>
         </ruleEntry>
