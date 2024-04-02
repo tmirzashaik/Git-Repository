@@ -14533,6 +14533,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Contact.AccountId</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Contact.AssistantName</field>
         <readable>true</readable>
@@ -41083,21 +41088,6 @@
     <layoutAssignments>
         <layout>WorkTypeGroupMember-Work Type Group Member Layout</layout>
     </layoutAssignments>
-    <loginIpRanges>
-        <description>CopaCLOUD NA (North America)</description>
-        <endAddress>34.73.251.138</endAddress>
-        <startAddress>34.73.251.138</startAddress>
-    </loginIpRanges>
-    <loginIpRanges>
-        <description>CopaCLOUD NA (North America)</description>
-        <endAddress>35.243.255.155</endAddress>
-        <startAddress>35.243.255.155</startAddress>
-    </loginIpRanges>
-    <loginIpRanges>
-        <description>CopaCLOUD NA (North America)</description>
-        <endAddress>104.196.211.229</endAddress>
-        <startAddress>104.196.211.229</startAddress>
-    </loginIpRanges>
     <objectPermissions>
         <object>AIPredictionEvent</object>
     </objectPermissions>
@@ -46581,10 +46571,6 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
-        <name>ManageCssUsers</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
         <name>ManageEncryptionKeys</name>
     </userPermissions>
     <userPermissions>
@@ -46598,10 +46584,6 @@
     <userPermissions>
         <enabled>true</enabled>
         <name>SendSitRequests</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ShareFilesWithNetworks</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
@@ -46622,10 +46604,6 @@
     <userPermissions>
         <enabled>true</enabled>
         <name>ViewEventLogFiles</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ViewGlobalHeader</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
