@@ -49,8 +49,8 @@
     </dashboardGridLayout>
     <dashboardType>SpecifiedUser</dashboardType>
     <isGridLayout>true</isGridLayout>
-    <owner>tmirzashaik@copado.com.dev</owner>
-    <runningUser>tmirzashaik@copado.com.dev</runningUser>
+    <owner>{!Environment.username}</owner>
+    <runningUser>{!Environment.username}</runningUser>
     <textColor>#000000</textColor>
     <title>Test</title>
     <titleColor>#000000</titleColor>
