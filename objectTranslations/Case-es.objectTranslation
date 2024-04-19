@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldSets>
+        <label><!-- StoryFieldSet --></label>
+        <name>vlocity_ins__StoryFieldSet</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- UpdateCaseWidget --></label>
+        <name>vlocity_ins__UpdateCaseWidget</name>
+    </fieldSets>
+    <fields>
+        <label><!-- Engineering Req Number --></label>
+        <name>EngineeringReqNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- Potential Liability --></label>
+        <name>PotentialLiability__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Product --></label>
+        <name>Product__c</name>
+        <picklistValues>
+            <masterLabel>GC1020</masterLabel>
+            <translation><!-- GC1020 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GC1040</masterLabel>
+            <translation><!-- GC1040 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GC1060</masterLabel>
+            <translation><!-- GC1060 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GC3020</masterLabel>
+            <translation><!-- GC3020 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GC3040</masterLabel>
+            <translation><!-- GC3040 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GC3060</masterLabel>
+            <translation><!-- GC3060 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GC5020</masterLabel>
+            <translation><!-- GC5020 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GC5040</masterLabel>
+            <translation><!-- GC5040 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GC5060</masterLabel>
+            <translation><!-- GC5060 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- SLA Violation --></label>
+        <name>SLAViolation__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Test --></label>
+        <name>Test__c</name>
+    </fields>
+    <fields>
+        <label><!-- Asset Policy Relationship --></label>
+        <name>vlocity_ins__AssetPartyRelationshipId__c</name>
+        <relationshipLabel><!-- Cases --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Billing Account --></label>
+        <name>vlocity_ins__BillingAccountId__c</name>
+        <relationshipLabel><!-- Cases --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Contract --></label>
+        <name>vlocity_ins__ContractId__c</name>
+        <relationshipLabel><!-- Cases --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Engineering Req Number --></label>
+        <name>vlocity_ins__EngineeringReqNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- Financial Account --></label>
+        <name>vlocity_ins__FinancialAccountId__c</name>
+        <relationshipLabel><!-- Cases --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Follow Up To --></label>
+        <name>vlocity_ins__FollowUpTo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Indicator Image Name --></label>
+        <name>vlocity_ins__IndicatorImageName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Claim --></label>
+        <name>vlocity_ins__InsuranceClaimId__c</name>
+        <relationshipLabel><!-- Cases --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Interaction Notes --></label>
+        <name>vlocity_ins__InteractionNotes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Policy --></label>
+        <name>vlocity_ins__PolicyId__c</name>
+        <relationshipLabel><!-- Cases --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Policy Relationship --></label>
+        <name>vlocity_ins__PolicyPartyRelationshipId__c</name>
+        <relationshipLabel><!-- Cases --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Priority Image Name --></label>
+        <name>vlocity_ins__PriorityImageName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product --></label>
+        <name>vlocity_ins__Product__c</name>
+        <picklistValues>
+            <masterLabel>GC1020</masterLabel>
+            <translation><!-- GC1020 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GC1040</masterLabel>
+            <translation><!-- GC1040 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GC1060</masterLabel>
+            <translation><!-- GC1060 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GC3020</masterLabel>
+            <translation><!-- GC3020 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GC3040</masterLabel>
+            <translation><!-- GC3040 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GC3060</masterLabel>
+            <translation><!-- GC3060 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GC5020</masterLabel>
+            <translation><!-- GC5020 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GC5040</masterLabel>
+            <translation><!-- GC5040 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GC5060</masterLabel>
+            <translation><!-- GC5060 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Statement --></label>
+        <name>vlocity_ins__StatementId__c</name>
+        <relationshipLabel><!-- Cases --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Status Image Name --></label>
+        <name>vlocity_ins__StatusImageName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Verification Timestamp --></label>
+        <name>vlocity_ins__VerificationTimestamp__c</name>
+    </fields>
+    <fields>
+        <label><!-- Verified Agent Name --></label>
+        <name>vlocity_ins__VerifiedAgentName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Verified --></label>
+        <name>vlocity_ins__Verified__c</name>
+    </fields>
+    <layouts>
+        <layout>Case Layout / test</layout>
+        <sections>
+            <label>update for testing</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description><!-- Mobile Phone Case --></description>
+        <label><!-- MobilePhoneCase --></label>
+        <name>vlocity_ins__MobilePhoneCase</name>
+    </recordTypes>
+    <webLinks>
+        <label><!-- UpsellCrosssellOpportunity --></label>
+        <name>UpsellCrosssellOpportunity</name>
+    </webLinks>
+</CustomObjectTranslation>
