@@ -628,9 +628,10 @@
     </fields>
     <fields>
         <fullName>Test_Field__c</fullName>
+        <description>test for case</description>
         <externalId>false</externalId>
         <label>Test_Field</label>
-        <length>14</length>
+        <length>18</length>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Text</type>
