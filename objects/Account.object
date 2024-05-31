@@ -578,6 +578,7 @@
     </fields>
     <fields>
         <fullName>Test_Field__c</fullName>
+        <description>test for case</description>
         <externalId>false</externalId>
         <label>Test_Field</label>
         <length>18</length>
