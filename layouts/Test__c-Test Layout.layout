@@ -30,6 +30,10 @@
                 <behavior>Edit</behavior>
                 <field>Rollback_testing_Latest__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Git_to_Org_test__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
