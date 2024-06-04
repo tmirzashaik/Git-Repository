@@ -155,6 +155,17 @@
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
     <fields>
+        <fullName>Git_to_Org_test__c</fullName>
+        <externalId>false</externalId>
+        <label>Git to Org test</label>
+        <length>55</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>SnapshotDifferencesTest__c</fullName>
         <externalId>false</externalId>
         <label>SnapshotDifferencesTest</label>
