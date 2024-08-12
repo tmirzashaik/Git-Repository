@@ -5289,10 +5289,6 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
-        <name>ShareFilesWithNetworks</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
         <name>ShareInternalArticles</name>
     </userPermissions>
     <userPermissions>
