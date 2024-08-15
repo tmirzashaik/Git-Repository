@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Test Monitor Login History permission retrieval</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Test PS</label>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>MonitorLoginHistory</name>
+    </userPermissions>
+</PermissionSet>
