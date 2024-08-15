@@ -4246,3 +4246,4 @@
         <name>ViewSetup</name>
     </userPermissions>
 </Profile>
+//test for auto merge
