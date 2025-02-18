@@ -12,7 +12,7 @@
     </applicationVisibilities>
     <applicationVisibilities>
         <application>cmcSf__CMC_SFDX</application>
-        <default>false</default>
+        <default>true</default>
         <visible>true</visible>
     </applicationVisibilities>
     <applicationVisibilities>
