@@ -16,11 +16,6 @@
         <visible>true</visible>
     </applicationVisibilities>
     <applicationVisibilities>
-        <application>standard__Commerce</application>
-        <default>false</default>
-        <visible>true</visible>
-    </applicationVisibilities>
-    <applicationVisibilities>
         <application>standard__Community</application>
         <default>false</default>
         <visible>true</visible>
@@ -146,135 +141,11 @@
         <visible>false</visible>
     </applicationVisibilities>
     <classAccesses>
-        <apexClass>CatalogTriggerHelper</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>ChangePasswordController</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>ChangePasswordControllerTest</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>CommunitiesLandingController</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>CommunitiesLandingControllerTest</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>CommunitiesLoginController</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>CommunitiesLoginControllerTest</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>CommunitiesSelfRegConfirmController</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>CommunitiesSelfRegConfirmControllerTest</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>CommunitiesSelfRegController</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>CommunitiesSelfRegControllerTest</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>Dashboard_Pal__DashboardPalCtrl</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>Dashboard_Pal__DashboardPalTest</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>ForgotPasswordController</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>ForgotPasswordControllerTest</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>LightningForgotPasswordController</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>LightningForgotPasswordControllerTest</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>LightningLoginFormController</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>LightningLoginFormControllerTest</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>MicrobatchSelfRegController</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>MicrobatchSelfRegControllerTest</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>MyProfilePageController</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>MyProfilePageControllerTest</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>OlderAccountsUtility</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>SiteLoginController</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>SiteLoginControllerTest</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>SiteRegisterController</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>SiteRegisterControllerTest</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
         <apexClass>TaskUtil</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>TaskUtilTest</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>Test</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>pcm_transformCatalogStructure</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>pcm_transformCatalogStructure_Test</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -13964,11 +13835,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>Campaign.CampaignImageId</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>Campaign.Description</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -14226,11 +14092,6 @@
         <editable>false</editable>
         <field>Case.ClosedDate</field>
         <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Case.ClosedOnCreate</field>
-        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -14624,11 +14485,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>Contact.Loan_Amount__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>Contact.MailingAddress</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -14945,11 +14801,6 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>ContactPointAddress.UsageType</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>ContactPointConsent.ContactPointTypeConsentId</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -15569,47 +15420,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>DataUsePurpose.IsMaintainablePerContactPoint</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>DataUsePurpose.IsMaintainablePerParty</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>DataUsePurpose.IsMaintainablePerType</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>DataUsePurpose.LegalBasisId</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Energy_Audit__c.Account__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Energy_Audit__c.Annual_Energy_Usage_kWh__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Energy_Audit__c.Audit_Notes__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Energy_Audit__c.Average_Annual_Electric_Cost__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Energy_Audit__c.Type_of_Installation__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -15713,18 +15524,8 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
-        <field>Event.IsVisibleInSelfService</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
         <editable>true</editable>
         <field>Event.Location</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Event.Test_Field__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -15789,11 +15590,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FulfillmentOrder.FulfilledToAddress</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>FulfillmentOrder.FulfilledToEmailAddress</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -15806,11 +15602,6 @@
         <editable>true</editable>
         <field>FulfillmentOrder.TotalProductAmount</field>
         <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Idea.Attachment</field>
-        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -15933,16 +15724,6 @@
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
-        <field>Knowledge__kav.Answer__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Knowledge__kav.Question__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
         <editable>true</editable>
         <field>Lead.Address</field>
         <readable>true</readable>
@@ -16041,11 +15822,6 @@
         <editable>true</editable>
         <field>Lead.NumberofLocations__c</field>
         <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Lead.PartnerAccountId</field>
-        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -16209,11 +15985,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>MessagingEndUser.IsOptedOut</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>MessagingEndUser.LeadId</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -16230,21 +16001,6 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>MessagingSession.OpportunityId</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Offer__c.Contact__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Offer__c.Offer_Amount__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Offer__c.Target_Close_Date__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -16311,11 +16067,6 @@
         <editable>true</editable>
         <field>Opportunity.OrderNumber__c</field>
         <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Opportunity.PartnerAccountId</field>
-        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -17028,71 +16779,6 @@
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
-        <field>PartnerFundAllocation.Description</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>PartnerFundClaim.Description</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>PartnerFundClaim.Status</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>PartnerFundRequest.Activity</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>PartnerFundRequest.AllocationId</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>PartnerFundRequest.Amount</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>PartnerFundRequest.BudgetId</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>PartnerFundRequest.CampaignId</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>PartnerFundRequest.Description</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>PartnerFundRequest.DesiredOutcome</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>PartnerFundRequest.Status</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>PartnerMarketingBudget.Description</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>PartnerMarketingBudget.ParentMdfBudgetId</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
         <editable>false</editable>
         <field>PartyConsent.DoubleConsentCaptureDate</field>
         <readable>false</readable>
@@ -17675,16 +17361,6 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Promotion.TermsAndConditions</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>PromotionQualifier.ExternalQualifier</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>PromotionTarget.ExternalTarget</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -18939,16 +18615,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Task.IsVisibleInSelfService</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Task.Test_Field__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>Task.Type</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -19036,11 +18702,6 @@
         <editable>false</editable>
         <field>TimeSlot.WorkTypeGroupId</field>
         <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>User.Dashboard_Pal__Default_Dashboard__c</field>
-        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -40595,13 +40256,6 @@
         <recordType>Account.Test_Account</recordType>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>Account-Account Layout</layout>
-        <recordType>Account.Test_New_Account</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>AccountBrand-Account Brand Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
         <layout>AccountContactRelation-Account Contact Relationship Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -40765,9 +40419,6 @@
         <layout>DataUsePurpose-Data Use Purpose Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>DelegatedAccount-External Managed Account Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
         <layout>DigitalWallet-Digital Wallet Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -40775,9 +40426,6 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>EmailMessage-Email Message Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Energy_Audit__c-Energy Audit Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>EngagementChannelType-Engagement Channel Type Layout</layout>
@@ -40816,12 +40464,6 @@
         <layout>Global-Global Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>Goal-Goal Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>GoalLink-Goal Link Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
         <layout>Idea-Idea Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -40834,16 +40476,6 @@
         <layout>InvoiceLine-Invoice Line Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>JobTracker-Job Tracker Layout - Winter %2716</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Knowledge__kav-Knowledge Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Knowledge__kav-Knowledge Layout</layout>
-        <recordType>Knowledge__kav.FAQ</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
         <layout>Lead-Lead %28Sales%29 Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -40851,23 +40483,6 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>Macro-Macro Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Metric-Completion Metric Layout</layout>
-        <recordType>Metric.Completion</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Metric-Metric Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Metric-Metric Layout</layout>
-        <recordType>Metric.Progress</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>MetricDataLink-Metric Data Link Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Offer__c-Offer Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>OperatingHours-Operating Hours Layout</layout>
@@ -40922,9 +40537,6 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>ProductConsumptionSchedule-Product Consumption Schedule Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Property__c-Property Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>QuickText-Quick Text Layout</layout>
@@ -41050,34 +40662,10 @@
         <layout>WebStore-Store Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>WebStoreConfig-Web Store Configuration Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>WorkCoaching-Coaching Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>WorkFeedback-Feedback Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>WorkFeedbackQuestion-Feedback Question Layout - Winter %2716</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>WorkFeedbackQuestionSet-Feedback Question Set Layout - Winter %2716</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>WorkFeedbackRequest-Feedback Request Layout - Winter %2716</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>WorkFeedbackTemplate-Feedback Template Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
         <layout>WorkOrder-Work Order Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>WorkOrderLineItem-Work Order Line Item Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>WorkPerformanceCycle-Performance Cycle Layout - Winter %2716</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>WorkType-Work Type Layout</layout>
@@ -41102,9 +40690,6 @@
         <modifyAllRecords>false</modifyAllRecords>
         <object>Account</object>
         <viewAllRecords>false</viewAllRecords>
-    </objectPermissions>
-    <objectPermissions>
-        <object>AccountBrand</object>
     </objectPermissions>
     <objectPermissions>
         <object>AccountContactRelation</object>
@@ -41215,9 +40800,6 @@
         <object>CartDeliveryGroupMethod</object>
     </objectPermissions>
     <objectPermissions>
-        <object>CartDeliveryGroupMethodAdj</object>
-    </objectPermissions>
-    <objectPermissions>
         <object>CartItem</object>
     </objectPermissions>
     <objectPermissions>
@@ -41243,18 +40825,6 @@
     </objectPermissions>
     <objectPermissions>
         <object>CaseComment</object>
-    </objectPermissions>
-    <objectPermissions>
-        <object>CaseExternalDocument</object>
-    </objectPermissions>
-    <objectPermissions>
-        <object>ChannelProgram</object>
-    </objectPermissions>
-    <objectPermissions>
-        <object>ChannelProgramLevel</object>
-    </objectPermissions>
-    <objectPermissions>
-        <object>ChannelProgramMember</object>
     </objectPermissions>
     <objectPermissions>
         <object>ChatterActivity</object>
@@ -41374,9 +40944,6 @@
         <object>DataUsePurpose</object>
     </objectPermissions>
     <objectPermissions>
-        <object>DelegatedAccount</object>
-    </objectPermissions>
-    <objectPermissions>
         <allowCreate>false</allowCreate>
         <allowDelete>false</allowDelete>
         <allowEdit>false</allowEdit>
@@ -41396,9 +40963,6 @@
     </objectPermissions>
     <objectPermissions>
         <object>EmailMessage</object>
-    </objectPermissions>
-    <objectPermissions>
-        <object>Energy_Audit__c</object>
     </objectPermissions>
     <objectPermissions>
         <object>EngagementChannelType</object>
@@ -41432,9 +40996,6 @@
     </objectPermissions>
     <objectPermissions>
         <object>EventRelayFeedback</object>
-    </objectPermissions>
-    <objectPermissions>
-        <object>ExperienceDiagnosticEvent</object>
     </objectPermissions>
     <objectPermissions>
         <object>FOStatusChangedEvent</object>
@@ -41473,12 +41034,6 @@
         <object>InvoiceLine</object>
     </objectPermissions>
     <objectPermissions>
-        <object>Knowledge__ka</object>
-    </objectPermissions>
-    <objectPermissions>
-        <object>Knowledge__kav</object>
-    </objectPermissions>
-    <objectPermissions>
         <allowCreate>true</allowCreate>
         <allowDelete>true</allowDelete>
         <allowEdit>true</allowEdit>
@@ -41489,9 +41044,6 @@
     </objectPermissions>
     <objectPermissions>
         <object>LegalEntity</object>
-    </objectPermissions>
-    <objectPermissions>
-        <object>LinkedArticle</object>
     </objectPermissions>
     <objectPermissions>
         <object>Location</object>
@@ -41533,13 +41085,7 @@
         <object>MessagingSession</object>
     </objectPermissions>
     <objectPermissions>
-        <object>NetworkMember</object>
-    </objectPermissions>
-    <objectPermissions>
         <object>Note</object>
-    </objectPermissions>
-    <objectPermissions>
-        <object>Offer__c</object>
     </objectPermissions>
     <objectPermissions>
         <object>OperatingHours</object>
@@ -41581,9 +41127,6 @@
         <object>OrgLifecycleNotification</object>
     </objectPermissions>
     <objectPermissions>
-        <object>OrgMetric</object>
-    </objectPermissions>
-    <objectPermissions>
         <object>OrgMetricScanResult</object>
     </objectPermissions>
     <objectPermissions>
@@ -41591,18 +41134,6 @@
     </objectPermissions>
     <objectPermissions>
         <object>Partner</object>
-    </objectPermissions>
-    <objectPermissions>
-        <object>PartnerFundAllocation</object>
-    </objectPermissions>
-    <objectPermissions>
-        <object>PartnerFundClaim</object>
-    </objectPermissions>
-    <objectPermissions>
-        <object>PartnerFundRequest</object>
-    </objectPermissions>
-    <objectPermissions>
-        <object>PartnerMarketingBudget</object>
     </objectPermissions>
     <objectPermissions>
         <object>PartyConsent</object>
@@ -41699,9 +41230,6 @@
     </objectPermissions>
     <objectPermissions>
         <object>PromptError</object>
-    </objectPermissions>
-    <objectPermissions>
-        <object>Property__c</object>
     </objectPermissions>
     <objectPermissions>
         <object>PushTopic</object>
@@ -41812,9 +41340,6 @@
         <object>ShippingRateGroup</object>
     </objectPermissions>
     <objectPermissions>
-        <object>SiteMarketingDataExtensionMapping</object>
-    </objectPermissions>
-    <objectPermissions>
         <object>SkillRequirement</object>
     </objectPermissions>
     <objectPermissions>
@@ -41828,9 +41353,6 @@
     </objectPermissions>
     <objectPermissions>
         <object>StandardShippingRate</object>
-    </objectPermissions>
-    <objectPermissions>
-        <object>StoreIntegratedService</object>
     </objectPermissions>
     <objectPermissions>
         <object>StreamingChannel</object>
@@ -41903,9 +41425,6 @@
     </objectPermissions>
     <objectPermissions>
         <object>WebStoreCatalog</object>
-    </objectPermissions>
-    <objectPermissions>
-        <object>WebStoreConfig</object>
     </objectPermissions>
     <objectPermissions>
         <object>WebStoreInventorySource</object>
@@ -43209,98 +42728,6 @@
     <objectPermissions>
         <object>vlocity_ins__XOMSetup__c</object>
     </objectPermissions>
-    <pageAccesses>
-        <apexPage>AnswersHome</apexPage>
-        <enabled>false</enabled>
-    </pageAccesses>
-    <pageAccesses>
-        <apexPage>BandwidthExceeded</apexPage>
-        <enabled>false</enabled>
-    </pageAccesses>
-    <pageAccesses>
-        <apexPage>ChangePassword</apexPage>
-        <enabled>false</enabled>
-    </pageAccesses>
-    <pageAccesses>
-        <apexPage>CommunitiesLanding</apexPage>
-        <enabled>false</enabled>
-    </pageAccesses>
-    <pageAccesses>
-        <apexPage>CommunitiesLogin</apexPage>
-        <enabled>false</enabled>
-    </pageAccesses>
-    <pageAccesses>
-        <apexPage>CommunitiesSelfReg</apexPage>
-        <enabled>false</enabled>
-    </pageAccesses>
-    <pageAccesses>
-        <apexPage>CommunitiesSelfRegConfirm</apexPage>
-        <enabled>false</enabled>
-    </pageAccesses>
-    <pageAccesses>
-        <apexPage>CommunitiesTemplate</apexPage>
-        <enabled>false</enabled>
-    </pageAccesses>
-    <pageAccesses>
-        <apexPage>Exception</apexPage>
-        <enabled>false</enabled>
-    </pageAccesses>
-    <pageAccesses>
-        <apexPage>FileNotFound</apexPage>
-        <enabled>false</enabled>
-    </pageAccesses>
-    <pageAccesses>
-        <apexPage>ForgotPassword</apexPage>
-        <enabled>false</enabled>
-    </pageAccesses>
-    <pageAccesses>
-        <apexPage>ForgotPasswordConfirm</apexPage>
-        <enabled>false</enabled>
-    </pageAccesses>
-    <pageAccesses>
-        <apexPage>IdeasHome</apexPage>
-        <enabled>false</enabled>
-    </pageAccesses>
-    <pageAccesses>
-        <apexPage>InMaintenance</apexPage>
-        <enabled>false</enabled>
-    </pageAccesses>
-    <pageAccesses>
-        <apexPage>MicrobatchSelfReg</apexPage>
-        <enabled>false</enabled>
-    </pageAccesses>
-    <pageAccesses>
-        <apexPage>MyProfilePage</apexPage>
-        <enabled>false</enabled>
-    </pageAccesses>
-    <pageAccesses>
-        <apexPage>SiteLogin</apexPage>
-        <enabled>false</enabled>
-    </pageAccesses>
-    <pageAccesses>
-        <apexPage>SiteRegister</apexPage>
-        <enabled>false</enabled>
-    </pageAccesses>
-    <pageAccesses>
-        <apexPage>SiteRegisterConfirm</apexPage>
-        <enabled>false</enabled>
-    </pageAccesses>
-    <pageAccesses>
-        <apexPage>SiteTemplate</apexPage>
-        <enabled>false</enabled>
-    </pageAccesses>
-    <pageAccesses>
-        <apexPage>StdExceptionTemplate</apexPage>
-        <enabled>false</enabled>
-    </pageAccesses>
-    <pageAccesses>
-        <apexPage>Unauthorized</apexPage>
-        <enabled>false</enabled>
-    </pageAccesses>
-    <pageAccesses>
-        <apexPage>UnderConstruction</apexPage>
-        <enabled>false</enabled>
-    </pageAccesses>
     <pageAccesses>
         <apexPage>vlocity_ins__AccountApplicationChildListPage</apexPage>
         <enabled>false</enabled>
@@ -44908,11 +44335,6 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
-        <recordType>Account.Test_New_Account</recordType>
-        <visible>false</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
         <recordType>Account.vlocity_ins__AgencyBrokerage</recordType>
         <visible>false</visible>
     </recordTypeVisibilities>
@@ -45055,26 +44477,6 @@
         <default>false</default>
         <recordType>Event.vlocity_ins__MobilePhoneEvent</recordType>
         <visible>false</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>Idea.InternalIdeasIdeaRecordType</recordType>
-        <visible>false</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>Knowledge__kav.FAQ</recordType>
-        <visible>false</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>Metric.Completion</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>true</default>
-        <recordType>Metric.Progress</recordType>
-        <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
@@ -45567,24 +44969,8 @@
         <visible>false</visible>
     </recordTypeVisibilities>
     <tabVisibilities>
-        <tab>Energy_Audit__c</tab>
-        <visibility>DefaultOn</visibility>
-    </tabVisibilities>
-    <tabVisibilities>
-        <tab>Knowledge__kav</tab>
-        <visibility>DefaultOn</visibility>
-    </tabVisibilities>
-    <tabVisibilities>
-        <tab>Property__c</tab>
-        <visibility>DefaultOn</visibility>
-    </tabVisibilities>
-    <tabVisibilities>
         <tab>standard-Account</tab>
         <visibility>DefaultOn</visibility>
-    </tabVisibilities>
-    <tabVisibilities>
-        <tab>standard-AccountBrand</tab>
-        <visibility>Hidden</visibility>
     </tabVisibilities>
     <tabVisibilities>
         <tab>standard-AlternativePaymentMethod</tab>
@@ -45635,14 +45021,6 @@
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
-        <tab>standard-BusinessBrand</tab>
-        <visibility>Hidden</visibility>
-    </tabVisibilities>
-    <tabVisibilities>
-        <tab>standard-BuyerGroup</tab>
-        <visibility>DefaultOn</visibility>
-    </tabVisibilities>
-    <tabVisibilities>
         <tab>standard-Campaign</tab>
         <visibility>DefaultOff</visibility>
     </tabVisibilities>
@@ -45653,14 +45031,6 @@
     <tabVisibilities>
         <tab>standard-Case</tab>
         <visibility>DefaultOn</visibility>
-    </tabVisibilities>
-    <tabVisibilities>
-        <tab>standard-ChannelProgram</tab>
-        <visibility>DefaultOff</visibility>
-    </tabVisibilities>
-    <tabVisibilities>
-        <tab>standard-ChannelProgramLevel</tab>
-        <visibility>DefaultOff</visibility>
     </tabVisibilities>
     <tabVisibilities>
         <tab>standard-Chatter</tab>
@@ -45727,19 +45097,7 @@
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
-        <tab>standard-ContractLineItem</tab>
-        <visibility>Hidden</visibility>
-    </tabVisibilities>
-    <tabVisibilities>
-        <tab>standard-Coupon</tab>
-        <visibility>Hidden</visibility>
-    </tabVisibilities>
-    <tabVisibilities>
         <tab>standard-CreditMemo</tab>
-        <visibility>Hidden</visibility>
-    </tabVisibilities>
-    <tabVisibilities>
-        <tab>standard-Customer</tab>
         <visibility>Hidden</visibility>
     </tabVisibilities>
     <tabVisibilities>
@@ -45757,10 +45115,6 @@
     <tabVisibilities>
         <tab>standard-DataUsePurpose</tab>
         <visibility>DefaultOn</visibility>
-    </tabVisibilities>
-    <tabVisibilities>
-        <tab>standard-DelegatedAccount</tab>
-        <visibility>DefaultOff</visibility>
     </tabVisibilities>
     <tabVisibilities>
         <tab>standard-DeleteEvent</tab>
@@ -45847,14 +45201,6 @@
         <visibility>Hidden</visibility>
     </tabVisibilities>
     <tabVisibilities>
-        <tab>standard-InventoryItemReservation</tab>
-        <visibility>Hidden</visibility>
-    </tabVisibilities>
-    <tabVisibilities>
-        <tab>standard-InventoryReservation</tab>
-        <visibility>Hidden</visibility>
-    </tabVisibilities>
-    <tabVisibilities>
         <tab>standard-Invoice</tab>
         <visibility>Hidden</visibility>
     </tabVisibilities>
@@ -45863,19 +45209,7 @@
         <visibility>DefaultOff</visibility>
     </tabVisibilities>
     <tabVisibilities>
-        <tab>standard-Knowledge</tab>
-        <visibility>Hidden</visibility>
-    </tabVisibilities>
-    <tabVisibilities>
-        <tab>standard-KnowledgePublishing</tab>
-        <visibility>Hidden</visibility>
-    </tabVisibilities>
-    <tabVisibilities>
         <tab>standard-Lead</tab>
-        <visibility>DefaultOn</visibility>
-    </tabVisibilities>
-    <tabVisibilities>
-        <tab>standard-LearningItem</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
@@ -45939,28 +45273,8 @@
         <visibility>Hidden</visibility>
     </tabVisibilities>
     <tabVisibilities>
-        <tab>standard-OrgMetric</tab>
-        <visibility>DefaultOn</visibility>
-    </tabVisibilities>
-    <tabVisibilities>
         <tab>standard-OtherUserProfile</tab>
         <visibility>DefaultOn</visibility>
-    </tabVisibilities>
-    <tabVisibilities>
-        <tab>standard-PartnerFundAllocation</tab>
-        <visibility>DefaultOff</visibility>
-    </tabVisibilities>
-    <tabVisibilities>
-        <tab>standard-PartnerFundClaim</tab>
-        <visibility>DefaultOff</visibility>
-    </tabVisibilities>
-    <tabVisibilities>
-        <tab>standard-PartnerFundRequest</tab>
-        <visibility>DefaultOff</visibility>
-    </tabVisibilities>
-    <tabVisibilities>
-        <tab>standard-PartnerMarketingBudget</tab>
-        <visibility>DefaultOff</visibility>
     </tabVisibilities>
     <tabVisibilities>
         <tab>standard-PartyConsent</tab>
@@ -46027,10 +45341,6 @@
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
-        <tab>standard-PromotionSegment</tab>
-        <visibility>Hidden</visibility>
-    </tabVisibilities>
-    <tabVisibilities>
         <tab>standard-Quote</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
@@ -46052,10 +45362,6 @@
     </tabVisibilities>
     <tabVisibilities>
         <tab>standard-Scorecard</tab>
-        <visibility>Hidden</visibility>
-    </tabVisibilities>
-    <tabVisibilities>
-        <tab>standard-Seller</tab>
         <visibility>Hidden</visibility>
     </tabVisibilities>
     <tabVisibilities>
@@ -46109,10 +45415,6 @@
     <tabVisibilities>
         <tab>standard-Waitlist</tab>
         <visibility>DefaultOff</visibility>
-    </tabVisibilities>
-    <tabVisibilities>
-        <tab>standard-WebStoreInventorySource</tab>
-        <visibility>Hidden</visibility>
     </tabVisibilities>
     <tabVisibilities>
         <tab>standard-WorkOrder</tab>
@@ -46821,10 +46123,6 @@
     </userPermissions>
     <userPermissions>
         <enabled>false</enabled>
-        <name>DelegatedPortalUserAdmin</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>false</enabled>
         <name>DelegatedTwoFactor</name>
     </userPermissions>
     <userPermissions>
@@ -46922,10 +46220,6 @@
     <userPermissions>
         <enabled>true</enabled>
         <name>EditTopics</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>false</enabled>
-        <name>EinsteinSearchAnswersUser</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
@@ -47090,10 +46384,6 @@
     <userPermissions>
         <enabled>false</enabled>
         <name>LiveMessageAgent</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>false</enabled>
-        <name>LoanOfficerUser</name>
     </userPermissions>
     <userPermissions>
         <enabled>false</enabled>
@@ -47377,23 +46667,7 @@
     </userPermissions>
     <userPermissions>
         <enabled>false</enabled>
-        <name>Microbatching</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>false</enabled>
         <name>ModerateChatter</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>false</enabled>
-        <name>ModerateNetworkFeeds</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>false</enabled>
-        <name>ModerateNetworkFiles</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>false</enabled>
-        <name>ModerateNetworkMessages</name>
     </userPermissions>
     <userPermissions>
         <enabled>false</enabled>
@@ -47433,10 +46707,6 @@
     </userPermissions>
     <userPermissions>
         <enabled>false</enabled>
-        <name>PRMChannelMgmtConsoleUser</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>false</enabled>
         <name>Packaging2</name>
     </userPermissions>
     <userPermissions>
@@ -47458,10 +46728,6 @@
     <userPermissions>
         <enabled>false</enabled>
         <name>PersonalizedFinanceUserAccess</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>false</enabled>
-        <name>PortalSuperUser</name>
     </userPermissions>
     <userPermissions>
         <enabled>false</enabled>
@@ -47641,10 +46907,6 @@
     </userPermissions>
     <userPermissions>
         <enabled>false</enabled>
-        <name>UnderwriterUser</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>false</enabled>
         <name>UseAddOrderItemSummaryAPIs</name>
     </userPermissions>
     <userPermissions>
@@ -47746,10 +47008,6 @@
     <userPermissions>
         <enabled>false</enabled>
         <name>ViewContent</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>false</enabled>
-        <name>ViewCustomerSentiment</name>
     </userPermissions>
     <userPermissions>
         <enabled>false</enabled>
