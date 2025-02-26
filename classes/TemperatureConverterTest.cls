@@ -11,4 +11,4 @@ private class TemperatureConverterTest {
     }
 }
 
-//Test for case 00062656new
+//Test for case 00062656
