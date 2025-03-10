@@ -6,21 +6,7 @@
     <authorizationFailureAction>Discard</authorizationFailureAction>
     <emailServicesAddresses>
         <authorizedSenders>tmirzashaik@copado.com</authorizedSenders>
-        <developerName>New</developerName>
-        <isActive>true</isActive>
-        <localPart>test</localPart>
-        <runAsUser>{!Environment.username}</runAsUser>
-    </emailServicesAddresses>
-    <emailServicesAddresses>
-        <authorizedSenders>tmirzashaik@copado.com</authorizedSenders>
-        <developerName>Test</developerName>
-        <isActive>true</isActive>
-        <localPart>test</localPart>
-        <runAsUser>{!Environment.username}</runAsUser>
-    </emailServicesAddresses>
-    <emailServicesAddresses>
-        <authorizedSenders>tmirzashaik@copado.com</authorizedSenders>
-        <developerName>Thrisha</developerName>
+        <developerName>Override_Test</developerName>
         <isActive>true</isActive>
         <localPart>test</localPart>
         <runAsUser>{!Environment.username}</runAsUser>
