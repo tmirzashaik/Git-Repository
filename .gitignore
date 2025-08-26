@@ -13,3 +13,4 @@ deploy-options.json
 # OS files
 .DS_Store
 Thumbs.db
+.copado/copado-config.json
