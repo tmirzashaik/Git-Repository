@@ -13,4 +13,4 @@ public class TaskUtil {
         return taskPriority;
     }
 }
-//test cli commit latest
+//test cli commit latest new
