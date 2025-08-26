@@ -13,3 +13,30 @@ deploy-options.json
 # OS files
 .DS_Store
 Thumbs.db
+# Salesforce cache
+.sf/
+.sfdx/
+.localdevserver/
+deploy-options.json
+.code/
+.vscode/
+.idea/
+.copado/
+
+# LWC VSCode autocomplete
+**/lwc/jsconfig.json
+
+# LWC Jest coverage reports
+coverage/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+package.xml
+classes/copado__*
+triggers/copado__*
+pages/copado__*
