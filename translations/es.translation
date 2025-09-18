@@ -5,6 +5,10 @@
         <name>Test_Translation</name>
     </customLabels>
     <customLabels>
+        <label>Test1</label>
+        <name>Test_Translation_1</name>
+    </customLabels>
+    <customLabels>
         <label>text</label>
         <name>TranslationsTest</name>
     </customLabels>

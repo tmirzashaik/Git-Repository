@@ -8,6 +8,13 @@
         <value>Test</value>
     </labels>
     <labels>
+        <fullName>Test_Translation_1</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Test Translation 1</shortDescription>
+        <value>Test 1</value>
+    </labels>
+    <labels>
         <fullName>TranslationsTest</fullName>
         <language>en_US</language>
         <protected>true</protected>
