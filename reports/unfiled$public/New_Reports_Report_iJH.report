@@ -24,29 +24,7 @@
     <columns>
         <field>LASTRUNDATE</field>
     </columns>
-    <filter>
-        <criteriaItems>
-            <column>LONG_NAME</column>
-            <columnToColumn>false</columnToColumn>
-            <isUnlocked>true</isUnlocked>
-            <operator>contains</operator>
-            <value>The</value>
-        </criteriaItems>
-        <criteriaItems>
-            <column>SHORT_NAME</column>
-            <columnToColumn>false</columnToColumn>
-            <isUnlocked>true</isUnlocked>
-            <operator>contains</operator>
-            <value>Thrisha</value>
-        </criteriaItems>
-        <criteriaItems>
-            <column>LASTRUNDATE</column>
-            <columnToColumn>true</columnToColumn>
-            <isUnlocked>true</isUnlocked>
-            <operator>equals</operator>
-            <value>CREATEDDATE</value>
-        </criteriaItems>
-    </filter>
+    <currency>USD</currency>
     <format>Tabular</format>
     <name>New Reports Report</name>
     <params>
