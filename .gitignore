@@ -40,3 +40,6 @@ package.xml
 classes/copado__*
 triggers/copado__*
 pages/copado__*.copado/copado-config.json
+
+reports/*
+!reports/unfiled\$public/
